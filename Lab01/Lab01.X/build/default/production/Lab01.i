@@ -7,7 +7,7 @@
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "Lab01.c" 2
-# 17 "Lab01.c"
+# 18 "Lab01.c"
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2488,7 +2488,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 17 "Lab01.c" 2
+# 18 "Lab01.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 3
@@ -2623,7 +2623,7 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 18 "Lab01.c" 2
+# 19 "Lab01.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 1 3
 
@@ -2722,7 +2722,7 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 #pragma printf_check(sprintf) const
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
-# 19 "Lab01.c" 2
+# 20 "Lab01.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdlib.h" 1 3
 
@@ -2807,7 +2807,8 @@ extern char * ltoa(char * buf, long val, int base);
 extern char * ultoa(char * buf, unsigned long val, int base);
 
 extern char * ftoa(float f, int * status);
-# 20 "Lab01.c" 2
+# 21 "Lab01.c" 2
+
 
 
 
@@ -2830,33 +2831,63 @@ extern char * ftoa(float f, int * status);
 
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
-# 53 "Lab01.c"
+# 54 "Lab01.c"
 unsigned char CONT;
 unsigned char FLAG = 0X00;
 unsigned char FLAG1 = 0X00;
-unsigned char FLAG2 = 0X00;
+unsigned char VAL = 0X00;
+unsigned char LOW;
+unsigned char HIGH;
 
 
 
 
-
-char NUMEROS[4] = {
+char NUMEROS[16] = {
     0B00111111,
     0B00000110,
     0B01011011,
     0B01001111,
+    0B01100110,
+    0B01101101,
+    0B01111101,
+    0B00000111,
+    0B01111111,
+    0B01100111,
+    0B01110111,
+    0B01111100,
+    0B00111001,
+    0B01011110,
+    0B01111001,
+    0B01110001,
     };
 
 
 
 
 void setup(void);
+void VALORES(unsigned int);
+void HEX(void);
 
 
 
 
 void __attribute__((picinterrupt(("")))) isr(void){
-# 87 "Lab01.c"
+    if(T0IF == 1){
+        INTCONbits.T0IF = 0;
+        TMR0 = 100;
+    }
+
+
+    if(PIR1bits.ADIF == 1){
+        if(ADCON0bits.CHS == 8){
+           PORTC = ADRESH;}
+        else{
+           VAL = ADRESH;
+       }
+        PIR1bits.ADIF = 0;
+    }
+
+
     if(INTCONbits.RBIF == 1){
         if(PORTBbits.RB0 == 0){
             FLAG = 1;}
@@ -2867,8 +2898,7 @@ void __attribute__((picinterrupt(("")))) isr(void){
             }
         }
         if(PORTBbits.RB1 == 0){
-            FLAG1 = 1;
-        }
+            FLAG1 = 1;}
         else{
             if(FLAG1 == 1){
                 FLAG1 = 0;
@@ -2884,24 +2914,39 @@ void __attribute__((picinterrupt(("")))) isr(void){
 
 void setup(void){
 
+
     ANSEL = 0X00;
-    ANSELH = 0X00;
+    ANSELH = 0B00001000;
 
     TRISA = 0X00;
     TRISB = 0B00000011;
     TRISC = 0X00;
-    TRISD = 0X00;
     TRISE = 0X00;
 
     PORTA = 0X00;
     PORTB = 0X00;
     PORTC = 0X00;
-    PORTD = 0X00;
     PORTE = 0X00;
+
+
+    OSCCONbits.SCS = 1;
+    OSCCONbits.IRCF2 = 1;
+    OSCCONbits.IRCF1 = 1;
+    OSCCONbits.IRCF0 = 0;
 
 
     IOCB = 0B00000011;
     WPUB = 0B00000011;
+
+
+    ADCON0bits.ADON = 1;
+    ADCON0bits.CHS = 8;
+
+
+    ADCON0bits.ADCS = 1;
+    ADCON1bits.ADFM = 0;
+    ADCON1bits.VCFG0 = 0;
+    ADCON1bits.VCFG1 = 0;
 
 
     OPTION_REG = 0B00000101;
@@ -2912,8 +2957,10 @@ void setup(void){
     INTCONbits.RBIE = 1;
     INTCONbits.T0IF = 0;
     INTCONbits.RBIF = 0;
+    PIE1bits.ADIE = 1;
+    PIR1bits.ADIF = 0;
 
-    PORTD = NUMEROS[3];
+    PORTC = NUMEROS[0];
     }
 
 
@@ -2922,5 +2969,17 @@ void setup(void){
 void main(void){
     setup();
     while (1){
+        ADCON0bits.GO = 1;
+        }
+        HEX();
     }
-}
+
+
+
+
+
+void HEX(void){
+    HIGH = VAL & 0xF0;
+    LOW = VAL & 0x0F;
+    HIGH >>= 4;
+  }
