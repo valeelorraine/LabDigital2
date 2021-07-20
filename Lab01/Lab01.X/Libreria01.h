@@ -10,10 +10,6 @@
 #define _XTAL_FREQ 4000000
 #include <xc.h>
 
-int LECTURA(){
-    unsigned char ADCL;
-    ADCL = ADRESH;
-    return ADCL;
-}
+
 #endif	/* LIBRERIA01_H */
 

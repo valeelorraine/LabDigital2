@@ -2810,8 +2810,6 @@ extern char * ftoa(float f, int * status);
 # 21 "Lab01.c" 2
 
 # 1 "./Libreria01.h" 1
-# 14 "./Libreria01.h"
-}
 # 22 "Lab01.c" 2
 
 

@@ -19,7 +19,7 @@
 #include <stdint.h>      // Librería para variables de ancho definido
 #include <stdio.h>
 #include <stdlib.h>
-//#include "Libreria01.h"
+#include "Libreria01.h"
 
 //******************************************************************************
 //                      C O N F I G U R A C I Ó N 
@@ -51,7 +51,7 @@
 //******************************************************************************
 //                           V A R I A B L E S
 //******************************************************************************
-unsigned char CONT;
+unsigned char DISPLAY = 1;         // Variable para la multiplexación
 unsigned char FLAG = 0X00;
 unsigned char FLAG1 = 0X00;
 unsigned char VAL = 0X00;
@@ -85,22 +85,35 @@ char NUMEROS[16] = {
 //******************************************************************************
 void setup(void);                  // Configuraciones
 void VALORES(unsigned int);        // Obtener valores hexadecimales
-void HEX(void);
+void HEX(unsigned int);
 
 //******************************************************************************
 //                     F U N C I Ó N   para   I S R
 //******************************************************************************
 void __interrupt() isr(void){     
     if(T0IF == 1){                 // Bandera del TMR0 encendida
-        INTCONbits.T0IF = 0;       // Apagar la bandera
-        TMR0 = _tmr0_value;        // Inicializar TMR0  
+        TMR0 = _tmr0_value;        // Inicializar TMR0 
+        
+        switch(DISPLAY){          // Multiplexación de los DISPLAYS
+        case 1:                   // Centenas buscan el valor en la tabla
+            PORTE = 0X00;
+            PORTC = NUMEROS[HIGH]; 
+            PORTEbits.RE0 = 1;    // Encender pin del transistor del disp
+            DISPLAY = 2;          // Incrementar variable para ir al sig. display
+            break;
+        case 2:                   // Decenas buscan el valor en la tabla
+            PORTE = 0X00;
+            PORTC = NUMEROS[LOW];
+            PORTEbits.RE1 = 1;    // Encender pin del transistor del disp
+            DISPLAY = 1;          // Incrementar variable para ir al sig. display
+            break;
+            }
+        INTCONbits.T0IF = 0;     // Apagar la bandera
     }
     
     
     if(PIR1bits.ADIF == 1){        // Interrupción del ADC
         if(ADCON0bits.CHS == 8){   // Revisar si el canal AN0 está activo
-           PORTC = ADRESH;}
-        else{
            VAL = ADRESH;           // Valor del ADC
        }
         PIR1bits.ADIF = 0;         // Limpiar bandera 
@@ -178,8 +191,6 @@ void setup(void){
     INTCONbits.RBIF = 0;           // RBIF Limpiar la bandera de CHANGE INTERRUPT
     PIE1bits.ADIE = 1;             // ADIE Habilitar para comprobar FLAG -GF
     PIR1bits.ADIF = 0;             // Limpiar bandera de interrupción del ADC
-
-    PORTC = NUMEROS[0];            // Colocar el display en 3
     }
 
 //******************************************************************************
@@ -189,17 +200,26 @@ void main(void){
     setup();                       // Llamar al set up    
     while (1){  
         ADCON0bits.GO = 1;         // Activar la secuencia de lectura
+        HEX(VAL);
+        __delay_us(100);
+        if(VAL == PORTA){
+            PORTBbits.RB3 = 1;
+            }
+        else{
+            PORTBbits.RB3 = 0;
         }
-        HEX(); 
-    }             
+        } 
+    }                
 
 //******************************************************************************
 //                           F U N C I O N E S 
 //******************************************************************************
 
-void HEX(void){
-    HIGH = VAL & 0xF0;         // obtener los 4bits +S, Justiicado a la izq.
+void HEX(unsigned int arg1){
+    unsigned int temp;
+    temp = arg1;
     LOW = VAL & 0x0F;          // And de la variable para obtener los 4bits -S
+    HIGH = VAL & 0xF0;         // obtener los 4bits +S, Justiicado a la izq.
     HIGH >>= 4;                // Correr los valores 4 espacios a la derecha        
   }
 
