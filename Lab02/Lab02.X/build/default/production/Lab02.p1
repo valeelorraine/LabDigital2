@@ -110,8 +110,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1140: extern volatile unsigned char RCREG __attribute__((address(0x01A)));
 [v _RCREG `Vuc ~T0 @X0 0 e@26 ]
 [p mainexit ]
-"68 Lab02.c
-[; ;Lab02.c: 68: void setup(void);
+"62 Lab02.c
+[; ;Lab02.c: 62: void setup(void);
 [v _setup `(v ~T0 @X0 0 ef ]
 "72 ./LCD.h
 [; ;./LCD.h: 72: void Lcd_Init(void);
@@ -125,8 +125,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "76
 [; ;./LCD.h: 76: void Lcd_Write_String(char *a);
 [v _Lcd_Write_String `(v ~T0 @X0 0 ef1`*uc ]
-"74 Lab02.c
-[; ;Lab02.c: 74: void decimal(uint8_t );
+"65 Lab02.c
+[; ;Lab02.c: 65: void decimal(uint8_t );
 [v _decimal `(v ~T0 @X0 0 ef1`uc ]
 "74 ./LCD.h
 [; ;./LCD.h: 74: void Lcd_Write_Char(char a);
@@ -479,11 +479,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _OSCCONbits 0 0 -> -> 1 `i `uc ]
 "27
 [; ;./config_ADC.h: 27:         switch(frec){
-[e $U 140  ]
+[e $U 141  ]
 {
 "28
 [; ;./config_ADC.h: 28:             case 8:
-[e :U 141 ]
+[e :U 142 ]
 "29
 [; ;./config_ADC.h: 29:                 OSCCONbits.IRCF0 = 1;
 [e = . . _OSCCONbits 1 1 -> -> 1 `i `uc ]
@@ -495,10 +495,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
 "32
 [; ;./config_ADC.h: 32:                 break;
-[e $U 139  ]
+[e $U 140  ]
 "33
 [; ;./config_ADC.h: 33:             case 4:
-[e :U 142 ]
+[e :U 143 ]
 "34
 [; ;./config_ADC.h: 34:                 OSCCONbits.IRCF0 = 0;
 [e = . . _OSCCONbits 1 1 -> -> 0 `i `uc ]
@@ -510,10 +510,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
 "37
 [; ;./config_ADC.h: 37:                 break;
-[e $U 139  ]
+[e $U 140  ]
 "38
 [; ;./config_ADC.h: 38:             case 2:
-[e :U 143 ]
+[e :U 144 ]
 "39
 [; ;./config_ADC.h: 39:                 OSCCONbits.IRCF0 = 1;
 [e = . . _OSCCONbits 1 1 -> -> 1 `i `uc ]
@@ -525,10 +525,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
 "42
 [; ;./config_ADC.h: 42:                 break;
-[e $U 139  ]
+[e $U 140  ]
 "43
 [; ;./config_ADC.h: 43:              case 1:
-[e :U 144 ]
+[e :U 145 ]
 "44
 [; ;./config_ADC.h: 44:                 OSCCONbits.IRCF0 = 0;
 [e = . . _OSCCONbits 1 1 -> -> 0 `i `uc ]
@@ -540,10 +540,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
 "47
 [; ;./config_ADC.h: 47:                 break;
-[e $U 139  ]
+[e $U 140  ]
 "48
 [; ;./config_ADC.h: 48:              case 50:
-[e :U 145 ]
+[e :U 146 ]
 "49
 [; ;./config_ADC.h: 49:                 OSCCONbits.IRCF0 = 0;
 [e = . . _OSCCONbits 1 1 -> -> 0 `i `uc ]
@@ -555,10 +555,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
 "52
 [; ;./config_ADC.h: 52:                 break;
-[e $U 139  ]
+[e $U 140  ]
 "53
 [; ;./config_ADC.h: 53:              case 25:
-[e :U 146 ]
+[e :U 147 ]
 "54
 [; ;./config_ADC.h: 54:                 OSCCONbits.IRCF0 = 0;
 [e = . . _OSCCONbits 1 1 -> -> 0 `i `uc ]
@@ -570,10 +570,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _OSCCONbits 1 3 -> -> 0 `i `uc ]
 "57
 [; ;./config_ADC.h: 57:                 break;
-[e $U 139  ]
+[e $U 140  ]
 "58
 [; ;./config_ADC.h: 58:               case 12:
-[e :U 147 ]
+[e :U 148 ]
 "59
 [; ;./config_ADC.h: 59:                 OSCCONbits.IRCF0 = 1;
 [e = . . _OSCCONbits 1 1 -> -> 1 `i `uc ]
@@ -585,10 +585,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _OSCCONbits 1 3 -> -> 0 `i `uc ]
 "62
 [; ;./config_ADC.h: 62:                 break;
-[e $U 139  ]
+[e $U 140  ]
 "63
 [; ;./config_ADC.h: 63:               case 31:
-[e :U 148 ]
+[e :U 149 ]
 "64
 [; ;./config_ADC.h: 64:                 OSCCONbits.IRCF0 = 0;
 [e = . . _OSCCONbits 1 1 -> -> 0 `i `uc ]
@@ -600,10 +600,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
 "67
 [; ;./config_ADC.h: 67:                 break;
-[e $U 139  ]
+[e $U 140  ]
 "68
 [; ;./config_ADC.h: 68:               default:
-[e :U 149 ]
+[e :U 150 ]
 "69
 [; ;./config_ADC.h: 69:                 OSCCONbits.IRCF0 = 0;
 [e = . . _OSCCONbits 1 1 -> -> 0 `i `uc ]
@@ -615,25 +615,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
 "72
 [; ;./config_ADC.h: 72:                 break;
-[e $U 139  ]
+[e $U 140  ]
 "73
 [; ;./config_ADC.h: 73:         }
 }
-[e $U 139  ]
+[e $U 140  ]
+[e :U 141 ]
+[e [\ -> _frec `i , $ -> 8 `i 142
+ , $ -> 4 `i 143
+ , $ -> 2 `i 144
+ , $ -> 1 `i 145
+ , $ -> 50 `i 146
+ , $ -> 25 `i 147
+ , $ -> 12 `i 148
+ , $ -> 31 `i 149
+ 150 ]
 [e :U 140 ]
-[e [\ -> _frec `i , $ -> 8 `i 141
- , $ -> 4 `i 142
- , $ -> 2 `i 143
- , $ -> 1 `i 144
- , $ -> 50 `i 145
- , $ -> 25 `i 146
- , $ -> 12 `i 147
- , $ -> 31 `i 148
- 149 ]
-[e :U 139 ]
 "74
 [; ;./config_ADC.h: 74: }
-[e :UE 138 ]
+[e :UE 139 ]
 }
 "76
 [; ;./config_ADC.h: 76: void initAN(uint8_t bin, uint8_t just){
@@ -678,7 +678,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
 "91
 [; ;./config_ADC.h: 91:    }
-[e :UE 150 ]
+[e :UE 151 ]
 }
 "94
 [; ;./config_ADC.h: 94: void chselect (uint8_t cant){
@@ -689,18 +689,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "95
 [; ;./config_ADC.h: 95:     if(ADCON0bits.GO == 0){
-[e $ ! == -> . . _ADCON0bits 1 1 `i -> 0 `i 152  ]
+[e $ ! == -> . . _ADCON0bits 1 1 `i -> 0 `i 153  ]
 {
 "96
 [; ;./config_ADC.h: 96:       switch (ADCON0bits.CHS){
-[e $U 154  ]
+[e $U 155  ]
 {
 "98
 [; ;./config_ADC.h: 98:           case 0:
-[e :U 155 ]
+[e :U 156 ]
 "99
 [; ;./config_ADC.h: 99:             if (cant == 1){
-[e $ ! == -> _cant `i -> 1 `i 156  ]
+[e $ ! == -> _cant `i -> 1 `i 157  ]
 {
 "100
 [; ;./config_ADC.h: 100:                 ADCON0bits.CHS = 0;
@@ -708,10 +708,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "101
 [; ;./config_ADC.h: 101:             }
 }
-[e $U 157  ]
+[e $U 158  ]
 "102
 [; ;./config_ADC.h: 102:             else{
-[e :U 156 ]
+[e :U 157 ]
 {
 "103
 [; ;./config_ADC.h: 103:                 ADCON0bits.CHS = 1;
@@ -719,16 +719,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "104
 [; ;./config_ADC.h: 104:             }
 }
-[e :U 157 ]
+[e :U 158 ]
 "105
 [; ;./config_ADC.h: 105:             break;
-[e $U 153  ]
+[e $U 154  ]
 "106
 [; ;./config_ADC.h: 106:          case 1:
-[e :U 158 ]
+[e :U 159 ]
 "107
 [; ;./config_ADC.h: 107:             if (cant == 2){
-[e $ ! == -> _cant `i -> 2 `i 159  ]
+[e $ ! == -> _cant `i -> 2 `i 160  ]
 {
 "108
 [; ;./config_ADC.h: 108:                 ADCON0bits.CHS = 0;
@@ -736,10 +736,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "109
 [; ;./config_ADC.h: 109:             }
 }
-[e $U 160  ]
+[e $U 161  ]
 "110
 [; ;./config_ADC.h: 110:             else{
-[e :U 159 ]
+[e :U 160 ]
 {
 "111
 [; ;./config_ADC.h: 111:                 ADCON0bits.CHS = 2;
@@ -747,16 +747,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "112
 [; ;./config_ADC.h: 112:             }
 }
-[e :U 160 ]
+[e :U 161 ]
 "113
 [; ;./config_ADC.h: 113:             break;
-[e $U 153  ]
+[e $U 154  ]
 "114
 [; ;./config_ADC.h: 114:          case 2:
-[e :U 161 ]
+[e :U 162 ]
 "115
 [; ;./config_ADC.h: 115:             if (cant == 3){
-[e $ ! == -> _cant `i -> 3 `i 162  ]
+[e $ ! == -> _cant `i -> 3 `i 163  ]
 {
 "116
 [; ;./config_ADC.h: 116:                 ADCON0bits.CHS = 0;
@@ -764,10 +764,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "117
 [; ;./config_ADC.h: 117:             }
 }
-[e $U 163  ]
+[e $U 164  ]
 "118
 [; ;./config_ADC.h: 118:             else{
-[e :U 162 ]
+[e :U 163 ]
 {
 "119
 [; ;./config_ADC.h: 119:                 ADCON0bits.CHS = 3;
@@ -775,16 +775,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "120
 [; ;./config_ADC.h: 120:             }
 }
-[e :U 163 ]
+[e :U 164 ]
 "121
 [; ;./config_ADC.h: 121:             break;
-[e $U 153  ]
+[e $U 154  ]
 "122
 [; ;./config_ADC.h: 122:          case 3:
-[e :U 164 ]
+[e :U 165 ]
 "123
 [; ;./config_ADC.h: 123:             if (cant == 4){
-[e $ ! == -> _cant `i -> 4 `i 165  ]
+[e $ ! == -> _cant `i -> 4 `i 166  ]
 {
 "124
 [; ;./config_ADC.h: 124:                 ADCON0bits.CHS = 0;
@@ -792,10 +792,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "125
 [; ;./config_ADC.h: 125:             }
 }
-[e $U 166  ]
+[e $U 167  ]
 "126
 [; ;./config_ADC.h: 126:             else{
-[e :U 165 ]
+[e :U 166 ]
 {
 "127
 [; ;./config_ADC.h: 127:                 ADCON0bits.CHS = 4;
@@ -803,16 +803,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "128
 [; ;./config_ADC.h: 128:             }
 }
-[e :U 166 ]
+[e :U 167 ]
 "129
 [; ;./config_ADC.h: 129:             break;
-[e $U 153  ]
+[e $U 154  ]
 "130
 [; ;./config_ADC.h: 130:          case 4:
-[e :U 167 ]
+[e :U 168 ]
 "131
 [; ;./config_ADC.h: 131:             if (cant == 5){
-[e $ ! == -> _cant `i -> 5 `i 168  ]
+[e $ ! == -> _cant `i -> 5 `i 169  ]
 {
 "132
 [; ;./config_ADC.h: 132:                 ADCON0bits.CHS = 0;
@@ -820,10 +820,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "133
 [; ;./config_ADC.h: 133:             }
 }
-[e $U 169  ]
+[e $U 170  ]
 "134
 [; ;./config_ADC.h: 134:             else{
-[e :U 168 ]
+[e :U 169 ]
 {
 "135
 [; ;./config_ADC.h: 135:                 ADCON0bits.CHS = 5;
@@ -831,16 +831,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "136
 [; ;./config_ADC.h: 136:             }
 }
-[e :U 169 ]
+[e :U 170 ]
 "137
 [; ;./config_ADC.h: 137:             break;
-[e $U 153  ]
+[e $U 154  ]
 "138
 [; ;./config_ADC.h: 138:          case 5:
-[e :U 170 ]
+[e :U 171 ]
 "139
 [; ;./config_ADC.h: 139:             if (cant == 6){
-[e $ ! == -> _cant `i -> 6 `i 171  ]
+[e $ ! == -> _cant `i -> 6 `i 172  ]
 {
 "140
 [; ;./config_ADC.h: 140:                 ADCON0bits.CHS = 0;
@@ -848,10 +848,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "141
 [; ;./config_ADC.h: 141:             }
 }
-[e $U 172  ]
+[e $U 173  ]
 "142
 [; ;./config_ADC.h: 142:             else{
-[e :U 171 ]
+[e :U 172 ]
 {
 "143
 [; ;./config_ADC.h: 143:                 ADCON0bits.CHS = 6;
@@ -859,16 +859,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "144
 [; ;./config_ADC.h: 144:             }
 }
-[e :U 172 ]
+[e :U 173 ]
 "145
 [; ;./config_ADC.h: 145:             break;
-[e $U 153  ]
+[e $U 154  ]
 "146
 [; ;./config_ADC.h: 146:          case 6:
-[e :U 173 ]
+[e :U 174 ]
 "147
 [; ;./config_ADC.h: 147:             if (cant == 7){
-[e $ ! == -> _cant `i -> 7 `i 174  ]
+[e $ ! == -> _cant `i -> 7 `i 175  ]
 {
 "148
 [; ;./config_ADC.h: 148:                 ADCON0bits.CHS = 0;
@@ -876,10 +876,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "149
 [; ;./config_ADC.h: 149:             }
 }
-[e $U 175  ]
+[e $U 176  ]
 "150
 [; ;./config_ADC.h: 150:             else{
-[e :U 174 ]
+[e :U 175 ]
 {
 "151
 [; ;./config_ADC.h: 151:                 ADCON0bits.CHS = 7;
@@ -887,16 +887,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "152
 [; ;./config_ADC.h: 152:             }
 }
-[e :U 175 ]
+[e :U 176 ]
 "153
 [; ;./config_ADC.h: 153:             break;
-[e $U 153  ]
+[e $U 154  ]
 "154
 [; ;./config_ADC.h: 154:          case 7:
-[e :U 176 ]
+[e :U 177 ]
 "155
 [; ;./config_ADC.h: 155:             if (cant == 8){
-[e $ ! == -> _cant `i -> 8 `i 177  ]
+[e $ ! == -> _cant `i -> 8 `i 178  ]
 {
 "156
 [; ;./config_ADC.h: 156:                 ADCON0bits.CHS = 0;
@@ -904,10 +904,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "157
 [; ;./config_ADC.h: 157:             }
 }
-[e $U 178  ]
+[e $U 179  ]
 "158
 [; ;./config_ADC.h: 158:             else{
-[e :U 177 ]
+[e :U 178 ]
 {
 "159
 [; ;./config_ADC.h: 159:                 ADCON0bits.CHS = 8;
@@ -915,16 +915,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "160
 [; ;./config_ADC.h: 160:             }
 }
-[e :U 178 ]
+[e :U 179 ]
 "161
 [; ;./config_ADC.h: 161:             break;
-[e $U 153  ]
+[e $U 154  ]
 "162
 [; ;./config_ADC.h: 162:          case 8:
-[e :U 179 ]
+[e :U 180 ]
 "163
 [; ;./config_ADC.h: 163:             if (cant == 9){
-[e $ ! == -> _cant `i -> 9 `i 180  ]
+[e $ ! == -> _cant `i -> 9 `i 181  ]
 {
 "164
 [; ;./config_ADC.h: 164:                 ADCON0bits.CHS = 0;
@@ -932,10 +932,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "165
 [; ;./config_ADC.h: 165:             }
 }
-[e $U 181  ]
+[e $U 182  ]
 "166
 [; ;./config_ADC.h: 166:             else{
-[e :U 180 ]
+[e :U 181 ]
 {
 "167
 [; ;./config_ADC.h: 167:                 ADCON0bits.CHS = 9;
@@ -943,16 +943,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "168
 [; ;./config_ADC.h: 168:             }
 }
-[e :U 181 ]
+[e :U 182 ]
 "169
 [; ;./config_ADC.h: 169:             break;
-[e $U 153  ]
+[e $U 154  ]
 "170
 [; ;./config_ADC.h: 170:          case 9:
-[e :U 182 ]
+[e :U 183 ]
 "171
 [; ;./config_ADC.h: 171:             if (cant == 10){
-[e $ ! == -> _cant `i -> 10 `i 183  ]
+[e $ ! == -> _cant `i -> 10 `i 184  ]
 {
 "172
 [; ;./config_ADC.h: 172:                 ADCON0bits.CHS = 0;
@@ -960,10 +960,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "173
 [; ;./config_ADC.h: 173:             }
 }
-[e $U 184  ]
+[e $U 185  ]
 "174
 [; ;./config_ADC.h: 174:             else{
-[e :U 183 ]
+[e :U 184 ]
 {
 "175
 [; ;./config_ADC.h: 175:                 ADCON0bits.CHS = 10;
@@ -971,16 +971,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "176
 [; ;./config_ADC.h: 176:             };
 }
-[e :U 184 ]
+[e :U 185 ]
 "177
 [; ;./config_ADC.h: 177:             break;
-[e $U 153  ]
+[e $U 154  ]
 "178
 [; ;./config_ADC.h: 178:          case 10:
-[e :U 185 ]
+[e :U 186 ]
 "179
 [; ;./config_ADC.h: 179:             if (cant == 11){
-[e $ ! == -> _cant `i -> 11 `i 186  ]
+[e $ ! == -> _cant `i -> 11 `i 187  ]
 {
 "180
 [; ;./config_ADC.h: 180:                 ADCON0bits.CHS = 0;
@@ -988,10 +988,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "181
 [; ;./config_ADC.h: 181:             }
 }
-[e $U 187  ]
+[e $U 188  ]
 "182
 [; ;./config_ADC.h: 182:             else{
-[e :U 186 ]
+[e :U 187 ]
 {
 "183
 [; ;./config_ADC.h: 183:                 ADCON0bits.CHS = 11;
@@ -999,16 +999,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "184
 [; ;./config_ADC.h: 184:             }
 }
-[e :U 187 ]
+[e :U 188 ]
 "185
 [; ;./config_ADC.h: 185:             break;
-[e $U 153  ]
+[e $U 154  ]
 "186
 [; ;./config_ADC.h: 186:          case 11:
-[e :U 188 ]
+[e :U 189 ]
 "187
 [; ;./config_ADC.h: 187:             if (cant == 12){
-[e $ ! == -> _cant `i -> 12 `i 189  ]
+[e $ ! == -> _cant `i -> 12 `i 190  ]
 {
 "188
 [; ;./config_ADC.h: 188:                 ADCON0bits.CHS = 0;
@@ -1016,10 +1016,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "189
 [; ;./config_ADC.h: 189:             }
 }
-[e $U 190  ]
+[e $U 191  ]
 "190
 [; ;./config_ADC.h: 190:             else{
-[e :U 189 ]
+[e :U 190 ]
 {
 "191
 [; ;./config_ADC.h: 191:                 ADCON0bits.CHS = 12;
@@ -1027,16 +1027,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "192
 [; ;./config_ADC.h: 192:             }
 }
-[e :U 190 ]
+[e :U 191 ]
 "193
 [; ;./config_ADC.h: 193:             break;
-[e $U 153  ]
+[e $U 154  ]
 "194
 [; ;./config_ADC.h: 194:          case 12:
-[e :U 191 ]
+[e :U 192 ]
 "195
 [; ;./config_ADC.h: 195:             if (cant == 13){
-[e $ ! == -> _cant `i -> 13 `i 192  ]
+[e $ ! == -> _cant `i -> 13 `i 193  ]
 {
 "196
 [; ;./config_ADC.h: 196:                 ADCON0bits.CHS = 0;
@@ -1044,10 +1044,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "197
 [; ;./config_ADC.h: 197:             }
 }
-[e $U 193  ]
+[e $U 194  ]
 "198
 [; ;./config_ADC.h: 198:             else{
-[e :U 192 ]
+[e :U 193 ]
 {
 "199
 [; ;./config_ADC.h: 199:                 ADCON0bits.CHS = 13;
@@ -1055,44 +1055,44 @@ Version 4.0 HI-TECH Software Intermediate Code
 "200
 [; ;./config_ADC.h: 200:             }
 }
-[e :U 193 ]
+[e :U 194 ]
 "201
 [; ;./config_ADC.h: 201:             break;
-[e $U 153  ]
+[e $U 154  ]
 "202
 [; ;./config_ADC.h: 202:          case 13:
-[e :U 194 ]
+[e :U 195 ]
 "203
 [; ;./config_ADC.h: 203:                 ADCON0bits.CHS = 0;
 [e = . . _ADCON0bits 0 2 -> -> 0 `i `uc ]
 "204
 [; ;./config_ADC.h: 204:             break;
-[e $U 153  ]
+[e $U 154  ]
 "205
 [; ;./config_ADC.h: 205:         }
 }
-[e $U 153  ]
+[e $U 154  ]
+[e :U 155 ]
+[e [\ -> . . _ADCON0bits 0 2 `i , $ -> 0 `i 156
+ , $ -> 1 `i 159
+ , $ -> 2 `i 162
+ , $ -> 3 `i 165
+ , $ -> 4 `i 168
+ , $ -> 5 `i 171
+ , $ -> 6 `i 174
+ , $ -> 7 `i 177
+ , $ -> 8 `i 180
+ , $ -> 9 `i 183
+ , $ -> 10 `i 186
+ , $ -> 11 `i 189
+ , $ -> 12 `i 192
+ , $ -> 13 `i 195
+ 154 ]
 [e :U 154 ]
-[e [\ -> . . _ADCON0bits 0 2 `i , $ -> 0 `i 155
- , $ -> 1 `i 158
- , $ -> 2 `i 161
- , $ -> 3 `i 164
- , $ -> 4 `i 167
- , $ -> 5 `i 170
- , $ -> 6 `i 173
- , $ -> 7 `i 176
- , $ -> 8 `i 179
- , $ -> 9 `i 182
- , $ -> 10 `i 185
- , $ -> 11 `i 188
- , $ -> 12 `i 191
- , $ -> 13 `i 194
- 153 ]
-[e :U 153 ]
 "206
 [; ;./config_ADC.h: 206:     }
 }
-[e :U 152 ]
+[e :U 153 ]
 "207
 [; ;./config_ADC.h: 207:     _delay((unsigned long)((150)*(4000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 150 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
@@ -1101,7 +1101,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
 "209
 [; ;./config_ADC.h: 209: }
-[e :UE 151 ]
+[e :UE 152 ]
 }
 "212
 [; ;./config_ADC.h: 212: uint8_t table(uint8_t val){
@@ -1115,188 +1115,188 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _tempo `uc ~T0 @X0 1 a ]
 "215
 [; ;./config_ADC.h: 215:     switch(val){
-[e $U 197  ]
+[e $U 198  ]
 {
 "216
 [; ;./config_ADC.h: 216:         case 0:
-[e :U 198 ]
+[e :U 199 ]
 "217
 [; ;./config_ADC.h: 217:             tempo = 0b00111111;
 [e = _tempo -> -> 63 `i `uc ]
 "218
 [; ;./config_ADC.h: 218:             break;
-[e $U 196  ]
+[e $U 197  ]
 "219
 [; ;./config_ADC.h: 219:         case 1:
-[e :U 199 ]
+[e :U 200 ]
 "220
 [; ;./config_ADC.h: 220:             tempo = 0b00000110;
 [e = _tempo -> -> 6 `i `uc ]
 "221
 [; ;./config_ADC.h: 221:             break;
-[e $U 196  ]
+[e $U 197  ]
 "222
 [; ;./config_ADC.h: 222:         case 2:
-[e :U 200 ]
+[e :U 201 ]
 "223
 [; ;./config_ADC.h: 223:             tempo = 0b01011011;
 [e = _tempo -> -> 91 `i `uc ]
 "224
 [; ;./config_ADC.h: 224:             break;
-[e $U 196  ]
+[e $U 197  ]
 "225
 [; ;./config_ADC.h: 225:         case 3:
-[e :U 201 ]
+[e :U 202 ]
 "226
 [; ;./config_ADC.h: 226:             tempo = 0b01001111;
 [e = _tempo -> -> 79 `i `uc ]
 "227
 [; ;./config_ADC.h: 227:             break;
-[e $U 196  ]
+[e $U 197  ]
 "228
 [; ;./config_ADC.h: 228:         case 4:
-[e :U 202 ]
+[e :U 203 ]
 "229
 [; ;./config_ADC.h: 229:             tempo = 0b01100110;
 [e = _tempo -> -> 102 `i `uc ]
 "230
 [; ;./config_ADC.h: 230:             break;
-[e $U 196  ]
+[e $U 197  ]
 "231
 [; ;./config_ADC.h: 231:         case 5:
-[e :U 203 ]
+[e :U 204 ]
 "232
 [; ;./config_ADC.h: 232:             tempo = 0b01101101;
 [e = _tempo -> -> 109 `i `uc ]
 "233
 [; ;./config_ADC.h: 233:             break;
-[e $U 196  ]
+[e $U 197  ]
 "234
 [; ;./config_ADC.h: 234:         case 6:
-[e :U 204 ]
+[e :U 205 ]
 "235
 [; ;./config_ADC.h: 235:             tempo = 0b01111101;
 [e = _tempo -> -> 125 `i `uc ]
 "236
 [; ;./config_ADC.h: 236:             break;
-[e $U 196  ]
+[e $U 197  ]
 "237
 [; ;./config_ADC.h: 237:         case 7:
-[e :U 205 ]
+[e :U 206 ]
 "238
 [; ;./config_ADC.h: 238:             tempo = 0b00000111;
 [e = _tempo -> -> 7 `i `uc ]
 "239
 [; ;./config_ADC.h: 239:             break;
-[e $U 196  ]
+[e $U 197  ]
 "240
 [; ;./config_ADC.h: 240:         case 8:
-[e :U 206 ]
+[e :U 207 ]
 "241
 [; ;./config_ADC.h: 241:             tempo = 0b01111111;
 [e = _tempo -> -> 127 `i `uc ]
 "242
 [; ;./config_ADC.h: 242:             break;
-[e $U 196  ]
+[e $U 197  ]
 "243
 [; ;./config_ADC.h: 243:         case 9:
-[e :U 207 ]
+[e :U 208 ]
 "244
 [; ;./config_ADC.h: 244:             tempo = 0b01100111;
 [e = _tempo -> -> 103 `i `uc ]
 "245
 [; ;./config_ADC.h: 245:             break;
-[e $U 196  ]
+[e $U 197  ]
 "246
 [; ;./config_ADC.h: 246:         case 10:
-[e :U 208 ]
+[e :U 209 ]
 "247
 [; ;./config_ADC.h: 247:             tempo = 0b01110111;
 [e = _tempo -> -> 119 `i `uc ]
 "248
 [; ;./config_ADC.h: 248:             break;
-[e $U 196  ]
+[e $U 197  ]
 "249
 [; ;./config_ADC.h: 249:         case 11:
-[e :U 209 ]
+[e :U 210 ]
 "250
 [; ;./config_ADC.h: 250:             tempo = 0b01111100;
 [e = _tempo -> -> 124 `i `uc ]
 "251
 [; ;./config_ADC.h: 251:             break;
-[e $U 196  ]
+[e $U 197  ]
 "252
 [; ;./config_ADC.h: 252:         case 12:
-[e :U 210 ]
+[e :U 211 ]
 "253
 [; ;./config_ADC.h: 253:             tempo = 0b00111001;
 [e = _tempo -> -> 57 `i `uc ]
 "254
 [; ;./config_ADC.h: 254:             break;
-[e $U 196  ]
+[e $U 197  ]
 "255
 [; ;./config_ADC.h: 255:         case 13:
-[e :U 211 ]
+[e :U 212 ]
 "256
 [; ;./config_ADC.h: 256:             tempo = 0b01011110;
 [e = _tempo -> -> 94 `i `uc ]
 "257
 [; ;./config_ADC.h: 257:             break;
-[e $U 196  ]
+[e $U 197  ]
 "258
 [; ;./config_ADC.h: 258:         case 14:
-[e :U 212 ]
+[e :U 213 ]
 "259
 [; ;./config_ADC.h: 259:             tempo = 0b01111001;
 [e = _tempo -> -> 121 `i `uc ]
 "260
 [; ;./config_ADC.h: 260:             break;
-[e $U 196  ]
+[e $U 197  ]
 "261
 [; ;./config_ADC.h: 261:         case 15:
-[e :U 213 ]
+[e :U 214 ]
 "262
 [; ;./config_ADC.h: 262:             tempo = 0b01110001;
 [e = _tempo -> -> 113 `i `uc ]
 "263
 [; ;./config_ADC.h: 263:             break;
-[e $U 196  ]
+[e $U 197  ]
 "264
 [; ;./config_ADC.h: 264:             default:
-[e :U 214 ]
+[e :U 215 ]
 "265
 [; ;./config_ADC.h: 265:                 tempo = 0b00111111;
 [e = _tempo -> -> 63 `i `uc ]
 "266
 [; ;./config_ADC.h: 266:         }
 }
-[e $U 196  ]
+[e $U 197  ]
+[e :U 198 ]
+[e [\ -> _val `i , $ -> 0 `i 199
+ , $ -> 1 `i 200
+ , $ -> 2 `i 201
+ , $ -> 3 `i 202
+ , $ -> 4 `i 203
+ , $ -> 5 `i 204
+ , $ -> 6 `i 205
+ , $ -> 7 `i 206
+ , $ -> 8 `i 207
+ , $ -> 9 `i 208
+ , $ -> 10 `i 209
+ , $ -> 11 `i 210
+ , $ -> 12 `i 211
+ , $ -> 13 `i 212
+ , $ -> 14 `i 213
+ , $ -> 15 `i 214
+ 215 ]
 [e :U 197 ]
-[e [\ -> _val `i , $ -> 0 `i 198
- , $ -> 1 `i 199
- , $ -> 2 `i 200
- , $ -> 3 `i 201
- , $ -> 4 `i 202
- , $ -> 5 `i 203
- , $ -> 6 `i 204
- , $ -> 7 `i 205
- , $ -> 8 `i 206
- , $ -> 9 `i 207
- , $ -> 10 `i 208
- , $ -> 11 `i 209
- , $ -> 12 `i 210
- , $ -> 13 `i 211
- , $ -> 14 `i 212
- , $ -> 15 `i 213
- 214 ]
-[e :U 196 ]
 "267
 [; ;./config_ADC.h: 267:         return(tempo);
 [e ) _tempo ]
-[e $UE 195  ]
+[e $UE 196  ]
 "268
 [; ;./config_ADC.h: 268: }
-[e :UE 195 ]
+[e :UE 196 ]
 }
 "26 Lab02.c
 [p x FOSC=INTRC_NOCLKOUT  ]
@@ -1323,572 +1323,566 @@ Version 4.0 HI-TECH Software Intermediate Code
 "40
 [p x WRT  =  OFF            ]
 "50
-[; ;Lab02.c: 50: uint8_t FLAG;
-[v _FLAG `uc ~T0 @X0 1 e ]
+[; ;Lab02.c: 50: uint8_t CONTADOR;
+[v _CONTADOR `uc ~T0 @X0 1 e ]
 "51
-[; ;Lab02.c: 51: uint8_t startfinal;
-[v _startfinal `uc ~T0 @X0 1 e ]
-"52
-[; ;Lab02.c: 52: uint8_t start;
-[v _start `uc ~T0 @X0 1 e ]
-"53
-[; ;Lab02.c: 53: uint8_t contador;
-[v _contador `uc ~T0 @X0 1 e ]
-"54
-[; ;Lab02.c: 54: uint8_t disp0;
-[v _disp0 `uc ~T0 @X0 1 e ]
-"55
-[; ;Lab02.c: 55: uint8_t disp1;
-[v _disp1 `uc ~T0 @X0 1 e ]
-"56
-[; ;Lab02.c: 56: uint8_t tempo1;
-[v _tempo1 `uc ~T0 @X0 1 e ]
-"57
-[; ;Lab02.c: 57: uint8_t VUART;
+[; ;Lab02.c: 51: uint8_t VUART;
 [v _VUART `uc ~T0 @X0 1 e ]
-"58
-[; ;Lab02.c: 58: uint8_t RXREC;
+"52
+[; ;Lab02.c: 52: uint8_t RXREC;
 [v _RXREC `uc ~T0 @X0 1 e ]
-"59
-[; ;Lab02.c: 59: unsigned char VAL1;
+"53
+[; ;Lab02.c: 53: unsigned char VAL1;
 [v _VAL1 `uc ~T0 @X0 1 e ]
-"60
-[; ;Lab02.c: 60: unsigned char VAL2;
+"54
+[; ;Lab02.c: 54: unsigned char VAL2;
 [v _VAL2 `uc ~T0 @X0 1 e ]
-"61
-[; ;Lab02.c: 61: unsigned char un;
+"55
+[; ;Lab02.c: 55: unsigned char un;
 [v _un `uc ~T0 @X0 1 e ]
-"62
-[; ;Lab02.c: 62: unsigned char dec;
+"56
+[; ;Lab02.c: 56: unsigned char dec;
 [v _dec `uc ~T0 @X0 1 e ]
-"63
-[; ;Lab02.c: 63: unsigned char cen;
+"57
+[; ;Lab02.c: 57: unsigned char cen;
 [v _cen `uc ~T0 @X0 1 e ]
 [v $root$_isr `(v ~T0 @X0 0 e ]
-"79
-[; ;Lab02.c: 79: void __attribute__((picinterrupt((""))))isr(void){
+"70
+[; ;Lab02.c: 70: void __attribute__((picinterrupt((""))))isr(void){
 [v _isr `(v ~T1 @X0 1 ef ]
 {
 [e :U _isr ]
 [f ]
-"80
-[; ;Lab02.c: 80:     if (T0IF==1){
+"71
+[; ;Lab02.c: 71:     if (T0IF==1){
 [e $ ! == -> _T0IF `i -> 1 `i 217  ]
 {
-"81
-[; ;Lab02.c: 81:     INTCONbits.T0IF = 0;
+"72
+[; ;Lab02.c: 72:     INTCONbits.T0IF = 0;
 [e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-"82
-[; ;Lab02.c: 82:     }
+"73
+[; ;Lab02.c: 73:     }
 }
 [e :U 217 ]
-"84
-[; ;Lab02.c: 84:     if(PIR1bits.ADIF == 1){
+"75
+[; ;Lab02.c: 75:     if(PIR1bits.ADIF == 1){
 [e $ ! == -> . . _PIR1bits 0 6 `i -> 1 `i 218  ]
 {
-"85
-[; ;Lab02.c: 85:         if(ADCON0bits.CHS == 0){
+"76
+[; ;Lab02.c: 76:         if(ADCON0bits.CHS == 0){
 [e $ ! == -> . . _ADCON0bits 0 2 `i -> 0 `i 219  ]
 {
-"86
-[; ;Lab02.c: 86:             VAL1 = ADRESH;
+"77
+[; ;Lab02.c: 77:             VAL1 = ADRESH;
 [e = _VAL1 _ADRESH ]
-"87
-[; ;Lab02.c: 87:         }
+"78
+[; ;Lab02.c: 78:         }
 }
 [e $U 220  ]
-"88
-[; ;Lab02.c: 88:         else{
+"79
+[; ;Lab02.c: 79:         else{
 [e :U 219 ]
 {
-"89
-[; ;Lab02.c: 89:             VAL2 = ADRESH;
+"80
+[; ;Lab02.c: 80:             VAL2 = ADRESH;
 [e = _VAL2 _ADRESH ]
-"90
-[; ;Lab02.c: 90:         }
+"81
+[; ;Lab02.c: 81:         }
 }
 [e :U 220 ]
-"91
-[; ;Lab02.c: 91:         PIR1bits.ADIF = 0;
+"82
+[; ;Lab02.c: 82:         PIR1bits.ADIF = 0;
 [e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
-"92
-[; ;Lab02.c: 92:     }
+"83
+[; ;Lab02.c: 83:     }
 }
 [e :U 218 ]
-"94
-[; ;Lab02.c: 94:     if(PIR1bits.RCIF == 1){
+"85
+[; ;Lab02.c: 85:     if(PIR1bits.RCIF == 1){
 [e $ ! == -> . . _PIR1bits 0 5 `i -> 1 `i 221  ]
 {
-"95
-[; ;Lab02.c: 95:         RXREC = RCREG;
+"86
+[; ;Lab02.c: 86:         RXREC = RCREG;
 [e = _RXREC _RCREG ]
-"96
-[; ;Lab02.c: 96:         if (RXREC == 43){
+"87
+[; ;Lab02.c: 87:         if (RXREC == 43){
 [e $ ! == -> _RXREC `i -> 43 `i 222  ]
 {
-"97
-[; ;Lab02.c: 97:             contador++;
-[e ++ _contador -> -> 1 `i `uc ]
-"98
-[; ;Lab02.c: 98:         }
+"88
+[; ;Lab02.c: 88:             CONTADOR++;
+[e ++ _CONTADOR -> -> 1 `i `uc ]
+"89
+[; ;Lab02.c: 89:         }
 }
 [e :U 222 ]
-"99
-[; ;Lab02.c: 99:         if (RXREC == 45){
+"90
+[; ;Lab02.c: 90:         if (RXREC == 45){
 [e $ ! == -> _RXREC `i -> 45 `i 223  ]
 {
-"100
-[; ;Lab02.c: 100:             contador--;
-[e -- _contador -> -> 1 `i `uc ]
-"101
-[; ;Lab02.c: 101:         }
+"91
+[; ;Lab02.c: 91:             CONTADOR--;
+[e -- _CONTADOR -> -> 1 `i `uc ]
+"92
+[; ;Lab02.c: 92:         }
 }
 [e :U 223 ]
-"102
-[; ;Lab02.c: 102:         PIR1bits.RCIF = 0;
+"93
+[; ;Lab02.c: 93:         PIR1bits.RCIF = 0;
 [e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
-"103
-[; ;Lab02.c: 103:     }
+"94
+[; ;Lab02.c: 94:     }
 }
 [e :U 221 ]
-"104
-[; ;Lab02.c: 104: }
+"95
+[; ;Lab02.c: 95: }
 [e :UE 216 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"109
-[; ;Lab02.c: 109: void main(void) {
+"100
+[; ;Lab02.c: 100: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"110
-[; ;Lab02.c: 110:     setup();
+"101
+[; ;Lab02.c: 101:     setup();
 [e ( _setup ..  ]
-"111
-[; ;Lab02.c: 111:     Lcd_Init();
+"102
+[; ;Lab02.c: 102:     Lcd_Init();
 [e ( _Lcd_Init ..  ]
-"112
-[; ;Lab02.c: 112:     Lcd_Clear();
+"103
+[; ;Lab02.c: 103:     Lcd_Clear();
 [e ( _Lcd_Clear ..  ]
-"113
-[; ;Lab02.c: 113:     Lcd_Set_Cursor(1,1);
+"104
+[; ;Lab02.c: 104:     Lcd_Set_Cursor(1,1);
 [e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-"114
-[; ;Lab02.c: 114:     Lcd_Write_String("S1:   S2:   S3:");
+"105
+[; ;Lab02.c: 105:     Lcd_Write_String("S1:   S2:   S3:");
 [e ( _Lcd_Write_String (1 :s 1C ]
-"116
-[; ;Lab02.c: 116: while(1) {
+"107
+[; ;Lab02.c: 107: while(1) {
 [e :U 226 ]
 {
-"117
-[; ;Lab02.c: 117:     chselect(2);
+"108
+[; ;Lab02.c: 108:     chselect(2);
 [e ( _chselect (1 -> -> 2 `i `uc ]
-"119
-[; ;Lab02.c: 119:     decimal(VAL1);
+"110
+[; ;Lab02.c: 110:     decimal(VAL1);
 [e ( _decimal (1 _VAL1 ]
-"120
-[; ;Lab02.c: 120:     Lcd_Set_Cursor(2,1);
+"111
+[; ;Lab02.c: 111:     Lcd_Set_Cursor(2,1);
 [e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
-"121
-[; ;Lab02.c: 121:     Lcd_Write_Char(cen);
+"112
+[; ;Lab02.c: 112:     Lcd_Write_Char(cen);
 [e ( _Lcd_Write_Char (1 -> _cen `uc ]
-"122
-[; ;Lab02.c: 122:     Lcd_Write_Char(dec);
-[e ( _Lcd_Write_Char (1 -> _dec `uc ]
-"123
-[; ;Lab02.c: 123:     Lcd_Write_Char(un);
-[e ( _Lcd_Write_Char (1 -> _un `uc ]
-"124
-[; ;Lab02.c: 124:     Lcd_Write_String("   ");
+"113
+[; ;Lab02.c: 113:     Lcd_Write_String(".");
 [e ( _Lcd_Write_String (1 :s 2C ]
-"126
-[; ;Lab02.c: 126:     if(PIR1bits.TXIF == 1){
+"114
+[; ;Lab02.c: 114:     Lcd_Write_Char(dec);
+[e ( _Lcd_Write_Char (1 -> _dec `uc ]
+"115
+[; ;Lab02.c: 115:     Lcd_Write_Char(un);
+[e ( _Lcd_Write_Char (1 -> _un `uc ]
+"116
+[; ;Lab02.c: 116:     Lcd_Write_String("  ");
+[e ( _Lcd_Write_String (1 :s 3C ]
+"118
+[; ;Lab02.c: 118:     if(PIR1bits.TXIF == 1){
 [e $ ! == -> . . _PIR1bits 0 4 `i -> 1 `i 228  ]
 {
-"127
-[; ;Lab02.c: 127:         _delay((unsigned long)((150)*(4000000/4000.0)));
+"119
+[; ;Lab02.c: 119:         _delay((unsigned long)((150)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 150 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"128
-[; ;Lab02.c: 128:         printf("VALOR DE POT 1: \r");
-[e ( _printf :s 3C ]
-"129
-[; ;Lab02.c: 129:         _delay((unsigned long)((150)*(4000000/4000.0)));
+"120
+[; ;Lab02.c: 120:         printf("VALOR DE POT 1: \r");
+[e ( _printf :s 4C ]
+"121
+[; ;Lab02.c: 121:         _delay((unsigned long)((150)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 150 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"130
-[; ;Lab02.c: 130:         TXREG = cen;
+"122
+[; ;Lab02.c: 122:         TXREG = cen;
 [e = _TXREG _cen ]
+"123
+[; ;Lab02.c: 123:            }
+}
+[e :U 228 ]
+"124
+[; ;Lab02.c: 124:         _delay((unsigned long)((10)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"125
+[; ;Lab02.c: 125:         if(PIR1bits.TXIF == 1){
+[e $ ! == -> . . _PIR1bits 0 4 `i -> 1 `i 229  ]
+{
+"126
+[; ;Lab02.c: 126:             TXREG = 46;
+[e = _TXREG -> -> 46 `i `uc ]
+"127
+[; ;Lab02.c: 127:            }
+}
+[e :U 229 ]
+"128
+[; ;Lab02.c: 128:         _delay((unsigned long)((10)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"129
+[; ;Lab02.c: 129:         if(PIR1bits.TXIF == 1){
+[e $ ! == -> . . _PIR1bits 0 4 `i -> 1 `i 230  ]
+{
+"130
+[; ;Lab02.c: 130:             TXREG = dec;
+[e = _TXREG _dec ]
 "131
 [; ;Lab02.c: 131:            }
 }
-[e :U 228 ]
+[e :U 230 ]
 "132
 [; ;Lab02.c: 132:         _delay((unsigned long)((10)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "133
 [; ;Lab02.c: 133:         if(PIR1bits.TXIF == 1){
-[e $ ! == -> . . _PIR1bits 0 4 `i -> 1 `i 229  ]
+[e $ ! == -> . . _PIR1bits 0 4 `i -> 1 `i 231  ]
 {
 "134
-[; ;Lab02.c: 134:             TXREG = 46;
-[e = _TXREG -> -> 46 `i `uc ]
+[; ;Lab02.c: 134:             TXREG = un;
+[e = _TXREG _un ]
 "135
 [; ;Lab02.c: 135:            }
 }
-[e :U 229 ]
+[e :U 231 ]
 "136
 [; ;Lab02.c: 136:         _delay((unsigned long)((10)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "137
 [; ;Lab02.c: 137:         if(PIR1bits.TXIF == 1){
-[e $ ! == -> . . _PIR1bits 0 4 `i -> 1 `i 230  ]
+[e $ ! == -> . . _PIR1bits 0 4 `i -> 1 `i 232  ]
 {
 "138
-[; ;Lab02.c: 138:             TXREG = dec;
-[e = _TXREG _dec ]
+[; ;Lab02.c: 138:             TXREG = 13;
+[e = _TXREG -> -> 13 `i `uc ]
 "139
 [; ;Lab02.c: 139:            }
 }
-[e :U 230 ]
-"140
-[; ;Lab02.c: 140:         _delay((unsigned long)((10)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"141
-[; ;Lab02.c: 141:         if(PIR1bits.TXIF == 1){
-[e $ ! == -> . . _PIR1bits 0 4 `i -> 1 `i 231  ]
-{
-"142
-[; ;Lab02.c: 142:             TXREG = un;
-[e = _TXREG _un ]
-"143
-[; ;Lab02.c: 143:            }
-}
-[e :U 231 ]
-"144
-[; ;Lab02.c: 144:         _delay((unsigned long)((10)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"145
-[; ;Lab02.c: 145:         if(PIR1bits.TXIF == 1){
-[e $ ! == -> . . _PIR1bits 0 4 `i -> 1 `i 232  ]
-{
-"146
-[; ;Lab02.c: 146:             TXREG = 13;
-[e = _TXREG -> -> 13 `i `uc ]
-"147
-[; ;Lab02.c: 147:            }
-}
 [e :U 232 ]
-"148
-[; ;Lab02.c: 148:         _delay((unsigned long)((150)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 150 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"152
-[; ;Lab02.c: 152:     decimal(VAL2);
+"140
+[; ;Lab02.c: 140:         _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"144
+[; ;Lab02.c: 144:     decimal(VAL2);
 [e ( _decimal (1 _VAL2 ]
-"153
-[; ;Lab02.c: 153:     Lcd_Write_Char(cen);
+"145
+[; ;Lab02.c: 145:     Lcd_Write_Char(cen);
 [e ( _Lcd_Write_Char (1 -> _cen `uc ]
-"154
-[; ;Lab02.c: 154:     Lcd_Write_Char(dec);
+"146
+[; ;Lab02.c: 146:     Lcd_Write_String(".");
+[e ( _Lcd_Write_String (1 :s 5C ]
+"147
+[; ;Lab02.c: 147:     Lcd_Write_Char(dec);
 [e ( _Lcd_Write_Char (1 -> _dec `uc ]
-"155
-[; ;Lab02.c: 155:     Lcd_Write_Char(un);
+"148
+[; ;Lab02.c: 148:     Lcd_Write_Char(un);
 [e ( _Lcd_Write_Char (1 -> _un `uc ]
-"156
-[; ;Lab02.c: 156:     _delay((unsigned long)((1500)*(4000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-"158
-[; ;Lab02.c: 158:     if(PIR1bits.TXIF == 1){
+"149
+[; ;Lab02.c: 149:     Lcd_Write_String("  ");
+[e ( _Lcd_Write_String (1 :s 6C ]
+"150
+[; ;Lab02.c: 150:     _delay((unsigned long)((1000)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"152
+[; ;Lab02.c: 152:     if(PIR1bits.TXIF == 1){
 [e $ ! == -> . . _PIR1bits 0 4 `i -> 1 `i 233  ]
 {
-"159
-[; ;Lab02.c: 159:         _delay((unsigned long)((150)*(4000000/4000.0)));
+"153
+[; ;Lab02.c: 153:         _delay((unsigned long)((150)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 150 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"160
-[; ;Lab02.c: 160:         printf("VALOR DE POT 2: \r");
-[e ( _printf :s 4C ]
-"161
-[; ;Lab02.c: 161:         _delay((unsigned long)((150)*(4000000/4000.0)));
+"154
+[; ;Lab02.c: 154:         printf("VALOR DE POT 2: \r");
+[e ( _printf :s 7C ]
+"155
+[; ;Lab02.c: 155:         _delay((unsigned long)((150)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 150 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"162
-[; ;Lab02.c: 162:             TXREG = cen;
+"156
+[; ;Lab02.c: 156:             TXREG = cen;
 [e = _TXREG _cen ]
-"163
-[; ;Lab02.c: 163:            }
+"157
+[; ;Lab02.c: 157:            }
 }
 [e :U 233 ]
-"164
-[; ;Lab02.c: 164:         _delay((unsigned long)((10)*(4000000/4000.0)));
+"158
+[; ;Lab02.c: 158:         _delay((unsigned long)((10)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"165
-[; ;Lab02.c: 165:         if(PIR1bits.TXIF == 1){
+"159
+[; ;Lab02.c: 159:         if(PIR1bits.TXIF == 1){
 [e $ ! == -> . . _PIR1bits 0 4 `i -> 1 `i 234  ]
 {
-"166
-[; ;Lab02.c: 166:             TXREG = 46;
+"160
+[; ;Lab02.c: 160:             TXREG = 46;
 [e = _TXREG -> -> 46 `i `uc ]
-"167
-[; ;Lab02.c: 167:            }
+"161
+[; ;Lab02.c: 161:            }
 }
 [e :U 234 ]
-"168
-[; ;Lab02.c: 168:         _delay((unsigned long)((10)*(4000000/4000.0)));
+"162
+[; ;Lab02.c: 162:         _delay((unsigned long)((10)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"169
-[; ;Lab02.c: 169:         if(PIR1bits.TXIF == 1){
+"163
+[; ;Lab02.c: 163:         if(PIR1bits.TXIF == 1){
 [e $ ! == -> . . _PIR1bits 0 4 `i -> 1 `i 235  ]
 {
-"170
-[; ;Lab02.c: 170:             TXREG = dec;
+"164
+[; ;Lab02.c: 164:             TXREG = dec;
 [e = _TXREG _dec ]
-"171
-[; ;Lab02.c: 171:            }
+"165
+[; ;Lab02.c: 165:            }
 }
 [e :U 235 ]
-"172
-[; ;Lab02.c: 172:         _delay((unsigned long)((10)*(4000000/4000.0)));
+"166
+[; ;Lab02.c: 166:         _delay((unsigned long)((10)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"173
-[; ;Lab02.c: 173:         if(PIR1bits.TXIF == 1){
+"167
+[; ;Lab02.c: 167:         if(PIR1bits.TXIF == 1){
 [e $ ! == -> . . _PIR1bits 0 4 `i -> 1 `i 236  ]
 {
-"174
-[; ;Lab02.c: 174:             TXREG = un;
+"168
+[; ;Lab02.c: 168:             TXREG = un;
 [e = _TXREG _un ]
-"175
-[; ;Lab02.c: 175:            }
+"169
+[; ;Lab02.c: 169:            }
 }
 [e :U 236 ]
-"176
-[; ;Lab02.c: 176:         _delay((unsigned long)((10)*(4000000/4000.0)));
+"170
+[; ;Lab02.c: 170:         _delay((unsigned long)((10)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"177
-[; ;Lab02.c: 177:         if(PIR1bits.TXIF == 1){
+"171
+[; ;Lab02.c: 171:         if(PIR1bits.TXIF == 1){
 [e $ ! == -> . . _PIR1bits 0 4 `i -> 1 `i 237  ]
 {
-"178
-[; ;Lab02.c: 178:             TXREG = 13;
+"172
+[; ;Lab02.c: 172:             TXREG = 13;
 [e = _TXREG -> -> 13 `i `uc ]
-"179
-[; ;Lab02.c: 179:            }
+"173
+[; ;Lab02.c: 173:            }
 }
 [e :U 237 ]
-"180
-[; ;Lab02.c: 180:         _delay((unsigned long)((150)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 150 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"184
-[; ;Lab02.c: 184:     decimal(contador);
-[e ( _decimal (1 _contador ]
-"185
-[; ;Lab02.c: 185:     Lcd_Write_Char(cen);
-[e ( _Lcd_Write_Char (1 -> _cen `uc ]
-"186
-[; ;Lab02.c: 186:     Lcd_Write_String(".");
-[e ( _Lcd_Write_String (1 :s 5C ]
-"187
-[; ;Lab02.c: 187:     Lcd_Write_Char(dec);
-[e ( _Lcd_Write_Char (1 -> _dec `uc ]
-"188
-[; ;Lab02.c: 188:     Lcd_Write_Char(un);
-[e ( _Lcd_Write_Char (1 -> _un `uc ]
-"189
-[; ;Lab02.c: 189:     _delay((unsigned long)((100)*(4000000/4000.0)));
+"174
+[; ;Lab02.c: 174:         _delay((unsigned long)((100)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"190
-[; ;Lab02.c: 190:     }
+"178
+[; ;Lab02.c: 178:     decimal(CONTADOR);
+[e ( _decimal (1 _CONTADOR ]
+"179
+[; ;Lab02.c: 179:     Lcd_Write_Char(cen);
+[e ( _Lcd_Write_Char (1 -> _cen `uc ]
+"180
+[; ;Lab02.c: 180:     Lcd_Write_Char(dec);
+[e ( _Lcd_Write_Char (1 -> _dec `uc ]
+"181
+[; ;Lab02.c: 181:     Lcd_Write_Char(un);
+[e ( _Lcd_Write_Char (1 -> _un `uc ]
+"182
+[; ;Lab02.c: 182:     Lcd_Write_String("  ");
+[e ( _Lcd_Write_String (1 :s 8C ]
+"183
+[; ;Lab02.c: 183:     _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"184
+[; ;Lab02.c: 184:     }
 }
 [e :U 225 ]
 [e $U 226  ]
 [e :U 227 ]
-"191
-[; ;Lab02.c: 191: }
+"185
+[; ;Lab02.c: 185: }
 [e :UE 224 ]
 }
-"196
-[; ;Lab02.c: 196: void setup(void){
+"190
+[; ;Lab02.c: 190: void setup(void){
 [v _setup `(v ~T0 @X0 1 ef ]
 {
 [e :U _setup ]
 [f ]
-"199
-[; ;Lab02.c: 199:   ANSELH = 0x00;
+"193
+[; ;Lab02.c: 193:   ANSELH = 0x00;
 [e = _ANSELH -> -> 0 `i `uc ]
-"200
-[; ;Lab02.c: 200:   ANSEL = 0B00000011;
+"194
+[; ;Lab02.c: 194:   ANSEL = 0B00000011;
 [e = _ANSEL -> -> 3 `i `uc ]
-"202
-[; ;Lab02.c: 202:   TRISA = 0B00000011;
+"196
+[; ;Lab02.c: 196:   TRISA = 0B00000011;
 [e = _TRISA -> -> 3 `i `uc ]
-"203
-[; ;Lab02.c: 203:   TRISCbits.TRISC6 = 0;
+"197
+[; ;Lab02.c: 197:   TRISCbits.TRISC6 = 0;
 [e = . . _TRISCbits 0 6 -> -> 0 `i `uc ]
-"204
-[; ;Lab02.c: 204:   TRISCbits.TRISC7 = 1;
+"198
+[; ;Lab02.c: 198:   TRISCbits.TRISC7 = 1;
 [e = . . _TRISCbits 0 7 -> -> 1 `i `uc ]
-"205
-[; ;Lab02.c: 205:   TRISD = 0X00;
+"199
+[; ;Lab02.c: 199:   TRISD = 0X00;
 [e = _TRISD -> -> 0 `i `uc ]
-"206
-[; ;Lab02.c: 206:   TRISE = 0X00;
+"200
+[; ;Lab02.c: 200:   TRISE = 0X00;
 [e = _TRISE -> -> 0 `i `uc ]
-"208
-[; ;Lab02.c: 208:   PORTA = 0X00;
+"202
+[; ;Lab02.c: 202:   PORTA = 0X00;
 [e = _PORTA -> -> 0 `i `uc ]
-"209
-[; ;Lab02.c: 209:   PORTB = 0X00;
+"203
+[; ;Lab02.c: 203:   PORTB = 0X00;
 [e = _PORTB -> -> 0 `i `uc ]
-"210
-[; ;Lab02.c: 210:   PORTC = 0X00;
+"204
+[; ;Lab02.c: 204:   PORTC = 0X00;
 [e = _PORTC -> -> 0 `i `uc ]
-"211
-[; ;Lab02.c: 211:   PORTD = 0X00;
+"205
+[; ;Lab02.c: 205:   PORTD = 0X00;
 [e = _PORTD -> -> 0 `i `uc ]
-"212
-[; ;Lab02.c: 212:   PORTE = 0X00;
+"206
+[; ;Lab02.c: 206:   PORTE = 0X00;
 [e = _PORTE -> -> 0 `i `uc ]
-"214
-[; ;Lab02.c: 214:   initAN(0b00000011, 0);
+"208
+[; ;Lab02.c: 208:   initAN(0b00000011, 0);
 [e ( _initAN (2 , -> -> 3 `i `uc -> -> 0 `i `uc ]
-"217
-[; ;Lab02.c: 217:   OSCCONbits.SCS = 1;
+"211
+[; ;Lab02.c: 211:   OSCCONbits.SCS = 1;
 [e = . . _OSCCONbits 0 0 -> -> 1 `i `uc ]
-"218
-[; ;Lab02.c: 218:   OSCCONbits.IRCF2 = 1;
+"212
+[; ;Lab02.c: 212:   OSCCONbits.IRCF2 = 1;
 [e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
-"219
-[; ;Lab02.c: 219:   OSCCONbits.IRCF1 = 1;
+"213
+[; ;Lab02.c: 213:   OSCCONbits.IRCF1 = 1;
 [e = . . _OSCCONbits 1 2 -> -> 1 `i `uc ]
-"220
-[; ;Lab02.c: 220:   OSCCONbits.IRCF0 = 0;
+"214
+[; ;Lab02.c: 214:   OSCCONbits.IRCF0 = 0;
 [e = . . _OSCCONbits 1 1 -> -> 0 `i `uc ]
-"223
-[; ;Lab02.c: 223:   OPTION_REG = 0B11000100;
+"217
+[; ;Lab02.c: 217:   OPTION_REG = 0B11000100;
 [e = _OPTION_REG -> -> 196 `i `uc ]
-"224
-[; ;Lab02.c: 224:   INTCONbits.GIE = 1;
+"218
+[; ;Lab02.c: 218:   INTCONbits.GIE = 1;
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"225
-[; ;Lab02.c: 225:   INTCONbits.PEIE = 1;
+"219
+[; ;Lab02.c: 219:   INTCONbits.PEIE = 1;
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"226
-[; ;Lab02.c: 226:   INTCONbits.T0IE = 1;
+"220
+[; ;Lab02.c: 220:   INTCONbits.T0IE = 1;
 [e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
-"227
-[; ;Lab02.c: 227:   INTCONbits.T0IF = 0;
+"221
+[; ;Lab02.c: 221:   INTCONbits.T0IF = 0;
 [e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-"228
-[; ;Lab02.c: 228:   PIE1bits.ADIE = 1;
+"222
+[; ;Lab02.c: 222:   PIE1bits.ADIE = 1;
 [e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
-"229
-[; ;Lab02.c: 229:   PIR1bits.ADIF = 0;
+"223
+[; ;Lab02.c: 223:   PIR1bits.ADIF = 0;
 [e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
-"232
-[; ;Lab02.c: 232:   PIR1bits.RCIF = 0;
+"226
+[; ;Lab02.c: 226:   PIR1bits.RCIF = 0;
 [e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
-"233
-[; ;Lab02.c: 233:   PIE1bits.RCIE = 0;
+"227
+[; ;Lab02.c: 227:   PIE1bits.RCIE = 0;
 [e = . . _PIE1bits 0 5 -> -> 0 `i `uc ]
-"234
-[; ;Lab02.c: 234:   PIE1bits.TXIE = 0;
+"228
+[; ;Lab02.c: 228:   PIE1bits.TXIE = 0;
 [e = . . _PIE1bits 0 4 -> -> 0 `i `uc ]
-"235
-[; ;Lab02.c: 235:   TXSTAbits.TX9 = 0;
+"229
+[; ;Lab02.c: 229:   TXSTAbits.TX9 = 0;
 [e = . . _TXSTAbits 0 6 -> -> 0 `i `uc ]
-"236
-[; ;Lab02.c: 236:   TXSTAbits.TXEN = 1;
+"230
+[; ;Lab02.c: 230:   TXSTAbits.TXEN = 1;
 [e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
-"237
-[; ;Lab02.c: 237:   TXSTAbits.SYNC = 0;
+"231
+[; ;Lab02.c: 231:   TXSTAbits.SYNC = 0;
 [e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
-"238
-[; ;Lab02.c: 238:   TXSTAbits.BRGH = 1;
+"232
+[; ;Lab02.c: 232:   TXSTAbits.BRGH = 1;
 [e = . . _TXSTAbits 0 2 -> -> 1 `i `uc ]
-"239
-[; ;Lab02.c: 239:   RCSTAbits.RX9 = 0;
+"233
+[; ;Lab02.c: 233:   RCSTAbits.RX9 = 0;
 [e = . . _RCSTAbits 0 6 -> -> 0 `i `uc ]
-"240
-[; ;Lab02.c: 240:   RCSTAbits.CREN = 1;
+"234
+[; ;Lab02.c: 234:   RCSTAbits.CREN = 1;
 [e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
-"241
-[; ;Lab02.c: 241:   RCSTAbits.SPEN = 1;
+"235
+[; ;Lab02.c: 235:   RCSTAbits.SPEN = 1;
 [e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
-"245
-[; ;Lab02.c: 245:   BAUDCTLbits.BRG16 = 0;
+"239
+[; ;Lab02.c: 239:   BAUDCTLbits.BRG16 = 0;
 [e = . . _BAUDCTLbits 0 3 -> -> 0 `i `uc ]
-"246
-[; ;Lab02.c: 246:   SPBRG = 25;
+"240
+[; ;Lab02.c: 240:   SPBRG = 25;
 [e = _SPBRG -> -> 25 `i `uc ]
-"247
-[; ;Lab02.c: 247:   SPBRGH = 1;
+"241
+[; ;Lab02.c: 241:   SPBRGH = 1;
 [e = _SPBRGH -> -> 1 `i `uc ]
-"248
-[; ;Lab02.c: 248: }
+"242
+[; ;Lab02.c: 242: }
 [e :UE 238 ]
 }
-"254
-[; ;Lab02.c: 254: void decimal(uint8_t var){
+"248
+[; ;Lab02.c: 248: void decimal(uint8_t var){
 [v _decimal `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _decimal ]
 [v _var `uc ~T0 @X0 1 r1 ]
 [f ]
-"255
-[; ;Lab02.c: 255:     uint8_t VAL;
+"249
+[; ;Lab02.c: 249:     uint8_t VAL;
 [v _VAL `uc ~T0 @X0 1 a ]
-"256
-[; ;Lab02.c: 256:     VAL = var;
+"250
+[; ;Lab02.c: 250:     VAL = var;
 [e = _VAL _var ]
-"257
-[; ;Lab02.c: 257:     cen = (VAL/100) ;
+"251
+[; ;Lab02.c: 251:     cen = (VAL/100) ;
 [e = _cen -> / -> _VAL `i -> 100 `i `uc ]
-"258
-[; ;Lab02.c: 258:     VAL = (VAL - (cen*100));
+"252
+[; ;Lab02.c: 252:     VAL = (VAL - (cen*100));
 [e = _VAL -> - -> _VAL `i * -> _cen `i -> 100 `i `uc ]
-"259
-[; ;Lab02.c: 259:     dec = (VAL/10);
+"253
+[; ;Lab02.c: 253:     dec = (VAL/10);
 [e = _dec -> / -> _VAL `i -> 10 `i `uc ]
-"260
-[; ;Lab02.c: 260:     VAL = (VAL - (dec*10));
+"254
+[; ;Lab02.c: 254:     VAL = (VAL - (dec*10));
 [e = _VAL -> - -> _VAL `i * -> _dec `i -> 10 `i `uc ]
-"261
-[; ;Lab02.c: 261:     un = (VAL);
+"255
+[; ;Lab02.c: 255:     un = (VAL);
 [e = _un _VAL ]
-"263
-[; ;Lab02.c: 263:     cen = cen + 48;
+"257
+[; ;Lab02.c: 257:     cen = cen + 48;
 [e = _cen -> + -> _cen `i -> 48 `i `uc ]
-"264
-[; ;Lab02.c: 264:     dec = dec + 48;
+"258
+[; ;Lab02.c: 258:     dec = dec + 48;
 [e = _dec -> + -> _dec `i -> 48 `i `uc ]
-"265
-[; ;Lab02.c: 265:     un = un + 48;
+"259
+[; ;Lab02.c: 259:     un = un + 48;
 [e = _un -> + -> _un `i -> 48 `i `uc ]
-"266
-[; ;Lab02.c: 266: }
+"260
+[; ;Lab02.c: 260: }
 [e :UE 239 ]
 }
-"268
-[; ;Lab02.c: 268: void putch(char info){
+"262
+[; ;Lab02.c: 262: void putch(char info){
 [v _putch `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _putch ]
 [v _info `uc ~T0 @X0 1 r1 ]
 [f ]
-"269
-[; ;Lab02.c: 269:     while (TXIF == 0);
+"263
+[; ;Lab02.c: 263:     while (TXIF == 0);
 [e $U 241  ]
 [e :U 242 ]
 [e :U 241 ]
 [e $ == -> _TXIF `i -> 0 `i 242  ]
 [e :U 243 ]
-"270
-[; ;Lab02.c: 270:     TXREG = info;
+"264
+[; ;Lab02.c: 264:     TXREG = info;
 [e = _TXREG -> _info `uc ]
-"272
-[; ;Lab02.c: 272: }
+"266
+[; ;Lab02.c: 266: }
 [e :UE 240 ]
 }
 [p f _printf 8388608 ]
 [a 1C 83 49 58 32 32 32 83 50 58 32 32 32 83 51 58 0 ]
+[a 2C 46 0 ]
 [a 5C 46 0 ]
-[a 2C 32 32 32 0 ]
-[a 4C 86 65 76 79 82 32 68 69 32 80 79 84 32 50 58 32 13 0 ]
-[a 3C 86 65 76 79 82 32 68 69 32 80 79 84 32 49 58 32 13 0 ]
+[a 3C 32 32 0 ]
+[a 6C 32 32 0 ]
+[a 8C 32 32 0 ]
+[a 7C 86 65 76 79 82 32 68 69 32 80 79 84 32 50 58 32 13 0 ]
+[a 4C 86 65 76 79 82 32 68 69 32 80 79 84 32 49 58 32 13 0 ]

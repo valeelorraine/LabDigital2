@@ -21,15 +21,15 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"79 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab02\Lab02.X\Lab02.c
+"70 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab02\Lab02.X\Lab02.c
 [v _isr isr `II(v  1 e 1 0 ]
-"109
+"100
 [v _main main `(v  1 e 1 0 ]
-"196
+"190
 [v _setup setup `(v  1 e 1 0 ]
-"254
+"248
 [v _decimal decimal `(v  1 e 1 0 ]
-"268
+"262
 [v _putch putch `(v  1 e 1 0 ]
 "16 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab02\Lab02.X\LCD.c
 [v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
@@ -235,29 +235,29 @@
 [v _T0IF T0IF `VEb  1 e 0 @90 ]
 "4544
 [v _TXIF TXIF `VEb  1 e 0 @100 ]
-"53 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab02\Lab02.X\Lab02.c
-[v _contador contador `uc  1 e 1 0 ]
-"58
+"50 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab02\Lab02.X\Lab02.c
+[v _CONTADOR CONTADOR `uc  1 e 1 0 ]
+"52
 [v _RXREC RXREC `uc  1 e 1 0 ]
-"59
+"53
 [v _VAL1 VAL1 `uc  1 e 1 0 ]
-"60
+"54
 [v _VAL2 VAL2 `uc  1 e 1 0 ]
-"61
+"55
 [v _un un `uc  1 e 1 0 ]
-"62
+"56
 [v _dec dec `uc  1 e 1 0 ]
-"63
+"57
 [v _cen cen `uc  1 e 1 0 ]
-"109
+"100
 [v _main main `(v  1 e 1 0 ]
 {
-"191
+"185
 } 0
-"196
+"190
 [v _setup setup `(v  1 e 1 0 ]
 {
-"248
+"242
 } 0
 "76 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab02\Lab02.X/config_ADC.h
 [v _initAN initAN `(v  1 e 1 0 ]
@@ -282,25 +282,25 @@
 [v printf@f f `*.24DCuc  1 a 1 7 ]
 "1567
 } 0
-"268 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab02\Lab02.X\Lab02.c
+"262 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab02\Lab02.X\Lab02.c
 [v _putch putch `(v  1 e 1 0 ]
 {
 [v putch@info info `uc  1 a 1 wreg ]
 [v putch@info info `uc  1 a 1 wreg ]
 [v putch@info info `uc  1 a 1 3 ]
-"272
+"266
 } 0
-"254
+"248
 [v _decimal decimal `(v  1 e 1 0 ]
 {
 [v decimal@var var `uc  1 a 1 wreg ]
-"255
+"249
 [v decimal@VAL VAL `uc  1 a 1 8 ]
-"254
+"248
 [v decimal@var var `uc  1 a 1 wreg ]
-"256
+"250
 [v decimal@var var `uc  1 a 1 7 ]
-"266
+"260
 } 0
 "4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
 [v ___bmul __bmul `(uc  1 e 1 0 ]
@@ -402,8 +402,8 @@
 [v Lcd_Port@a a `uc  1 a 1 3 ]
 "18
 } 0
-"79 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab02\Lab02.X\Lab02.c
+"70 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab02\Lab02.X\Lab02.c
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"104
+"95
 } 0
