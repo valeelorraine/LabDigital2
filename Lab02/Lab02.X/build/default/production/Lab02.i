@@ -1,4 +1,4 @@
-# 1 "Lab01.c"
+# 1 "Lab02.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "Lab01.c" 2
-# 18 "Lab01.c"
+# 1 "Lab02.c" 2
+# 16 "Lab02.c"
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2488,7 +2488,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 18 "Lab01.c" 2
+# 16 "Lab02.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 3
@@ -2623,7 +2623,279 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 19 "Lab01.c" 2
+# 17 "Lab02.c" 2
+
+# 1 "./config_ADC.h" 1
+# 14 "./config_ADC.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
+# 14 "./config_ADC.h" 2
+# 25 "./config_ADC.h"
+void initOsc(uint8_t frec){
+    OSCCONbits.SCS = 1;
+        switch(frec){
+            case 8:
+                OSCCONbits.IRCF0 = 1;
+                OSCCONbits.IRCF1 = 1;
+                OSCCONbits.IRCF2 = 1;
+                break;
+            case 4:
+                OSCCONbits.IRCF0 = 0;
+                OSCCONbits.IRCF1 = 1;
+                OSCCONbits.IRCF2 = 1;
+                break;
+            case 2:
+                OSCCONbits.IRCF0 = 1;
+                OSCCONbits.IRCF1 = 0;
+                OSCCONbits.IRCF2 = 1;
+                break;
+             case 1:
+                OSCCONbits.IRCF0 = 0;
+                OSCCONbits.IRCF1 = 0;
+                OSCCONbits.IRCF2 = 1;
+                break;
+             case 50:
+                OSCCONbits.IRCF0 = 0;
+                OSCCONbits.IRCF1 = 1;
+                OSCCONbits.IRCF2 = 1;
+                break;
+             case 25:
+                OSCCONbits.IRCF0 = 0;
+                OSCCONbits.IRCF1 = 1;
+                OSCCONbits.IRCF2 = 0;
+                break;
+              case 12:
+                OSCCONbits.IRCF0 = 1;
+                OSCCONbits.IRCF1 = 0;
+                OSCCONbits.IRCF2 = 0;
+                break;
+              case 31:
+                OSCCONbits.IRCF0 = 0;
+                OSCCONbits.IRCF1 = 1;
+                OSCCONbits.IRCF2 = 1;
+                break;
+              default:
+                OSCCONbits.IRCF0 = 0;
+                OSCCONbits.IRCF1 = 1;
+                OSCCONbits.IRCF2 = 1;
+                break;
+        }
+}
+
+void initAN(uint8_t bin, uint8_t just){
+     ANSEL = bin;
+     ANSELH = 0x00;
+     TRISA = bin;
+
+     ADCON0bits.CHS= 0;
+     _delay((unsigned long)((100)*(4000000/4000000.0)));
+
+     ADCON0bits.ADON = 1;
+     ADCON0bits.ADCS = 1;
+     ADCON1bits.ADFM = just;
+     ADCON1bits.VCFG0 = 0;
+     ADCON1bits.VCFG1 = 0;
+
+     PIE1bits.ADIE= 1;
+   }
+
+
+void chselect (uint8_t cant){
+    if(ADCON0bits.GO == 0){
+      switch (ADCON0bits.CHS){
+
+          case 0:
+            if (cant == 1){
+                ADCON0bits.CHS = 0;
+            }
+            else{
+                ADCON0bits.CHS = 1;
+            }
+            break;
+         case 1:
+            if (cant == 2){
+                ADCON0bits.CHS = 0;
+            }
+            else{
+                ADCON0bits.CHS = 2;
+            }
+            break;
+         case 2:
+            if (cant == 3){
+                ADCON0bits.CHS = 0;
+            }
+            else{
+                ADCON0bits.CHS = 3;
+            }
+            break;
+         case 3:
+            if (cant == 4){
+                ADCON0bits.CHS = 0;
+            }
+            else{
+                ADCON0bits.CHS = 4;
+            }
+            break;
+         case 4:
+            if (cant == 5){
+                ADCON0bits.CHS = 0;
+            }
+            else{
+                ADCON0bits.CHS = 5;
+            }
+            break;
+         case 5:
+            if (cant == 6){
+                ADCON0bits.CHS = 0;
+            }
+            else{
+                ADCON0bits.CHS = 6;
+            }
+            break;
+         case 6:
+            if (cant == 7){
+                ADCON0bits.CHS = 0;
+            }
+            else{
+                ADCON0bits.CHS = 7;
+            }
+            break;
+         case 7:
+            if (cant == 8){
+                ADCON0bits.CHS = 0;
+            }
+            else{
+                ADCON0bits.CHS = 8;
+            }
+            break;
+         case 8:
+            if (cant == 9){
+                ADCON0bits.CHS = 0;
+            }
+            else{
+                ADCON0bits.CHS = 9;
+            }
+            break;
+         case 9:
+            if (cant == 10){
+                ADCON0bits.CHS = 0;
+            }
+            else{
+                ADCON0bits.CHS = 10;
+            };
+            break;
+         case 10:
+            if (cant == 11){
+                ADCON0bits.CHS = 0;
+            }
+            else{
+                ADCON0bits.CHS = 11;
+            }
+            break;
+         case 11:
+            if (cant == 12){
+                ADCON0bits.CHS = 0;
+            }
+            else{
+                ADCON0bits.CHS = 12;
+            }
+            break;
+         case 12:
+            if (cant == 13){
+                ADCON0bits.CHS = 0;
+            }
+            else{
+                ADCON0bits.CHS = 13;
+            }
+            break;
+         case 13:
+                ADCON0bits.CHS = 0;
+            break;
+        }
+    }
+    _delay((unsigned long)((150)*(4000000/4000000.0)));
+    ADCON0bits.GO = 1;
+}
+
+
+uint8_t table(uint8_t val){
+    uint8_t tempo;
+
+    switch(val){
+        case 0:
+            tempo = 0b00111111;
+            break;
+        case 1:
+            tempo = 0b00000110;
+            break;
+        case 2:
+            tempo = 0b01011011;
+            break;
+        case 3:
+            tempo = 0b01001111;
+            break;
+        case 4:
+            tempo = 0b01100110;
+            break;
+        case 5:
+            tempo = 0b01101101;
+            break;
+        case 6:
+            tempo = 0b01111101;
+            break;
+        case 7:
+            tempo = 0b00000111;
+            break;
+        case 8:
+            tempo = 0b01111111;
+            break;
+        case 9:
+            tempo = 0b01100111;
+            break;
+        case 10:
+            tempo = 0b01110111;
+            break;
+        case 11:
+            tempo = 0b01111100;
+            break;
+        case 12:
+            tempo = 0b00111001;
+            break;
+        case 13:
+            tempo = 0b01011110;
+            break;
+        case 14:
+            tempo = 0b01111001;
+            break;
+        case 15:
+            tempo = 0b01110001;
+            break;
+            default:
+                tempo = 0b00111111;
+        }
+        return(tempo);
+}
+# 18 "Lab02.c" 2
+
+# 1 "./LCD.h" 1
+# 64 "./LCD.h"
+void Lcd_Port(char a);
+
+void Lcd_Cmd(char a);
+
+void Lcd_Clear(void);
+
+void Lcd_Set_Cursor(char a, char b);
+
+void Lcd_Init(void);
+
+void Lcd_Write_Char(char a);
+
+void Lcd_Write_String(char *a);
+
+void Lcd_Shift_Right(void);
+
+void Lcd_Shift_Left(void);
+# 19 "Lab02.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 1 3
 
@@ -2722,96 +2994,7 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 #pragma printf_check(sprintf) const
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
-# 20 "Lab01.c" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdlib.h" 1 3
-
-
-
-
-
-
-typedef unsigned short wchar_t;
-
-
-
-
-
-
-
-typedef struct {
- int rem;
- int quot;
-} div_t;
-typedef struct {
- unsigned rem;
- unsigned quot;
-} udiv_t;
-typedef struct {
- long quot;
- long rem;
-} ldiv_t;
-typedef struct {
- unsigned long quot;
- unsigned long rem;
-} uldiv_t;
-# 65 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdlib.h" 3
-extern double atof(const char *);
-extern double strtod(const char *, const char **);
-extern int atoi(const char *);
-extern unsigned xtoi(const char *);
-extern long atol(const char *);
-
-
-
-extern long strtol(const char *, char **, int);
-
-extern int rand(void);
-extern void srand(unsigned int);
-extern void * calloc(size_t, size_t);
-extern div_t div(int numer, int denom);
-extern udiv_t udiv(unsigned numer, unsigned denom);
-extern ldiv_t ldiv(long numer, long denom);
-extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
-
-
-
-extern unsigned long _lrotl(unsigned long value, unsigned int shift);
-extern unsigned long _lrotr(unsigned long value, unsigned int shift);
-extern unsigned int _rotl(unsigned int value, unsigned int shift);
-extern unsigned int _rotr(unsigned int value, unsigned int shift);
-
-
-
-
-extern void * malloc(size_t);
-extern void free(void *);
-extern void * realloc(void *, size_t);
-# 104 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdlib.h" 3
-extern int atexit(void (*)(void));
-extern char * getenv(const char *);
-extern char ** environ;
-extern int system(char *);
-extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
-extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
-extern int abs(int);
-extern long labs(long);
-
-extern char * itoa(char * buf, int val, int base);
-extern char * utoa(char * buf, unsigned val, int base);
-
-
-
-
-extern char * ltoa(char * buf, long val, int base);
-extern char * ultoa(char * buf, unsigned long val, int base);
-
-extern char * ftoa(float f, int * status);
-# 21 "Lab01.c" 2
-
-# 1 "./Libreria01.h" 1
-# 22 "Lab01.c" 2
-
+# 20 "Lab02.c" 2
 
 
 
@@ -2833,94 +3016,147 @@ extern char * ftoa(float f, int * status);
 
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
-# 54 "Lab01.c"
-unsigned char DISPLAY = 1;
-unsigned char FLAG = 0X00;
-unsigned char FLAG1 = 0X00;
-unsigned char VAL = 0X00;
-unsigned char LOW;
-unsigned char HIGH;
-
-
-
-
-char NUMEROS[16] = {
-    0B00111111,
-    0B00000110,
-    0B01011011,
-    0B01001111,
-    0B01100110,
-    0B01101101,
-    0B01111101,
-    0B00000111,
-    0B01111111,
-    0B01100111,
-    0B01110111,
-    0B01111100,
-    0B00111001,
-    0B01011110,
-    0B01111001,
-    0B01110001,
-    };
+# 50 "Lab02.c"
+uint8_t FLAG;
+uint8_t startfinal;
+uint8_t start;
+uint8_t contador;
+uint8_t disp0;
+uint8_t disp1;
+uint8_t tempo1;
+uint8_t VUART;
+uint8_t RXREC;
+unsigned char VAL1;
+unsigned char VAL2;
+unsigned char un;
+unsigned char dec;
+unsigned char cen;
 
 
 
 
 void setup(void);
-void VALORES(unsigned int);
-void HEX(unsigned int);
+void inicio(void);
+void final (void);
+uint8_t table(uint8_t);
+void dispasign(uint8_t , uint8_t );
+void hexconv(uint8_t );
+void decimal(uint8_t );
 
 
 
 
-void __attribute__((picinterrupt(("")))) isr(void){
-    if(T0IF == 1){
-        TMR0 = 100;
-
-        switch(DISPLAY){
-        case 1:
-            PORTE = 0X00;
-            PORTC = NUMEROS[HIGH];
-            PORTEbits.RE0 = 1;
-            DISPLAY = 2;
-            break;
-        case 2:
-            PORTE = 0X00;
-            PORTC = NUMEROS[LOW];
-            PORTEbits.RE1 = 1;
-            DISPLAY = 1;
-            break;
-            }
-        INTCONbits.T0IF = 0;
+void __attribute__((picinterrupt((""))))isr(void){
+    if (T0IF==1){
+    INTCONbits.T0IF = 0;
     }
 
-
     if(PIR1bits.ADIF == 1){
-        if(ADCON0bits.CHS == 8){
-           VAL = ADRESH;
-       }
+        if(ADCON0bits.CHS == 0){
+            VAL1 = ADRESH;
+        }
+        else{
+            VAL2 = ADRESH;
+        }
         PIR1bits.ADIF = 0;
     }
 
+    if(PIR1bits.RCIF == 1){
+        RXREC = RCREG;
+        if (RXREC == 43){
+            contador++;
+        }
+        if (RXREC == 45){
+            contador--;
+        }
+        PIR1bits.RCIF = 0;
+    }
+}
 
-    if(INTCONbits.RBIF == 1){
-        if(PORTBbits.RB0 == 0){
-            FLAG = 1;}
-        else{
-            if(FLAG == 1){
-                FLAG = 0;
-                PORTA++;
-            }
-        }
-        if(PORTBbits.RB1 == 0){
-            FLAG1 = 1;}
-        else{
-            if(FLAG1 == 1){
-                FLAG1 = 0;
-                PORTA--;
-            }
-        }
-        INTCONbits.RBIF = 0;
+
+
+
+void main(void) {
+    setup();
+    Lcd_Init();
+    Lcd_Clear();
+    Lcd_Set_Cursor(1,1);
+    Lcd_Write_String("S1:   S2:   S3:");
+
+while(1) {
+    chselect(2);
+
+    decimal(VAL1);
+    Lcd_Set_Cursor(2,1);
+    Lcd_Write_Char(cen);
+    Lcd_Write_Char(dec);
+    Lcd_Write_Char(un);
+    Lcd_Write_String("   ");
+
+    if(PIR1bits.TXIF == 1){
+        _delay((unsigned long)((150)*(4000000/4000.0)));
+        printf("VALOR DE POT 1: \r");
+        _delay((unsigned long)((150)*(4000000/4000.0)));
+        TXREG = cen;
+           }
+        _delay((unsigned long)((10)*(4000000/4000.0)));
+        if(PIR1bits.TXIF == 1){
+            TXREG = 46;
+           }
+        _delay((unsigned long)((10)*(4000000/4000.0)));
+        if(PIR1bits.TXIF == 1){
+            TXREG = dec;
+           }
+        _delay((unsigned long)((10)*(4000000/4000.0)));
+        if(PIR1bits.TXIF == 1){
+            TXREG = un;
+           }
+        _delay((unsigned long)((10)*(4000000/4000.0)));
+        if(PIR1bits.TXIF == 1){
+            TXREG = 13;
+           }
+        _delay((unsigned long)((150)*(4000000/4000.0)));
+
+
+
+    decimal(VAL2);
+    Lcd_Write_Char(cen);
+    Lcd_Write_Char(dec);
+    Lcd_Write_Char(un);
+    _delay((unsigned long)((1500)*(4000000/4000000.0)));
+
+    if(PIR1bits.TXIF == 1){
+        _delay((unsigned long)((150)*(4000000/4000.0)));
+        printf("VALOR DE POT 2: \r");
+        _delay((unsigned long)((150)*(4000000/4000.0)));
+            TXREG = cen;
+           }
+        _delay((unsigned long)((10)*(4000000/4000.0)));
+        if(PIR1bits.TXIF == 1){
+            TXREG = 46;
+           }
+        _delay((unsigned long)((10)*(4000000/4000.0)));
+        if(PIR1bits.TXIF == 1){
+            TXREG = dec;
+           }
+        _delay((unsigned long)((10)*(4000000/4000.0)));
+        if(PIR1bits.TXIF == 1){
+            TXREG = un;
+           }
+        _delay((unsigned long)((10)*(4000000/4000.0)));
+        if(PIR1bits.TXIF == 1){
+            TXREG = 13;
+           }
+        _delay((unsigned long)((150)*(4000000/4000.0)));
+
+
+
+    decimal(contador);
+    Lcd_Write_Char(cen);
+    Lcd_Write_String(".");
+    Lcd_Write_Char(dec);
+    Lcd_Write_Char(un);
+    _delay((unsigned long)((100)*(4000000/4000.0)));
     }
 }
 
@@ -2930,78 +3166,77 @@ void __attribute__((picinterrupt(("")))) isr(void){
 void setup(void){
 
 
-    ANSEL = 0X00;
-    ANSELH = 0B00001000;
+  ANSELH = 0x00;
+  ANSEL = 0B00000011;
 
-    TRISA = 0X00;
-    TRISB = 0B00000011;
-    TRISC = 0X00;
-    TRISE = 0X00;
+  TRISA = 0B00000011;
+  TRISCbits.TRISC6 = 0;
+  TRISCbits.TRISC7 = 1;
+  TRISD = 0X00;
+  TRISE = 0X00;
 
-    PORTA = 0X00;
-    PORTB = 0X00;
-    PORTC = 0X00;
-    PORTE = 0X00;
+  PORTA = 0X00;
+  PORTB = 0X00;
+  PORTC = 0X00;
+  PORTD = 0X00;
+  PORTE = 0X00;
 
-
-    OSCCONbits.SCS = 1;
-    OSCCONbits.IRCF2 = 1;
-    OSCCONbits.IRCF1 = 1;
-    OSCCONbits.IRCF0 = 0;
+  initAN(0b00000011, 0);
 
 
-    IOCB = 0B00000011;
-    WPUB = 0B00000011;
+  OSCCONbits.SCS = 1;
+  OSCCONbits.IRCF2 = 1;
+  OSCCONbits.IRCF1 = 1;
+  OSCCONbits.IRCF0 = 0;
 
 
-    ADCON0bits.ADON = 1;
-    ADCON0bits.CHS = 8;
+  OPTION_REG = 0B11000100;
+  INTCONbits.GIE = 1;
+  INTCONbits.PEIE = 1;
+  INTCONbits.T0IE = 1;
+  INTCONbits.T0IF = 0;
+  PIE1bits.ADIE = 1;
+  PIR1bits.ADIF = 0;
 
 
-    ADCON0bits.ADCS = 1;
-    ADCON1bits.ADFM = 0;
-    ADCON1bits.VCFG0 = 0;
-    ADCON1bits.VCFG1 = 0;
-
-
-    OPTION_REG = 0B00000101;
-    TMR0 = 100;
-    INTCONbits.GIE = 1;
-    INTCONbits.PEIE = 1;
-    INTCONbits.T0IE = 1;
-    INTCONbits.RBIE = 1;
-    INTCONbits.T0IF = 0;
-    INTCONbits.RBIF = 0;
-    PIE1bits.ADIE = 1;
-    PIR1bits.ADIF = 0;
-    }
+  PIR1bits.RCIF = 0;
+  PIE1bits.RCIE = 0;
+  PIE1bits.TXIE = 0;
+  TXSTAbits.TX9 = 0;
+  TXSTAbits.TXEN = 1;
+  TXSTAbits.SYNC = 0;
+  TXSTAbits.BRGH = 1;
+  RCSTAbits.RX9 = 0;
+  RCSTAbits.CREN = 1;
+  RCSTAbits.SPEN = 1;
 
 
 
-
-void main(void){
-    setup();
-    while (1){
-        ADCON0bits.GO = 1;
-        HEX(VAL);
-        _delay((unsigned long)((100)*(4000000/4000000.0)));
-        if(VAL == PORTA){
-            PORTBbits.RB3 = 1;
-            }
-        else{
-            PORTBbits.RB3 = 0;
-        }
-        }
-    }
+  BAUDCTLbits.BRG16 = 0;
+  SPBRG = 25;
+  SPBRGH = 1;
+}
 
 
 
 
 
-void HEX(unsigned int arg1){
-    unsigned int temp;
-    temp = arg1;
-    LOW = VAL & 0x0F;
-    HIGH = VAL & 0xF0;
-    HIGH >>= 4;
-  }
+void decimal(uint8_t var){
+    uint8_t VAL;
+    VAL = var;
+    cen = (VAL/100) ;
+    VAL = (VAL - (cen*100));
+    dec = (VAL/10);
+    VAL = (VAL - (dec*10));
+    un = (VAL);
+
+    cen = cen + 48;
+    dec = dec + 48;
+    un = un + 48;
+}
+
+void putch(char info){
+    while (TXIF == 0);
+    TXREG = info;
+
+}
