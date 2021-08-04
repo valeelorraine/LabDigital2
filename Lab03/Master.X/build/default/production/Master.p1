@@ -929,8 +929,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Master.c: 249: }
 [e :UE 185 ]
 }
-[p f _printf 8388608 ]
 [p f _sprintf 8388736 ]
+[p f _printf 8388608 ]
 [a 5C 37 100 0 ]
 [a 6C 37 100 0 ]
 [a 7C 37 100 0 ]

@@ -64,15 +64,6 @@ void setup(void);                  // Configuraciones
 //                     F U N C I Ó N   para   I S R
 //******************************************************************************
 void __interrupt() isr(void){
-//    if(PIR1bits.ADIF == 1){        // Obtener valor del potenciómetro
-//        if(ADCON0bits.CHS == 0){   // Switcheo de canales
-//            vol2 = ADRESH;         // Obtener el valor y guardarlo en vol2
-//            }
-//        else{
-//            vol1 = ADRESH;         // Obtener el valor y guardarlo en vol1
-//        }
-//        PIR1bits.ADIF = 0;      // Limpiar bandera 
-//    }
     if(PIR1bits.ADIF == 1){       // Obtener valor del potenciómetro
         if(ADCON0bits.CHS == 0){  // Switcheo de canales
             ADCON0bits.CHS = 1;

@@ -340,7 +340,7 @@ text5 170 17D CODE 170 0
 text3 164 16F CODE 164 0
 %locals
 dist/default/production\Master.X.production.o
-C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
+C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
 1152 7F3 0 CODE 0
 1155 7F3 0 CODE 0
 1214 7F3 0 CODE 0
@@ -695,7 +695,7 @@ C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
 49 1C9 0 CODE 0
 52 1CF 0 CODE 0
 53 1D3 0 CODE 0
-C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
+C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
 5979 3 0 ENTRY 0
 5981 3 0 ENTRY 0
 5982 3 0 ENTRY 0

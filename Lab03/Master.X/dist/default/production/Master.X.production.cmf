@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\PERSON~1\AppData\Local\Temp\sgms.o
+$C:\Users\PERSON~1\AppData\Local\Temp\sfoo.o
 end_init CODE 0 0 0 3 2
 config CONFIG 4 2007 2007 2 2
 $dist/default/production\Master.X.production.o
@@ -93,28 +93,28 @@ STRING 905-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Master.X.production.o
-7F3 cinit CODE >1152:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-7F3 cinit CODE >1155:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-7F3 cinit CODE >1214:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-7F4 cinit CODE >1215:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-7F5 cinit CODE >1216:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-7F6 cinit CODE >1217:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-7F7 cinit CODE >1218:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-7FC cinit CODE >1224:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-7FC cinit CODE >1226:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-7FD cinit CODE >1227:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-3 functab ENTRY >5979:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-3 functab ENTRY >5981:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-3 functab ENTRY >5982:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-3 functab ENTRY >5983:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-4 functab ENTRY >5984:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-5 functab ENTRY >5985:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-6 functab ENTRY >5986:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-7 functab ENTRY >5987:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-8 functab ENTRY >5989:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-8 functab ENTRY >5990:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-9 functab ENTRY >5993:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-9 functab ENTRY >5994:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
+7F3 cinit CODE >1152:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+7F3 cinit CODE >1155:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+7F3 cinit CODE >1214:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+7F4 cinit CODE >1215:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+7F5 cinit CODE >1216:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+7F6 cinit CODE >1217:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+7F7 cinit CODE >1218:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+7FC cinit CODE >1224:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+7FC cinit CODE >1226:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+7FD cinit CODE >1227:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+3 functab ENTRY >5979:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+3 functab ENTRY >5981:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+3 functab ENTRY >5982:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+3 functab ENTRY >5983:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+4 functab ENTRY >5984:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+5 functab ENTRY >5985:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+6 functab ENTRY >5986:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+7 functab ENTRY >5987:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+8 functab ENTRY >5989:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+8 functab ENTRY >5990:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+9 functab ENTRY >5993:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+9 functab ENTRY >5994:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
 1AF text24 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
 1AF text24 CODE >43:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
 1B1 text24 CODE >45:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
@@ -430,16 +430,16 @@ B7 text3 CODE >37:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electro
 7DD maintext CODE >173:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab03\Master.X\Master.c
 7E1 maintext CODE >174:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab03\Master.X\Master.c
 7EB maintext CODE >175:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab03\Master.X\Master.c
-BF clrtext CODE >1201:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-BF clrtext CODE >1202:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-C0 clrtext CODE >1203:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-C0 clrtext CODE >1204:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-C1 clrtext CODE >1205:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-C2 clrtext CODE >1206:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-C3 clrtext CODE >1207:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-C4 clrtext CODE >1208:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-C5 clrtext CODE >1209:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
-C6 clrtext CODE >1210:C:\Users\PERSON~1\AppData\Local\Temp\sgms.s
+BF clrtext CODE >1201:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+BF clrtext CODE >1202:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+C0 clrtext CODE >1203:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+C0 clrtext CODE >1204:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+C1 clrtext CODE >1205:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+C2 clrtext CODE >1206:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+C3 clrtext CODE >1207:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+C4 clrtext CODE >1208:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+C5 clrtext CODE >1209:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
+C6 clrtext CODE >1210:C:\Users\PERSON~1\AppData\Local\Temp\sfoo.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -477,11 +477,11 @@ __size_of_mensaje2 0 0 ABS 0 - dist/default/production\Master.X.production.o
 __Hstrings 18 0 ABS 0 strings -
 _RCIF 65 0 ABS 0 - dist/default/production\Master.X.production.o
 _TXIF 64 0 ABS 0 - dist/default/production\Master.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\PERSON~1\AppData\Local\Temp\sgms.o
+___sp 0 0 STACK 2 stack C:\Users\PERSON~1\AppData\Local\Temp\sfoo.o
 _atoi 920 0 CODE 0 text22 dist/default/production\Master.X.production.o
 _main CA6 0 CODE 0 maintext dist/default/production\Master.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Master.X.production.o
-start 0 0 CODE 0 init C:\Users\PERSON~1\AppData\Local\Temp\sgms.o
+start 0 0 CODE 0 init C:\Users\PERSON~1\AppData\Local\Temp\sfoo.o
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\Master.X.production.o
 __size_of___awmod 0 0 ABS 0 - dist/default/production\Master.X.production.o
 __pfunctab 6 0 ENTRY 0 functab dist/default/production\Master.X.production.o
@@ -496,12 +496,12 @@ __Hpowerup 0 0 CODE 0 powerup -
 printf@f 54 0 BANK0 1 cstackBANK0 dist/default/production\Master.X.production.o
 ___awmod@sign 76 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
 __size_of__doprnt 0 0 ABS 0 - dist/default/production\Master.X.production.o
-intlevel0 6 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\sgms.o
-intlevel1 6 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\sgms.o
-intlevel2 6 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\sgms.o
-intlevel3 6 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\sgms.o
-intlevel4 6 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\sgms.o
-intlevel5 6 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\sgms.o
+intlevel0 6 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\sfoo.o
+intlevel1 6 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\sfoo.o
+intlevel2 6 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\sfoo.o
+intlevel3 6 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\sfoo.o
+intlevel4 6 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\sfoo.o
+intlevel5 6 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\sfoo.o
 _division 786 0 CODE 0 text19 dist/default/production\Master.X.production.o
 strcat@from 70 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Master.X.production.o
@@ -533,8 +533,8 @@ __end_of___awmod 5F2 0 CODE 0 text20 dist/default/production\Master.X.production
 __end_of___lwdiv 540 0 CODE 0 text18 dist/default/production\Master.X.production.o
 __end_of___lwmod 4B8 0 CODE 0 text17 dist/default/production\Master.X.production.o
 __size_of_isdigit 0 0 ABS 0 - dist/default/production\Master.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\PERSON~1\AppData\Local\Temp\sgms.o
-___stacklo 0 0 ABS 0 - C:\Users\PERSON~1\AppData\Local\Temp\sgms.o
+___stackhi 0 0 ABS 0 - C:\Users\PERSON~1\AppData\Local\Temp\sfoo.o
+___stacklo 0 0 ABS 0 - C:\Users\PERSON~1\AppData\Local\Temp\sfoo.o
 _dpowers 1024 0 STRCODE 0 stringtext dist/default/production\Master.X.production.o
 _BAUDCTLbits 187 0 ABS 0 - dist/default/production\Master.X.production.o
 ___lwdiv@quotient 75 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
@@ -555,7 +555,7 @@ _TRISC5 43D 0 ABS 0 - dist/default/production\Master.X.production.o
 __end_of_printf 236 0 CODE 0 text14 dist/default/production\Master.X.production.o
 _residuo 23 0 BANK0 1 bssBANK0 dist/default/production\Master.X.production.o
 __size_of_precaucion 0 0 ABS 0 - dist/default/production\Master.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\PERSON~1\AppData\Local\Temp\sgms.o
+___int_sp 0 0 STACK 2 stack C:\Users\PERSON~1\AppData\Local\Temp\sfoo.o
 __Hbank0 18 0 ABS 0 bank0 -
 __Hbank1 18 0 ABS 0 bank1 -
 __Hbank2 18 0 ABS 0 bank2 -
@@ -613,7 +613,7 @@ strcat@to 72 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production
 _config_USART 236 0 CODE 0 text8 dist/default/production\Master.X.production.o
 __Lintentry 0 0 CODE 0 intentry -
 __stringtab 1000 0 STRCODE 0 stringtext dist/default/production\Master.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\PERSON~1\AppData\Local\Temp\sgms.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\PERSON~1\AppData\Local\Temp\sfoo.o
 __fptable 6 0 ENTRY 0 functab dist/default/production\Master.X.production.o
 __size_of___wmul 0 0 ABS 0 - dist/default/production\Master.X.production.o
 __LbssBANK0 18 0 ABS 0 bssBANK0 -
