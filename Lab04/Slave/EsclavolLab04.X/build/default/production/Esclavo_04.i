@@ -2859,10 +2859,15 @@ void setup(void){
     ANSEL = 0B00000001;
     TRISAbits.TRISA0 = 1;
     TRISB = 0x00;
+    TRISCbits.TRISC4 = 0;
+    TRISCbits.TRISC3 = 0;
 
 
     PORTA = 0X00;
     PORTB = 0x00;
+    PORTC = 0X00;
+
+    config_ADC(1);
 
 
     OSCCONbits.SCS = 1;
@@ -2879,7 +2884,6 @@ void setup(void){
 
     I2C_Slave_Init(0x50);
 
-    config_ADC(1);
 }
 
 
@@ -2887,9 +2891,7 @@ void setup(void){
 
 void main(void){
     setup();
-
     while(1){
-
         if(ADCON0bits.GO == 0){
             _delay((unsigned long)((100)*(4000000/4000.0)));
             ADCON0bits.GO = 1;

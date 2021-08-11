@@ -16,10 +16,10 @@
 
 #include <xc.h>
 #include <stdint.h>
-#include <stdio.h>             // Libreria para mandar str en comunicacion serial
+#include <stdio.h>                 // Libreria para mandar str en comu. serial
 #include <pic16f887.h> 
 #include "config_ADC.h"
-#include "I2C.h"               // Librería del I2C
+#include "I2C.h"                   // Librería del I2C
 
 //******************************************************************************
 //                      C O N F I G U R A C I Ó N 
@@ -50,8 +50,8 @@
 //******************************************************************************
 //                           V A R I A B L E S
 //******************************************************************************
-uint8_t temp;          // Variables
-unsigned char VOL;
+uint8_t temp;                      // Variable para la temperatura
+unsigned char VOL;                 // Variable para el potenciómetro
 unsigned char z;
 //******************************************************************************
 //                 P R O T O T I P O S  de  F U N C I O N E S
@@ -81,17 +81,17 @@ void __interrupt() isr(void){
         }
 
         if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW) {
-            z = SSPBUF;             // Lectura del SSBUF para limpiar el buffer y la bandera BF
-            PIR1bits.SSPIF = 0;     // Limpiar bandera de interr. recepción/transmisión SSP
+            z = SSPBUF;             // Lec. del SSBUF para limpiar buffer y flag BF
+            PIR1bits.SSPIF = 0;     // Limpiar FLAG de interr. recepción/transmisión SSP
             SSPCONbits.CKP = 1;     // Habilitar entrada de pulsos de reloj SCL
             while(!SSPSTATbits.BF); // Esperar a que la recepción se complete
-            VOL = SSPBUF;       // Guardar en el PORTD el valor del buffer de recepción
+            VOL = SSPBUF;           // Guardar val. buffer de recepción en PORTD
             __delay_us(250);   
             temp = SSPBUF;
         }
         
         else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
-            z = SSPBUF;
+            z = SSPBUF;             // Variable temporal
             BF = 0;
             SSPBUF = VOL;
             SSPCONbits.CKP = 1;
@@ -110,10 +110,15 @@ void setup(void){
     ANSEL = 0B00000001;            // Pines digitales en el puerto A           
     TRISAbits.TRISA0 = 1;          // Puertos como outputs 
     TRISB = 0x00; 
+    TRISCbits.TRISC4 = 0; 
+    TRISCbits.TRISC3 = 0; 
     
     //Inicializar puertos
     PORTA = 0X00;
     PORTB = 0x00;
+    PORTC = 0X00; 
+    
+    config_ADC(1);                 //Configuracion de ADC con libreria 
     
     // Configuración del oscilador
     OSCCONbits.SCS = 1;            // Utilizar el oscilador itnterno
@@ -130,7 +135,6 @@ void setup(void){
     //Inicializar I2C en esclavo
     I2C_Slave_Init(0x50); //se le asigna esta direccion al primer esclavo
         
-    config_ADC(1);                 //Configuracion de ADC con libreria
 }
 
 //******************************************************************************
@@ -138,10 +142,8 @@ void setup(void){
 //******************************************************************************
 void main(void){
     setup();
-    
     while(1){
-        //Volver a encender ADC
-        if(ADCON0bits.GO == 0){
+        if(ADCON0bits.GO == 0){     // Encender el ADC
             __delay_ms(100);
             ADCON0bits.GO = 1;
         }

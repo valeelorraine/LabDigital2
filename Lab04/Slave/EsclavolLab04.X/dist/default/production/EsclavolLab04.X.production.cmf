@@ -13,16 +13,16 @@
 %PSECTS
 $dist/default/production\EsclavolLab04.X.production.o
 cinit CODE 0 F F 7 2
-text1 CODE 0 F7 F7 25 2
+text1 CODE 0 F7 F7 28 2
 text2 CODE 0 92 92 65 2
-text3 CODE 0 137 137 1A 2
+text3 CODE 0 13A 13A 1A 2
 text4 CODE 0 16 16 7C 2
-maintext CODE 0 11C 11C 1B 2
+maintext CODE 0 11F 11F 1B 2
 cstackCOMMON COMMON 1 70 70 8 1
 intentry CODE 0 4 4 8 2
 bssCOMMON COMMON 1 78 78 3 1
 config CONFIG 4 2007 2007 2 2
-$C:\Users\PERSON~1\AppData\Local\Temp\s1us.o
+$C:\Users\PERSON~1\AppData\Local\Temp\sahc.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 4 2007 2007 2 2
@@ -41,13 +41,13 @@ BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST 151-1FFF 2
+CONST 154-1FFF 2
 ENTRY 3-3 2
-ENTRY 151-1FFF 2
+ENTRY 154-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
 CODE 3-3 2
-CODE 151-1FFF 2
+CODE 154-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
@@ -55,9 +55,9 @@ SFR3 180-18F 1
 COMMON 7B-7D 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE 151-1FFF 2
+STRCODE 154-1FFF 2
 STRING 3-3 2
-STRING 151-1FFF 2
+STRING 154-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -72,14 +72,14 @@ STRING 151-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\EsclavolLab04.X.production.o
-F cinit CODE >800:C:\Users\PERSON~1\AppData\Local\Temp\s1us.s
-F cinit CODE >803:C:\Users\PERSON~1\AppData\Local\Temp\s1us.s
-F cinit CODE >820:C:\Users\PERSON~1\AppData\Local\Temp\s1us.s
-10 cinit CODE >821:C:\Users\PERSON~1\AppData\Local\Temp\s1us.s
-11 cinit CODE >822:C:\Users\PERSON~1\AppData\Local\Temp\s1us.s
-12 cinit CODE >828:C:\Users\PERSON~1\AppData\Local\Temp\s1us.s
-12 cinit CODE >830:C:\Users\PERSON~1\AppData\Local\Temp\s1us.s
-13 cinit CODE >831:C:\Users\PERSON~1\AppData\Local\Temp\s1us.s
+F cinit CODE >802:C:\Users\PERSON~1\AppData\Local\Temp\sahc.s
+F cinit CODE >805:C:\Users\PERSON~1\AppData\Local\Temp\sahc.s
+F cinit CODE >822:C:\Users\PERSON~1\AppData\Local\Temp\sahc.s
+10 cinit CODE >823:C:\Users\PERSON~1\AppData\Local\Temp\sahc.s
+11 cinit CODE >824:C:\Users\PERSON~1\AppData\Local\Temp\sahc.s
+12 cinit CODE >830:C:\Users\PERSON~1\AppData\Local\Temp\sahc.s
+12 cinit CODE >832:C:\Users\PERSON~1\AppData\Local\Temp\sahc.s
+13 cinit CODE >833:C:\Users\PERSON~1\AppData\Local\Temp\sahc.s
 4 intentry CODE >64:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
 16 text4 CODE >64:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
 16 text4 CODE >65:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
@@ -113,29 +113,29 @@ F cinit CODE >820:C:\Users\PERSON~1\AppData\Local\Temp\s1us.s
 89 text4 CODE >100:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
 89 text4 CODE >101:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
 8B text4 CODE >103:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
-137 text3 CODE >92:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\I2C.c
-138 text3 CODE >94:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\I2C.c
-13C text3 CODE >95:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\I2C.c
-140 text3 CODE >96:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\I2C.c
-144 text3 CODE >97:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\I2C.c
-146 text3 CODE >98:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\I2C.c
-147 text3 CODE >99:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\I2C.c
-148 text3 CODE >100:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\I2C.c
-149 text3 CODE >101:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\I2C.c
-14A text3 CODE >102:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\I2C.c
-14D text3 CODE >103:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\I2C.c
-150 text3 CODE >104:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\I2C.c
+13A text3 CODE >92:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\I2C.c
+13B text3 CODE >94:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\I2C.c
+13F text3 CODE >95:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\I2C.c
+143 text3 CODE >96:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\I2C.c
+147 text3 CODE >97:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\I2C.c
+149 text3 CODE >98:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\I2C.c
+14A text3 CODE >99:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\I2C.c
+14B text3 CODE >100:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\I2C.c
+14C text3 CODE >101:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\I2C.c
+14D text3 CODE >102:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\I2C.c
+150 text3 CODE >103:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\I2C.c
+153 text3 CODE >104:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\I2C.c
 92 text2 CODE >15:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\config_ADC.c
 93 text2 CODE >16:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\config_ADC.c
 94 text2 CODE >18:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\config_ADC.c
 98 text2 CODE >19:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\config_ADC.c
-9C text2 CODE >21:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\config_ADC.c
-9F text2 CODE >22:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\config_ADC.c
-A0 text2 CODE >23:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\config_ADC.c
-A1 text2 CODE >24:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\config_ADC.c
-A4 text2 CODE >25:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\config_ADC.c
-A5 text2 CODE >26:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\config_ADC.c
-A6 text2 CODE >27:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\config_ADC.c
+9C text2 CODE >20:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\config_ADC.c
+9F text2 CODE >21:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\config_ADC.c
+A0 text2 CODE >22:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\config_ADC.c
+A1 text2 CODE >23:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\config_ADC.c
+A4 text2 CODE >24:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\config_ADC.c
+A5 text2 CODE >25:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\config_ADC.c
+A6 text2 CODE >26:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\config_ADC.c
 A7 text2 CODE >29:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\config_ADC.c
 AB text2 CODE >30:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\config_ADC.c
 AF text2 CODE >32:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\config_ADC.c
@@ -169,24 +169,27 @@ F7 text1 CODE >108:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electr
 F7 text1 CODE >110:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
 FB text1 CODE >111:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
 FE text1 CODE >112:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
-FF text1 CODE >115:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
-102 text1 CODE >116:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
-103 text1 CODE >119:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
-106 text1 CODE >120:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
-107 text1 CODE >121:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
-108 text1 CODE >122:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
-109 text1 CODE >125:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
-10A text1 CODE >126:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
-10B text1 CODE >127:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
-10C text1 CODE >128:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
-10F text1 CODE >131:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
+FF text1 CODE >113:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
+100 text1 CODE >114:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
+101 text1 CODE >117:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
+104 text1 CODE >118:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
+105 text1 CODE >119:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
+106 text1 CODE >121:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
+10C text1 CODE >124:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
+10F text1 CODE >125:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
+110 text1 CODE >126:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
+111 text1 CODE >127:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
+112 text1 CODE >130:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
+113 text1 CODE >131:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
+114 text1 CODE >132:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
 115 text1 CODE >133:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
-11B text1 CODE >134:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
-11C maintext CODE >139:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
-11C maintext CODE >140:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
-121 maintext CODE >144:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
-127 maintext CODE >145:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
-130 maintext CODE >146:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
+118 text1 CODE >136:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
+11E text1 CODE >138:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
+11F maintext CODE >143:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
+11F maintext CODE >144:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
+124 maintext CODE >146:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
+12A maintext CODE >147:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
+133 maintext CODE >148:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Slave\EsclavolLab04.X\Esclavo_04.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -201,7 +204,7 @@ FF text1 CODE >115:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electr
 %SYMTAB
 _z 78 0 COMMON 1 bssCOMMON dist/default/production\EsclavolLab04.X.production.o
 ___latbits 2 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
-__Hspace_0 151 0 ABS 0 - -
+__Hspace_0 154 0 ABS 0 - -
 __Hspace_1 7B 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
@@ -210,21 +213,21 @@ __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 _BF 4A0 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _PEIE 5E 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\PERSON~1\AppData\Local\Temp\s1us.o
-_main 238 0 CODE 0 maintext dist/default/production\EsclavolLab04.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\PERSON~1\AppData\Local\Temp\sahc.o
+_main 23E 0 CODE 0 maintext dist/default/production\EsclavolLab04.X.production.o
 _temp 7A 0 COMMON 1 bssCOMMON dist/default/production\EsclavolLab04.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
-start 18 0 CODE 0 init C:\Users\PERSON~1\AppData\Local\Temp\s1us.o
+start 18 0 CODE 0 init C:\Users\PERSON~1\AppData\Local\Temp\sahc.o
 __size_of_main 0 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __size_of_config_ADC 0 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\s1us.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\s1us.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\s1us.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\s1us.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\s1us.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\s1us.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\sahc.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\sahc.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\sahc.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\sahc.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\sahc.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\sahc.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
@@ -233,9 +236,9 @@ __Hclrtext 0 0 ABS 0 clrtext -
 _ADRESH 1E 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
 _SSPCONbits 14 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\PERSON~1\AppData\Local\Temp\s1us.o
-___stacklo 0 0 ABS 0 - C:\Users\PERSON~1\AppData\Local\Temp\s1us.o
-_I2C_Slave_Init 26E 0 CODE 0 text3 dist/default/production\EsclavolLab04.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\PERSON~1\AppData\Local\Temp\sahc.o
+___stacklo 0 0 ABS 0 - C:\Users\PERSON~1\AppData\Local\Temp\sahc.o
+_I2C_Slave_Init 274 0 CODE 0 text3 dist/default/production\EsclavolLab04.X.production.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\EsclavolLab04.X.production.o
 _TRISAbits 85 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
@@ -245,13 +248,13 @@ _SSPBUF 13 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\PERSON~1\AppData\Local\Temp\s1us.o
+___int_sp 0 0 STACK 2 stack C:\Users\PERSON~1\AppData\Local\Temp\sahc.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
 __Hcinit 2C 0 CODE 0 cinit -
-__end_of_I2C_Slave_Init 2A2 0 CODE 0 text3 dist/default/production\EsclavolLab04.X.production.o
+__end_of_I2C_Slave_Init 2A8 0 CODE 0 text3 dist/default/production\EsclavolLab04.X.production.o
 __Hstack 0 0 STACK 2 stack -
 __Hmaintext 0 0 ABS 0 maintext -
 __Hcommon 0 0 ABS 0 common -
@@ -282,7 +285,7 @@ __Ltext 0 0 ABS 0 text -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 _GIE 5F 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
 _VOL 79 0 COMMON 1 bssCOMMON dist/default/production\EsclavolLab04.X.production.o
-__S0 151 0 ABS 0 - -
+__S0 154 0 ABS 0 - -
 __S1 7B 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
@@ -290,9 +293,9 @@ _isr 2C 0 CODE 0 text4 dist/default/production\EsclavolLab04.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
 __end_of_isr 124 0 CODE 0 text4 dist/default/production\EsclavolLab04.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\PERSON~1\AppData\Local\Temp\s1us.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\PERSON~1\AppData\Local\Temp\sahc.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
-__pmaintext 238 0 CODE 0 maintext dist/default/production\EsclavolLab04.X.production.o
+__pmaintext 23E 0 CODE 0 maintext dist/default/production\EsclavolLab04.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
 I2C_Slave_Init@address 73 0 COMMON 1 cstackCOMMON dist/default/production\EsclavolLab04.X.production.o
@@ -316,7 +319,7 @@ __Hreset_vec 6 0 CODE 0 reset_vec -
 _SSPCON2bits 91 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
 __ptext1 1EE 0 CODE 0 text1 dist/default/production\EsclavolLab04.X.production.o
 __ptext2 124 0 CODE 0 text2 dist/default/production\EsclavolLab04.X.production.o
-__ptext3 26E 0 CODE 0 text3 dist/default/production\EsclavolLab04.X.production.o
+__ptext3 274 0 CODE 0 text3 dist/default/production\EsclavolLab04.X.production.o
 __ptext4 2C 0 CODE 0 text4 dist/default/production\EsclavolLab04.X.production.o
 __end_of_config_ADC 1EE 0 CODE 0 text2 dist/default/production\EsclavolLab04.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
@@ -330,14 +333,15 @@ __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\EsclavolLab04
 _SSPCON2 91 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
 _SSPSTAT 94 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
 __Hend_init 1E 0 CODE 0 end_init -
-__end_of_main 26E 0 CODE 0 maintext dist/default/production\EsclavolLab04.X.production.o
+__end_of_main 274 0 CODE 0 maintext dist/default/production\EsclavolLab04.X.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
 _PORTA 5 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
+_PORTC 7 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
 _SSPIE 463 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
 _SSPIF 63 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
 _TRISB 86 0 ABS 0 - dist/default/production\EsclavolLab04.X.production.o
-__end_of_setup 238 0 CODE 0 text1 dist/default/production\EsclavolLab04.X.production.o
+__end_of_setup 23E 0 CODE 0 text1 dist/default/production\EsclavolLab04.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 interrupt_function 8 0 CODE 0 intentry dist/default/production\EsclavolLab04.X.production.o
@@ -372,7 +376,7 @@ __initialization 1E 0 CODE 0 cinit dist/default/production\EsclavolLab04.X.produ
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cstackCOMMON 1 70 70 B 1
-intentry 0 4 8 14D 2
+intentry 0 4 8 150 2
 reset_vec 0 0 0 3 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section

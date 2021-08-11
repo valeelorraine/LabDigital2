@@ -17,7 +17,6 @@ void config_ADC(char frec) {        // Seleccionar la frecuencia ADC
         case 0:                     //FOSC/2
             ADCON0bits.CHS = 0;     // Canal 0
             __delay_us(100);
-    
             ADCON0bits.ADCS0 = 0;   // FOSC
             ADCON0bits.ADCS1 = 0;   
             ADCON0bits.ADON = 1;    // ADC enable bit
@@ -25,6 +24,7 @@ void config_ADC(char frec) {        // Seleccionar la frecuencia ADC
             ADCON1bits.VCFG1 = 0;   // 5 voltios
             ADCON1bits.VCFG0 = 0;   // Tierra
             break;
+            
         case 1: //FOSC/8
             ADCON0bits.CHS = 0;     // Canal 0
             __delay_us(100);

@@ -2649,7 +2649,6 @@ void config_ADC(char frec) {
         case 0:
             ADCON0bits.CHS = 0;
             _delay((unsigned long)((100)*(4000000/4000000.0)));
-
             ADCON0bits.ADCS0 = 0;
             ADCON0bits.ADCS1 = 0;
             ADCON0bits.ADON = 1;
@@ -2657,6 +2656,7 @@ void config_ADC(char frec) {
             ADCON1bits.VCFG1 = 0;
             ADCON1bits.VCFG0 = 0;
             break;
+
         case 1:
             ADCON0bits.CHS = 0;
             _delay((unsigned long)((100)*(4000000/4000000.0)));

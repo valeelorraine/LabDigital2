@@ -30,11 +30,11 @@ void Lcd_Port(char a) {
 }
 
 void Lcd_Cmd(char a) {
-    RS = 0;                 // Dato en el puerto lo va interpretar como comando
+    RS = 0; // => RS = 0 // Dato en el puerto lo va interpretar como comando
     Lcd_Port(a);
-    EN = 1;
+    EN = 1; // => E = 1
     __delay_ms(4);
-    EN = 0;
+    EN = 0; // => E = 0
 }
 
 void Lcd_Clear(void) {
@@ -67,6 +67,7 @@ void Lcd_Init(void) {
     Lcd_Cmd(0x03);
     __delay_ms(11);
     Lcd_Cmd(0x03);
+    /////////////////////////////////////////////////////
     Lcd_Cmd(0x02);
     Lcd_Cmd(0x02);
     Lcd_Cmd(0x08);
@@ -80,8 +81,8 @@ void Lcd_Write_Char(char a) {
     char temp, y;
     temp = a & 0x0F;
     y = a & 0xF0;
-    RS = 1;                               // => RS = 1
-    Lcd_Port(y >> 4);                     // Data transfer
+    RS = 1; // => RS = 1
+    Lcd_Port(y >> 4); //Data transfer
     EN = 1;
     __delay_us(40);
     EN = 0;
@@ -89,4 +90,20 @@ void Lcd_Write_Char(char a) {
     EN = 1;
     __delay_us(40);
     EN = 0;
+}
+
+void Lcd_Write_String(char *a) {
+    int i;
+    for (i = 0; a[i] != '\0'; i++)
+        Lcd_Write_Char(a[i]);
+}
+
+void Lcd_Shift_Right(void) {
+    Lcd_Cmd(0x01);
+    Lcd_Cmd(0x0C);
+}
+
+void Lcd_Shift_Left(void) {
+    Lcd_Cmd(0x01);
+    Lcd_Cmd(0x08);
 }

@@ -15,7 +15,7 @@
 
 
 # 1 "./LCD_4.h" 1
-# 40 "./LCD_4.h"
+# 41 "./LCD_4.h"
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2496,7 +2496,9 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 40 "./LCD_4.h" 2
+# 41 "./LCD_4.h" 2
+
+
 
 
 
@@ -2580,6 +2582,7 @@ void Lcd_Init(void) {
     Lcd_Cmd(0x03);
     _delay((unsigned long)((11)*(4000000/4000.0)));
     Lcd_Cmd(0x03);
+
     Lcd_Cmd(0x02);
     Lcd_Cmd(0x02);
     Lcd_Cmd(0x08);
@@ -2602,4 +2605,20 @@ void Lcd_Write_Char(char a) {
     RD3 = 1;
     _delay((unsigned long)((40)*(4000000/4000000.0)));
     RD3 = 0;
+}
+
+void Lcd_Write_String(char *a) {
+    int i;
+    for (i = 0; a[i] != '\0'; i++)
+        Lcd_Write_Char(a[i]);
+}
+
+void Lcd_Shift_Right(void) {
+    Lcd_Cmd(0x01);
+    Lcd_Cmd(0x0C);
+}
+
+void Lcd_Shift_Left(void) {
+    Lcd_Cmd(0x01);
+    Lcd_Cmd(0x08);
 }

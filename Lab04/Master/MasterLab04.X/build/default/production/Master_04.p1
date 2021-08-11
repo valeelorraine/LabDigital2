@@ -2,12 +2,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3449 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3449: extern volatile unsigned char ANSELH __attribute__((address(0x189)));
 [v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
-"1416
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1416: extern volatile unsigned char TRISA __attribute__((address(0x085)));
-[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
-"1478
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1478: extern volatile unsigned char TRISB __attribute__((address(0x086)));
-[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"1602
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1602: extern volatile unsigned char TRISD __attribute__((address(0x088)));
+[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
+"1664
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1664: extern volatile unsigned char TRISE __attribute__((address(0x089)));
+[v _TRISE `Vuc ~T0 @X0 0 e@137 ]
 "166
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 166: extern volatile unsigned char PORTA __attribute__((address(0x005)));
 [v _PORTA `Vuc ~T0 @X0 0 e@5 ]
@@ -35,26 +35,50 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1882
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1882: extern volatile OSCCONbits_t OSCCONbits __attribute__((address(0x08F)));
 [v _OSCCONbits `VS69 ~T0 @X0 0 e@143 ]
-"29 ./I2C.h
-[; ;./I2C.h: 29: void I2C_Master_Init(const unsigned long c);
+"28 ./I2C.h
+[; ;./I2C.h: 28: void I2C_Master_Init(const unsigned long c);
 [v _I2C_Master_Init `(v ~T0 @X0 0 ef1`Cul ]
 [p mainexit ]
-"41
-[; ;./I2C.h: 41: void I2C_Master_Start(void);
-[v _I2C_Master_Start `(v ~T0 @X0 0 ef ]
-"55
-[; ;./I2C.h: 55: void I2C_Master_Write(unsigned d);
-[v _I2C_Master_Write `(v ~T0 @X0 0 ef1`ui ]
-"60
-[; ;./I2C.h: 60: unsigned short I2C_Master_Read(unsigned short a);
-[v _I2C_Master_Read `(us ~T0 @X0 0 ef1`us ]
-"49
-[; ;./I2C.h: 49: void I2C_Master_Stop(void);
-[v _I2C_Master_Stop `(v ~T0 @X0 0 ef ]
+"54 ./LCD_4.h
+[; ;./LCD_4.h: 54: void Lcd_Init(void);
+[v _Lcd_Init `(v ~T0 @X0 0 ef ]
+"50
+[; ;./LCD_4.h: 50: void Lcd_Clear(void);
+[v _Lcd_Clear `(v ~T0 @X0 0 ef ]
+"52
+[; ;./LCD_4.h: 52: void Lcd_Set_Cursor(char a, char b);
+[v _Lcd_Set_Cursor `(v ~T0 @X0 0 ef2`uc`uc ]
+"58
+[; ;./LCD_4.h: 58: void Lcd_Write_String(char *a);
+[v _Lcd_Write_String `(v ~T0 @X0 0 ef1`*uc ]
 [v F1256 `(v ~T0 @X0 1 tf1`ul ]
 "92 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
 [v __delay `JF1256 ~T0 @X0 0 e ]
 [p i __delay ]
+"40 ./I2C.h
+[; ;./I2C.h: 40: void I2C_Master_Start(void);
+[v _I2C_Master_Start `(v ~T0 @X0 0 ef ]
+"54
+[; ;./I2C.h: 54: void I2C_Master_Write(unsigned d);
+[v _I2C_Master_Write `(v ~T0 @X0 0 ef1`ui ]
+"59
+[; ;./I2C.h: 59: unsigned short I2C_Master_Read(unsigned short a);
+[v _I2C_Master_Read `(us ~T0 @X0 0 ef1`us ]
+"48
+[; ;./I2C.h: 48: void I2C_Master_Stop(void);
+[v _I2C_Master_Stop `(v ~T0 @X0 0 ef ]
+"76 Master_04.c
+[; ;Master_04.c: 76: void voltaje(uint8_t var);
+[v _voltaje `(v ~T0 @X0 0 ef1`uc ]
+"56 ./LCD_4.h
+[; ;./LCD_4.h: 56: void Lcd_Write_Char(char a);
+[v _Lcd_Write_Char `(v ~T0 @X0 0 ef1`uc ]
+"74 Master_04.c
+[; ;Master_04.c: 74: void decimal(uint8_t var);
+[v _decimal `(v ~T0 @X0 0 ef1`uc ]
+"75
+[; ;Master_04.c: 75: void Temperatura(uint8_t var);
+[v _Temperatura `(v ~T0 @X0 0 ef1`uc ]
 "54 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -289,145 +313,401 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"28 Master_04.c
+"29 Master_04.c
 [p x FOSC=INTRC_NOCLKOUT  ]
-"29
-[p x WDTE=OFF             ]
 "30
-[p x PWRTE=OFF            ]
+[p x WDTE=OFF             ]
 "31
-[p x MCLRE=OFF            ]
+[p x PWRTE=OFF            ]
 "32
-[p x CP=OFF               ]
+[p x MCLRE=OFF            ]
 "33
+[p x CP=OFF               ]
+"34
 [p x CPD=OFF              ]
-"35
-[p x BOREN=OFF            ]
 "36
-[p x IESO=OFF             ]
+[p x BOREN=OFF            ]
 "37
-[p x FCMEN=OFF            ]
+[p x IESO=OFF             ]
 "38
+[p x FCMEN=OFF            ]
+"39
 [p x LVP=OFF              ]
-"41
-[p x BOR4V  =  BOR40V       ]
 "42
+[p x BOR4V  =  BOR40V       ]
+"43
 [p x WRT  =  OFF            ]
-"52
-[; ;Master_04.c: 52: uint8_t VOL;
+"59
+[; ;Master_04.c: 59: unsigned char VOL;
 [v _VOL `uc ~T0 @X0 1 e ]
+"60
+[; ;Master_04.c: 60: unsigned char un;
+[v _un `uc ~T0 @X0 1 e ]
+"61
+[; ;Master_04.c: 61: unsigned char dec;
+[v _dec `uc ~T0 @X0 1 e ]
+"62
+[; ;Master_04.c: 62: unsigned char cen;
+[v _cen `uc ~T0 @X0 1 e ]
 "63
-[; ;Master_04.c: 63: void setup(void){
+[; ;Master_04.c: 63: unsigned char POT;
+[v _POT `uc ~T0 @X0 1 e ]
+"64
+[; ;Master_04.c: 64: unsigned char TEMP;
+[v _TEMP `uc ~T0 @X0 1 e ]
+"65
+[; ;Master_04.c: 65: uint8_t sensor1;
+[v _sensor1 `uc ~T0 @X0 1 e ]
+"66
+[; ;Master_04.c: 66: uint8_t sensor2;
+[v _sensor2 `uc ~T0 @X0 1 e ]
+"67
+[; ;Master_04.c: 67: uint16_t temp;
+[v _temp `ui ~T0 @X0 1 e ]
+"68
+[; ;Master_04.c: 68: float temp1;
+[v _temp1 `f ~T0 @X0 1 e ]
+"81
+[; ;Master_04.c: 81: void setup(void){
 [v _setup `(v ~T0 @X0 1 ef ]
 {
 [e :U _setup ]
 [f ]
-"65
-[; ;Master_04.c: 65:     ANSELH = 0x00;
+"83
+[; ;Master_04.c: 83:     ANSELH = 0x00;
 [e = _ANSELH -> -> 0 `i `uc ]
-"66
-[; ;Master_04.c: 66:     TRISA = 0X00;
-[e = _TRISA -> -> 0 `i `uc ]
-"67
-[; ;Master_04.c: 67:     TRISB = 0x00;
-[e = _TRISB -> -> 0 `i `uc ]
-"69
-[; ;Master_04.c: 69:     PORTA = 0X00;
+"84
+[; ;Master_04.c: 84:     TRISD = 0X00;
+[e = _TRISD -> -> 0 `i `uc ]
+"85
+[; ;Master_04.c: 85:     TRISE = 0x00;
+[e = _TRISE -> -> 0 `i `uc ]
+"87
+[; ;Master_04.c: 87:     PORTA = 0X00;
 [e = _PORTA -> -> 0 `i `uc ]
-"70
-[; ;Master_04.c: 70:     PORTB = 0X00;
+"88
+[; ;Master_04.c: 88:     PORTB = 0X00;
 [e = _PORTB -> -> 0 `i `uc ]
-"71
-[; ;Master_04.c: 71:     PORTC = 0X00;
+"89
+[; ;Master_04.c: 89:     PORTC = 0X00;
 [e = _PORTC -> -> 0 `i `uc ]
-"72
-[; ;Master_04.c: 72:     PORTD = 0X00;
+"90
+[; ;Master_04.c: 90:     PORTD = 0X00;
 [e = _PORTD -> -> 0 `i `uc ]
-"75
-[; ;Master_04.c: 75:     OSCCONbits.SCS = 1;
+"93
+[; ;Master_04.c: 93:     OSCCONbits.SCS = 1;
 [e = . . _OSCCONbits 0 0 -> -> 1 `i `uc ]
-"76
-[; ;Master_04.c: 76:     OSCCONbits.IRCF2 = 1;
+"94
+[; ;Master_04.c: 94:     OSCCONbits.IRCF2 = 1;
 [e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
-"77
-[; ;Master_04.c: 77:     OSCCONbits.IRCF1 = 1;
+"95
+[; ;Master_04.c: 95:     OSCCONbits.IRCF1 = 1;
 [e = . . _OSCCONbits 1 2 -> -> 1 `i `uc ]
-"78
-[; ;Master_04.c: 78:     OSCCONbits.IRCF0 = 0;
+"96
+[; ;Master_04.c: 96:     OSCCONbits.IRCF0 = 0;
 [e = . . _OSCCONbits 1 1 -> -> 0 `i `uc ]
-"81
-[; ;Master_04.c: 81:     I2C_Master_Init(100000);
+"99
+[; ;Master_04.c: 99:     I2C_Master_Init(100000);
 [e ( _I2C_Master_Init (1 -> -> 100000 `l `ul ]
-"82
-[; ;Master_04.c: 82: }
-[e :UE 139 ]
+"100
+[; ;Master_04.c: 100:  }
+[e :UE 143 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"87
-[; ;Master_04.c: 87: void main(void){
+"104
+[; ;Master_04.c: 104: void main(void){
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"88
-[; ;Master_04.c: 88:     setup();
-[e ( _setup ..  ]
-"89
-[; ;Master_04.c: 89:     while(1){
-[e :U 142 ]
-{
-"90
-[; ;Master_04.c: 90:         I2C_Master_Start();
-[e ( _I2C_Master_Start ..  ]
-"91
-[; ;Master_04.c: 91:         I2C_Master_Write(0x51);
-[e ( _I2C_Master_Write (1 -> -> 81 `i `ui ]
-"92
-[; ;Master_04.c: 92:         PORTB = I2C_Master_Read(0);
-[e = _PORTB -> ( _I2C_Master_Read (1 -> -> 0 `i `us `uc ]
-"93
-[; ;Master_04.c: 93:         I2C_Master_Stop();
-[e ( _I2C_Master_Stop ..  ]
-"94
-[; ;Master_04.c: 94:         _delay((unsigned long)((200)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"97
-[; ;Master_04.c: 97:         I2C_Master_Start();
-[e ( _I2C_Master_Start ..  ]
-"98
-[; ;Master_04.c: 98:         I2C_Master_Write(0x80);
-[e ( _I2C_Master_Write (1 -> -> 128 `i `ui ]
-"99
-[; ;Master_04.c: 99:         I2C_Master_Write(0xF3);
-[e ( _I2C_Master_Write (1 -> -> 243 `i `ui ]
-"100
-[; ;Master_04.c: 100:         I2C_Master_Stop();
-[e ( _I2C_Master_Stop ..  ]
-"101
-[; ;Master_04.c: 101:         _delay((unsigned long)((200)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"103
-[; ;Master_04.c: 103:         I2C_Master_Start();
-[e ( _I2C_Master_Start ..  ]
-"104
-[; ;Master_04.c: 104:         I2C_Master_Write(0x81);
-[e ( _I2C_Master_Write (1 -> -> 129 `i `ui ]
 "105
-[; ;Master_04.c: 105:         PORTA = I2C_Master_Read(0);
-[e = _PORTA -> ( _I2C_Master_Read (1 -> -> 0 `i `us `uc ]
+[; ;Master_04.c: 105:     setup();
+[e ( _setup ..  ]
 "106
-[; ;Master_04.c: 106:         I2C_Master_Stop();
-[e ( _I2C_Master_Stop ..  ]
+[; ;Master_04.c: 106:     Lcd_Init();
+[e ( _Lcd_Init ..  ]
 "107
-[; ;Master_04.c: 107:         _delay((unsigned long)((200)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;Master_04.c: 107:     Lcd_Clear();
+[e ( _Lcd_Clear ..  ]
 "108
-[; ;Master_04.c: 108:     }
-}
-[e :U 141 ]
-[e $U 142  ]
-[e :U 143 ]
+[; ;Master_04.c: 108:     Lcd_Set_Cursor(1,1);
+[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
 "109
-[; ;Master_04.c: 109: }
-[e :UE 140 ]
+[; ;Master_04.c: 109:     Lcd_Write_String("S1:   S2:   S3:");
+[e ( _Lcd_Write_String (1 :s 1C ]
+"110
+[; ;Master_04.c: 110:     _delay((unsigned long)((100)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"112
+[; ;Master_04.c: 112:     while(1){
+[e :U 146 ]
+{
+"114
+[; ;Master_04.c: 114:         I2C_Master_Start();
+[e ( _I2C_Master_Start ..  ]
+"115
+[; ;Master_04.c: 115:         I2C_Master_Write(0x61);
+[e ( _I2C_Master_Write (1 -> -> 97 `i `ui ]
+"116
+[; ;Master_04.c: 116:         sensor2 = I2C_Master_Read(0);
+[e = _sensor2 -> ( _I2C_Master_Read (1 -> -> 0 `i `us `uc ]
+"117
+[; ;Master_04.c: 117:         I2C_Master_Stop();
+[e ( _I2C_Master_Stop ..  ]
+"118
+[; ;Master_04.c: 118:         _delay((unsigned long)((200)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"120
+[; ;Master_04.c: 120:         I2C_Master_Start();
+[e ( _I2C_Master_Start ..  ]
+"121
+[; ;Master_04.c: 121:         I2C_Master_Write(0x51);
+[e ( _I2C_Master_Write (1 -> -> 81 `i `ui ]
+"122
+[; ;Master_04.c: 122:         POT = I2C_Master_Read(0);
+[e = _POT -> ( _I2C_Master_Read (1 -> -> 0 `i `us `uc ]
+"123
+[; ;Master_04.c: 123:         I2C_Master_Stop();
+[e ( _I2C_Master_Stop ..  ]
+"124
+[; ;Master_04.c: 124:         _delay((unsigned long)((200)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"127
+[; ;Master_04.c: 127:         I2C_Master_Start();
+[e ( _I2C_Master_Start ..  ]
+"128
+[; ;Master_04.c: 128:         I2C_Master_Write(0x80);
+[e ( _I2C_Master_Write (1 -> -> 128 `i `ui ]
+"129
+[; ;Master_04.c: 129:         I2C_Master_Write(0xF3);
+[e ( _I2C_Master_Write (1 -> -> 243 `i `ui ]
+"130
+[; ;Master_04.c: 130:         I2C_Master_Stop();
+[e ( _I2C_Master_Stop ..  ]
+"131
+[; ;Master_04.c: 131:         _delay((unsigned long)((200)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"133
+[; ;Master_04.c: 133:         I2C_Master_Start();
+[e ( _I2C_Master_Start ..  ]
+"134
+[; ;Master_04.c: 134:         I2C_Master_Write(0x81);
+[e ( _I2C_Master_Write (1 -> -> 129 `i `ui ]
+"135
+[; ;Master_04.c: 135:         TEMP = I2C_Master_Read(0);
+[e = _TEMP -> ( _I2C_Master_Read (1 -> -> 0 `i `us `uc ]
+"136
+[; ;Master_04.c: 136:         I2C_Master_Stop();
+[e ( _I2C_Master_Stop ..  ]
+"137
+[; ;Master_04.c: 137:         _delay((unsigned long)((200)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"140
+[; ;Master_04.c: 140:         voltaje(POT);
+[e ( _voltaje (1 _POT ]
+"141
+[; ;Master_04.c: 141:         Lcd_Set_Cursor(2,1);
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+"142
+[; ;Master_04.c: 142:         Lcd_Write_Char(cen);
+[e ( _Lcd_Write_Char (1 -> _cen `uc ]
+"143
+[; ;Master_04.c: 143:         Lcd_Write_String(".");
+[e ( _Lcd_Write_String (1 :s 2C ]
+"144
+[; ;Master_04.c: 144:         Lcd_Write_Char(dec);
+[e ( _Lcd_Write_Char (1 -> _dec `uc ]
+"145
+[; ;Master_04.c: 145:         Lcd_Write_Char(un);
+[e ( _Lcd_Write_Char (1 -> _un `uc ]
+"146
+[; ;Master_04.c: 146:         Lcd_Write_String("  ");
+[e ( _Lcd_Write_String (1 :s 3C ]
+"147
+[; ;Master_04.c: 147:         _delay((unsigned long)((200)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"150
+[; ;Master_04.c: 150:         Lcd_Set_Cursor(2,8);
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 8 `i `uc ]
+"151
+[; ;Master_04.c: 151:         decimal(sensor2);
+[e ( _decimal (1 _sensor2 ]
+"152
+[; ;Master_04.c: 152:         Lcd_Write_Char(dec);
+[e ( _Lcd_Write_Char (1 -> _dec `uc ]
+"153
+[; ;Master_04.c: 153:         Lcd_Set_Cursor(2,9);
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 9 `i `uc ]
+"154
+[; ;Master_04.c: 154:         Lcd_Write_Char(un);
+[e ( _Lcd_Write_Char (1 -> _un `uc ]
+"157
+[; ;Master_04.c: 157:         Lcd_Set_Cursor(2,13);
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 13 `i `uc ]
+"158
+[; ;Master_04.c: 158:         Temperatura(TEMP);
+[e ( _Temperatura (1 _TEMP ]
+"159
+[; ;Master_04.c: 159:         Lcd_Write_Char(cen);
+[e ( _Lcd_Write_Char (1 -> _cen `uc ]
+"160
+[; ;Master_04.c: 160:         Lcd_Write_Char(dec);
+[e ( _Lcd_Write_Char (1 -> _dec `uc ]
+"161
+[; ;Master_04.c: 161:         Lcd_Write_Char(un);
+[e ( _Lcd_Write_Char (1 -> _un `uc ]
+"162
+[; ;Master_04.c: 162:         Lcd_Write_String("C ");
+[e ( _Lcd_Write_String (1 :s 4C ]
+"163
+[; ;Master_04.c: 163:         _delay((unsigned long)((200)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"165
+[; ;Master_04.c: 165:         PORTB = POT;
+[e = _PORTB _POT ]
+"166
+[; ;Master_04.c: 166:         PORTA = TEMP;
+[e = _PORTA _TEMP ]
+"167
+[; ;Master_04.c: 167:         _delay((unsigned long)((200)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"168
+[; ;Master_04.c: 168: }
 }
+[e :U 145 ]
+[e $U 146  ]
+[e :U 147 ]
+"169
+[; ;Master_04.c: 169:     }
+[e :UE 144 ]
+}
+"174
+[; ;Master_04.c: 174: void decimal(uint8_t var){
+[v _decimal `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _decimal ]
+[v _var `uc ~T0 @X0 1 r1 ]
+[f ]
+"175
+[; ;Master_04.c: 175:     uint8_t VAL;
+[v _VAL `uc ~T0 @X0 1 a ]
+"176
+[; ;Master_04.c: 176:     VAL = var;
+[e = _VAL _var ]
+"177
+[; ;Master_04.c: 177:     cen = (VAL/100) ;
+[e = _cen -> / -> _VAL `i -> 100 `i `uc ]
+"178
+[; ;Master_04.c: 178:     VAL = (VAL - (cen*100));
+[e = _VAL -> - -> _VAL `i * -> _cen `i -> 100 `i `uc ]
+"179
+[; ;Master_04.c: 179:     dec = (VAL/10);
+[e = _dec -> / -> _VAL `i -> 10 `i `uc ]
+"180
+[; ;Master_04.c: 180:     VAL = (VAL - (dec*10));
+[e = _VAL -> - -> _VAL `i * -> _dec `i -> 10 `i `uc ]
+"181
+[; ;Master_04.c: 181:     un = (VAL);
+[e = _un _VAL ]
+"183
+[; ;Master_04.c: 183:     cen = cen + 48;
+[e = _cen -> + -> _cen `i -> 48 `i `uc ]
+"184
+[; ;Master_04.c: 184:     dec = dec + 48;
+[e = _dec -> + -> _dec `i -> 48 `i `uc ]
+"185
+[; ;Master_04.c: 185:     un = un + 48;
+[e = _un -> + -> _un `i -> 48 `i `uc ]
+"186
+[; ;Master_04.c: 186: }
+[e :UE 148 ]
+}
+"188
+[; ;Master_04.c: 188: void voltaje(uint8_t var){
+[v _voltaje `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _voltaje ]
+[v _var `uc ~T0 @X0 1 r1 ]
+[f ]
+"189
+[; ;Master_04.c: 189:     uint8_t VAL;
+[v _VAL `uc ~T0 @X0 1 a ]
+"190
+[; ;Master_04.c: 190:     VAL = var;
+[e = _VAL _var ]
+"191
+[; ;Master_04.c: 191:     VAL = (VAL*1.96);
+[e = _VAL -> * -> -> _VAL `i `d .1.96 `uc ]
+"192
+[; ;Master_04.c: 192:     cen = (VAL/100) ;
+[e = _cen -> / -> _VAL `i -> 100 `i `uc ]
+"193
+[; ;Master_04.c: 193:     VAL = (VAL - (cen*100));
+[e = _VAL -> - -> _VAL `i * -> _cen `i -> 100 `i `uc ]
+"194
+[; ;Master_04.c: 194:     dec = (VAL/10);
+[e = _dec -> / -> _VAL `i -> 10 `i `uc ]
+"195
+[; ;Master_04.c: 195:     VAL = (VAL - (dec*10));
+[e = _VAL -> - -> _VAL `i * -> _dec `i -> 10 `i `uc ]
+"196
+[; ;Master_04.c: 196:     un = (VAL);
+[e = _un _VAL ]
+"198
+[; ;Master_04.c: 198:     cen = cen + 48;
+[e = _cen -> + -> _cen `i -> 48 `i `uc ]
+"199
+[; ;Master_04.c: 199:     dec = dec + 48;
+[e = _dec -> + -> _dec `i -> 48 `i `uc ]
+"200
+[; ;Master_04.c: 200:     un = un + 48;
+[e = _un -> + -> _un `i -> 48 `i `uc ]
+"201
+[; ;Master_04.c: 201: }
+[e :UE 149 ]
+}
+"203
+[; ;Master_04.c: 203: void Temperatura(uint8_t var){
+[v _Temperatura `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _Temperatura ]
+[v _var `uc ~T0 @X0 1 r1 ]
+[f ]
+"204
+[; ;Master_04.c: 204:     uint8_t VAL;
+[v _VAL `uc ~T0 @X0 1 a ]
+"205
+[; ;Master_04.c: 205:     VAL = (0.7*var)-47;
+[e = _VAL -> - * .0.7 -> -> _var `i `d -> -> 47 `i `d `uc ]
+"206
+[; ;Master_04.c: 206:     cen = (VAL/100) ;
+[e = _cen -> / -> _VAL `i -> 100 `i `uc ]
+"207
+[; ;Master_04.c: 207:     VAL = (VAL - (cen*100));
+[e = _VAL -> - -> _VAL `i * -> _cen `i -> 100 `i `uc ]
+"208
+[; ;Master_04.c: 208:     dec = (VAL/10);
+[e = _dec -> / -> _VAL `i -> 10 `i `uc ]
+"209
+[; ;Master_04.c: 209:     VAL = (VAL - (dec*10));
+[e = _VAL -> - -> _VAL `i * -> _dec `i -> 10 `i `uc ]
+"210
+[; ;Master_04.c: 210:     un = (VAL);
+[e = _un _VAL ]
+"212
+[; ;Master_04.c: 212:     cen = cen + 48;
+[e = _cen -> + -> _cen `i -> 48 `i `uc ]
+"213
+[; ;Master_04.c: 213:     dec = dec + 48;
+[e = _dec -> + -> _dec `i -> 48 `i `uc ]
+"214
+[; ;Master_04.c: 214:     un = un + 48;
+[e = _un -> + -> _un `i -> 48 `i `uc ]
+"215
+[; ;Master_04.c: 215: }
+[e :UE 150 ]
+}
+[a 1C 83 49 58 32 32 32 83 50 58 32 32 32 83 51 58 0 ]
+[a 2C 46 0 ]
+[a 4C 67 32 0 ]
+[a 3C 32 32 0 ]

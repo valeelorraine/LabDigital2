@@ -293,26 +293,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 "19
 [; ;config_ADC.c: 19:             _delay((unsigned long)((100)*(4000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-"21
-[; ;config_ADC.c: 21:             ADCON0bits.ADCS0 = 0;
+"20
+[; ;config_ADC.c: 20:             ADCON0bits.ADCS0 = 0;
 [e = . . _ADCON0bits 1 6 -> -> 0 `i `uc ]
-"22
-[; ;config_ADC.c: 22:             ADCON0bits.ADCS1 = 0;
+"21
+[; ;config_ADC.c: 21:             ADCON0bits.ADCS1 = 0;
 [e = . . _ADCON0bits 1 7 -> -> 0 `i `uc ]
-"23
-[; ;config_ADC.c: 23:             ADCON0bits.ADON = 1;
+"22
+[; ;config_ADC.c: 22:             ADCON0bits.ADON = 1;
 [e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
-"24
-[; ;config_ADC.c: 24:             ADCON1bits.ADFM = 0;
+"23
+[; ;config_ADC.c: 23:             ADCON1bits.ADFM = 0;
 [e = . . _ADCON1bits 0 4 -> -> 0 `i `uc ]
-"25
-[; ;config_ADC.c: 25:             ADCON1bits.VCFG1 = 0;
+"24
+[; ;config_ADC.c: 24:             ADCON1bits.VCFG1 = 0;
 [e = . . _ADCON1bits 0 2 -> -> 0 `i `uc ]
-"26
-[; ;config_ADC.c: 26:             ADCON1bits.VCFG0 = 0;
+"25
+[; ;config_ADC.c: 25:             ADCON1bits.VCFG0 = 0;
 [e = . . _ADCON1bits 0 1 -> -> 0 `i `uc ]
-"27
-[; ;config_ADC.c: 27:             break;
+"26
+[; ;config_ADC.c: 26:             break;
 [e $U 139  ]
 "28
 [; ;config_ADC.c: 28:         case 1:

@@ -7,7 +7,7 @@
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "Master_04.c" 2
-# 17 "Master_04.c"
+# 16 "Master_04.c"
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2488,7 +2488,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 17 "Master_04.c" 2
+# 16 "Master_04.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 3
@@ -2623,7 +2623,7 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 18 "Master_04.c" 2
+# 17 "Master_04.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 1 3
 
@@ -2722,14 +2722,131 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 #pragma printf_check(sprintf) const
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
+# 18 "Master_04.c" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdlib.h" 1 3
+
+
+
+
+
+
+typedef unsigned short wchar_t;
+
+
+
+
+
+
+
+typedef struct {
+ int rem;
+ int quot;
+} div_t;
+typedef struct {
+ unsigned rem;
+ unsigned quot;
+} udiv_t;
+typedef struct {
+ long quot;
+ long rem;
+} ldiv_t;
+typedef struct {
+ unsigned long quot;
+ unsigned long rem;
+} uldiv_t;
+# 65 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdlib.h" 3
+extern double atof(const char *);
+extern double strtod(const char *, const char **);
+extern int atoi(const char *);
+extern unsigned xtoi(const char *);
+extern long atol(const char *);
+
+
+
+extern long strtol(const char *, char **, int);
+
+extern int rand(void);
+extern void srand(unsigned int);
+extern void * calloc(size_t, size_t);
+extern div_t div(int numer, int denom);
+extern udiv_t udiv(unsigned numer, unsigned denom);
+extern ldiv_t ldiv(long numer, long denom);
+extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
+
+
+
+extern unsigned long _lrotl(unsigned long value, unsigned int shift);
+extern unsigned long _lrotr(unsigned long value, unsigned int shift);
+extern unsigned int _rotl(unsigned int value, unsigned int shift);
+extern unsigned int _rotr(unsigned int value, unsigned int shift);
+
+
+
+
+extern void * malloc(size_t);
+extern void free(void *);
+extern void * realloc(void *, size_t);
+# 104 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdlib.h" 3
+extern int atexit(void (*)(void));
+extern char * getenv(const char *);
+extern char ** environ;
+extern int system(char *);
+extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
+extern int abs(int);
+extern long labs(long);
+
+extern char * itoa(char * buf, int val, int base);
+extern char * utoa(char * buf, unsigned val, int base);
+
+
+
+
+extern char * ltoa(char * buf, long val, int base);
+extern char * ultoa(char * buf, unsigned long val, int base);
+
+extern char * ftoa(float f, int * status);
 # 19 "Master_04.c" 2
 
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\string.h" 1 3
+# 14 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\string.h" 3
+extern void * memcpy(void *, const void *, size_t);
+extern void * memmove(void *, const void *, size_t);
+extern void * memset(void *, int, size_t);
+# 36 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\string.h" 3
+extern char * strcat(char *, const char *);
+extern char * strcpy(char *, const char *);
+extern char * strncat(char *, const char *, size_t);
+extern char * strncpy(char *, const char *, size_t);
+extern char * strdup(const char *);
+extern char * strtok(char *, const char *);
+
+
+extern int memcmp(const void *, const void *, size_t);
+extern int strcmp(const char *, const char *);
+extern int stricmp(const char *, const char *);
+extern int strncmp(const char *, const char *, size_t);
+extern int strnicmp(const char *, const char *, size_t);
+extern void * memchr(const void *, int, size_t);
+extern size_t strcspn(const char *, const char *);
+extern char * strpbrk(const char *, const char *);
+extern size_t strspn(const char *, const char *);
+extern char * strstr(const char *, const char *);
+extern char * stristr(const char *, const char *);
+extern char * strerror(int);
+extern size_t strlen(const char *);
+extern char * strchr(const char *, int);
+extern char * strichr(const char *, int);
+extern char * strrchr(const char *, int);
+extern char * strrichr(const char *, int);
+# 20 "Master_04.c" 2
 
 # 1 "./I2C.h" 1
-# 20 "./I2C.h"
+# 19 "./I2C.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
-# 20 "./I2C.h" 2
-# 29 "./I2C.h"
+# 19 "./I2C.h" 2
+# 28 "./I2C.h"
 void I2C_Master_Init(const unsigned long c);
 
 
@@ -2768,6 +2885,27 @@ unsigned short I2C_Master_Read(unsigned short a);
 void I2C_Slave_Init(uint8_t address);
 # 21 "Master_04.c" 2
 
+# 1 "./LCD_4.h" 1
+# 46 "./LCD_4.h"
+void Lcd_Port(char a);
+
+void Lcd_Cmd(char a);
+
+void Lcd_Clear(void);
+
+void Lcd_Set_Cursor(char a, char b);
+
+void Lcd_Init(void);
+
+void Lcd_Write_Char(char a);
+
+void Lcd_Write_String(char *a);
+
+void Lcd_Shift_Right(void);
+
+void Lcd_Shift_Left(void);
+# 22 "Master_04.c" 2
+
 
 
 
@@ -2789,14 +2927,25 @@ void I2C_Slave_Init(uint8_t address);
 
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
-# 52 "Master_04.c"
-uint8_t VOL;
+# 59 "Master_04.c"
+unsigned char VOL;
+unsigned char un;
+unsigned char dec;
+unsigned char cen;
+unsigned char POT;
+unsigned char TEMP;
+uint8_t sensor1;
+uint8_t sensor2;
+uint16_t temp;
+float temp1;
 
 
 
 
 void setup(void);
-
+void decimal(uint8_t var);
+void Temperatura(uint8_t var);
+void voltaje(uint8_t var);
 
 
 
@@ -2804,8 +2953,8 @@ void setup(void);
 void setup(void){
 
     ANSELH = 0x00;
-    TRISA = 0X00;
-    TRISB = 0x00;
+    TRISD = 0X00;
+    TRISE = 0x00;
 
     PORTA = 0X00;
     PORTB = 0X00;
@@ -2820,17 +2969,29 @@ void setup(void){
 
 
     I2C_Master_Init(100000);
-}
-
+ }
 
 
 
 void main(void){
     setup();
+    Lcd_Init();
+    Lcd_Clear();
+    Lcd_Set_Cursor(1,1);
+    Lcd_Write_String("S1:   S2:   S3:");
+    _delay((unsigned long)((100)*(4000000/4000000.0)));
+
     while(1){
+
+        I2C_Master_Start();
+        I2C_Master_Write(0x61);
+        sensor2 = I2C_Master_Read(0);
+        I2C_Master_Stop();
+        _delay((unsigned long)((200)*(4000000/4000.0)));
+
         I2C_Master_Start();
         I2C_Master_Write(0x51);
-        PORTB = I2C_Master_Read(0);
+        POT = I2C_Master_Read(0);
         I2C_Master_Stop();
         _delay((unsigned long)((200)*(4000000/4000.0)));
 
@@ -2843,8 +3004,84 @@ void main(void){
 
         I2C_Master_Start();
         I2C_Master_Write(0x81);
-        PORTA = I2C_Master_Read(0);
+        TEMP = I2C_Master_Read(0);
         I2C_Master_Stop();
         _delay((unsigned long)((200)*(4000000/4000.0)));
+
+
+        voltaje(POT);
+        Lcd_Set_Cursor(2,1);
+        Lcd_Write_Char(cen);
+        Lcd_Write_String(".");
+        Lcd_Write_Char(dec);
+        Lcd_Write_Char(un);
+        Lcd_Write_String("  ");
+        _delay((unsigned long)((200)*(4000000/4000.0)));
+
+
+        Lcd_Set_Cursor(2,8);
+        decimal(sensor2);
+        Lcd_Write_Char(dec);
+        Lcd_Set_Cursor(2,9);
+        Lcd_Write_Char(un);
+
+
+        Lcd_Set_Cursor(2,13);
+        Temperatura(TEMP);
+        Lcd_Write_Char(cen);
+        Lcd_Write_Char(dec);
+        Lcd_Write_Char(un);
+        Lcd_Write_String("C ");
+        _delay((unsigned long)((200)*(4000000/4000.0)));
+
+        PORTB = POT;
+        PORTA = TEMP;
+        _delay((unsigned long)((200)*(4000000/4000.0)));
+}
     }
+
+
+
+
+void decimal(uint8_t var){
+    uint8_t VAL;
+    VAL = var;
+    cen = (VAL/100) ;
+    VAL = (VAL - (cen*100));
+    dec = (VAL/10);
+    VAL = (VAL - (dec*10));
+    un = (VAL);
+
+    cen = cen + 48;
+    dec = dec + 48;
+    un = un + 48;
+}
+
+void voltaje(uint8_t var){
+    uint8_t VAL;
+    VAL = var;
+    VAL = (VAL*1.96);
+    cen = (VAL/100) ;
+    VAL = (VAL - (cen*100));
+    dec = (VAL/10);
+    VAL = (VAL - (dec*10));
+    un = (VAL);
+
+    cen = cen + 48;
+    dec = dec + 48;
+    un = un + 48;
+}
+
+void Temperatura(uint8_t var){
+    uint8_t VAL;
+    VAL = (0.7*var)-47;
+    cen = (VAL/100) ;
+    VAL = (VAL - (cen*100));
+    dec = (VAL/10);
+    VAL = (VAL - (dec*10));
+    un = (VAL);
+
+    cen = cen + 48;
+    dec = dec + 48;
+    un = un + 48;
 }

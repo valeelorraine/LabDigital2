@@ -1,7 +1,6 @@
  /*
  * File            : I2C.c
  * Author          : Ligo George
- * Company         : electroSome
  * Project         : I2C Library for MPLAB XC8
  * Microcontroller : PIC 16F877A
  * Created on April 15, 2017, 5:59 PM
@@ -9,7 +8,9 @@
  * Modificada por: Pablo Mazariegos con la ayuda del auxiliar Gustavo Ordoñez 
  * Basado en Link: http://microcontroladores-mrelberni.com/i2c-pic-comunicacion-serial/
  */
+
 #include "I2C.h"
+
 //*****************************************************************************
 // Función para inicializar I2C Maestro
 //*****************************************************************************
@@ -103,5 +104,5 @@ void I2C_Slave_Init(uint8_t address)
     SSPIF = 0;
     SSPIE = 1;
 }
-//*****************************************************************************
+
 

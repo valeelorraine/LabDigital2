@@ -1,4 +1,4 @@
-     /*
+   /*
  * File            : I2C.h
  * Author          : Ligo George
  * Company         : electroSome
@@ -64,4 +64,3 @@ unsigned short I2C_Master_Read(unsigned short a);
 void I2C_Slave_Init(uint8_t address);
 //*****************************************************************************
 #endif	/* __I2C_H */
-

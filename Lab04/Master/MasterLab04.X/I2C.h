@@ -1,7 +1,6 @@
  /*
  * File            : I2C.h
  * Author          : Ligo George
- * Company         : electroSome
  * Project         : I2C Library for MPLAB XC8
  * Microcontroller : PIC 16F877A
  * Created on April 15, 2017, 5:59 PM
@@ -64,4 +63,3 @@ unsigned short I2C_Master_Read(unsigned short a);
 void I2C_Slave_Init(uint8_t address);
 //*****************************************************************************
 #endif	/* __I2C_H */
-

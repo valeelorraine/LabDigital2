@@ -5,34 +5,60 @@
 [d frameptr 0 ]
 "5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"43 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
 "6 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\pic\__eeprom.c
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"16 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Master\MasterLab04.X\I2C.c
+"17 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Master\MasterLab04.X\I2C.c
 [v _I2C_Master_Init I2C_Master_Init `(v  1 e 1 0 ]
-"32
+"33
 [v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
-"39
+"40
 [v _I2C_Master_Start I2C_Master_Start `(v  1 e 1 0 ]
-"55
+"56
 [v _I2C_Master_Stop I2C_Master_Stop `(v  1 e 1 0 ]
-"65
+"66
 [v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
-"74
+"75
 [v _I2C_Master_Read I2C_Master_Read `(us  1 e 2 0 ]
 "10 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Master\MasterLab04.X\LCD_4.c
 [v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
 "32
 [v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
-"63 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Master\MasterLab04.X\Master_04.c
+"40
+[v _Lcd_Clear Lcd_Clear `(v  1 e 1 0 ]
+"45
+[v _Lcd_Set_Cursor Lcd_Set_Cursor `(v  1 e 1 0 ]
+"62
+[v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
+"80
+[v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
+"95
+[v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
+"81 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Master\MasterLab04.X\Master_04.c
 [v _setup setup `(v  1 e 1 0 ]
-"87
+"104
 [v _main main `(v  1 e 1 0 ]
+"174
+[v _decimal decimal `(v  1 e 1 0 ]
+"188
+[v _voltaje voltaje `(v  1 e 1 0 ]
+"203
+[v _Temperatura Temperatura `(v  1 e 1 0 ]
 "166 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
 "228
@@ -41,7 +67,7 @@
 [v _PORTC PORTC `VEuc  1 e 1 @7 ]
 "352
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
-[s S105 . 1 `uc 1 RD0 1 0 :1:0 
+[s S166 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -51,17 +77,13 @@
 `uc 1 RD7 1 0 :1:7 
 ]
 "369
-[u S114 . 1 `S105 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES114  1 e 1 @8 ]
+[u S175 . 1 `S166 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES175  1 e 1 @8 ]
 "843
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "850
 [v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
-"1416
-[v _TRISA TRISA `VEuc  1 e 1 @133 ]
-"1478
-[v _TRISB TRISB `VEuc  1 e 1 @134 ]
-[s S159 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S225 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -71,8 +93,12 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "1557
-[u S168 . 1 `S159 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES168  1 e 1 @135 ]
+[u S234 . 1 `S225 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES234  1 e 1 @135 ]
+"1602
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"1664
+[v _TRISE TRISE `VEuc  1 e 1 @137 ]
 [s S29 . 1 `uc 1 SCS 1 0 :1:0 
 `uc 1 LTS 1 0 :1:1 
 `uc 1 HTS 1 0 :1:2 
@@ -89,7 +115,7 @@
 [v _OSCCONbits OSCCONbits `VES40  1 e 1 @143 ]
 "1979
 [v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
-[s S180 . 1 `uc 1 SEN 1 0 :1:0 
+[s S246 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -99,8 +125,8 @@
 `uc 1 GCEN 1 0 :1:7 
 ]
 "1996
-[u S189 . 1 `S180 1 . 1 0 ]
-[v _SSPCON2bits SSPCON2bits `VES189  1 e 1 @145 ]
+[u S255 . 1 `S246 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES255  1 e 1 @145 ]
 "2048
 [v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
 "2177
@@ -129,21 +155,45 @@
 [v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
 "4460
 [v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
-"87 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Master\MasterLab04.X\Master_04.c
+"60 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Master\MasterLab04.X\Master_04.c
+[v _un un `uc  1 e 1 0 ]
+"61
+[v _dec dec `uc  1 e 1 0 ]
+"62
+[v _cen cen `uc  1 e 1 0 ]
+"63
+[v _POT POT `uc  1 e 1 0 ]
+"64
+[v _TEMP TEMP `uc  1 e 1 0 ]
+"66
+[v _sensor2 sensor2 `uc  1 e 1 0 ]
+"104
 [v _main main `(v  1 e 1 0 ]
 {
-"109
+"169
 } 0
-"63
+"188
+[v _voltaje voltaje `(v  1 e 1 0 ]
+{
+[v voltaje@var var `uc  1 a 1 wreg ]
+"189
+[v voltaje@VAL VAL `uc  1 a 1 63 ]
+"188
+[v voltaje@var var `uc  1 a 1 wreg ]
+"190
+[v voltaje@var var `uc  1 a 1 62 ]
+"201
+} 0
+"81
 [v _setup setup `(v  1 e 1 0 ]
 {
-"82
+"100
 } 0
-"16 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Master\MasterLab04.X\I2C.c
+"17 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Master\MasterLab04.X\I2C.c
 [v _I2C_Master_Init I2C_Master_Init `(v  1 e 1 0 ]
 {
 [v I2C_Master_Init@c c `DCul  1 p 4 0 ]
-"24
+"25
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
@@ -157,33 +207,229 @@
 [v ___lldiv@dividend dividend `ul  1 p 4 4 ]
 "30
 } 0
-"65 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Master\MasterLab04.X\I2C.c
-[v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
+"174 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Master\MasterLab04.X\Master_04.c
+[v _decimal decimal `(v  1 e 1 0 ]
 {
-[v I2C_Master_Write@d d `ui  1 p 2 0 ]
-"69
+[v decimal@var var `uc  1 a 1 wreg ]
+"175
+[v decimal@VAL VAL `uc  1 a 1 13 ]
+"174
+[v decimal@var var `uc  1 a 1 wreg ]
+"176
+[v decimal@var var `uc  1 a 1 12 ]
+"186
 } 0
-"55
-[v _I2C_Master_Stop I2C_Master_Stop `(v  1 e 1 0 ]
+"203
+[v _Temperatura Temperatura `(v  1 e 1 0 ]
 {
-"59
+[v Temperatura@var var `uc  1 a 1 wreg ]
+"204
+[v Temperatura@VAL VAL `uc  1 a 1 63 ]
+"203
+[v Temperatura@var var `uc  1 a 1 wreg ]
+"205
+[v Temperatura@var var `uc  1 a 1 62 ]
+"215
 } 0
-"39
-[v _I2C_Master_Start I2C_Master_Start `(v  1 e 1 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 10 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 9 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 0 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 8 ]
+"44
+} 0
+"43 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 56 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 55 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 46 ]
+"70
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S598 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S603 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S606 . 4 `l 1 i 4 0 `d 1 f 4 0 `S598 1 fAsBytes 4 0 `S603 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S606  1 a 4 20 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 14 ]
+[s S675 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S678 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S675 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S678  1 a 2 24 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 19 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 18 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 13 ]
+"8
+[v ___flmul@b b `d  1 p 4 0 ]
+[v ___flmul@a a `d  1 p 4 4 ]
+"205
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+{
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v __Umul8_16@word_mpld word_mpld `ui  1 a 2 6 ]
+"5
+[v __Umul8_16@product product `ui  1 a 2 4 ]
+"4
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+[v __Umul8_16@multiplicand multiplicand `uc  1 p 1 0 ]
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 8 ]
+"60
+} 0
+"10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+{
+"17
+[v ___fladd@grs grs `uc  1 a 1 45 ]
+"15
+[v ___fladd@bexp bexp `uc  1 a 1 44 ]
+"16
+[v ___fladd@aexp aexp `uc  1 a 1 43 ]
+"13
+[v ___fladd@signs signs `uc  1 a 1 42 ]
+"10
+[v ___fladd@b b `d  1 p 4 26 ]
+[v ___fladd@a a `d  1 p 4 30 ]
+"237
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v ___bmul@product product `uc  1 a 1 2 ]
+"4
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 0 ]
+"6
+[v ___bmul@multiplier multiplier `uc  1 a 1 3 ]
+"51
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 7 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 6 ]
+[v ___awdiv@counter counter `uc  1 a 1 5 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 0 ]
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+"41
+} 0
+"95 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Master\MasterLab04.X\LCD_4.c
+[v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
+{
+[v Lcd_Write_String@a a `*.24uc  1 a 1 wreg ]
+"96
+[v Lcd_Write_String@i i `i  1 a 2 5 ]
+"95
+[v Lcd_Write_String@a a `*.24uc  1 a 1 wreg ]
+"97
+[v Lcd_Write_String@a a `*.24uc  1 a 1 7 ]
+"99
+} 0
+"80
+[v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
+{
+[v Lcd_Write_Char@a a `uc  1 a 1 wreg ]
+"81
+[v Lcd_Write_Char@y y `uc  1 a 1 3 ]
+[v Lcd_Write_Char@temp temp `uc  1 a 1 2 ]
+"80
+[v Lcd_Write_Char@a a `uc  1 a 1 wreg ]
+"82
+[v Lcd_Write_Char@a a `uc  1 a 1 4 ]
+"93
+} 0
+"45
+[v _Lcd_Set_Cursor Lcd_Set_Cursor `(v  1 e 1 0 ]
+{
+[v Lcd_Set_Cursor@a a `uc  1 a 1 wreg ]
+"46
+[v Lcd_Set_Cursor@temp temp `uc  1 a 1 10 ]
+[v Lcd_Set_Cursor@y y `uc  1 a 1 9 ]
+[v Lcd_Set_Cursor@z z `uc  1 a 1 8 ]
+"45
+[v Lcd_Set_Cursor@a a `uc  1 a 1 wreg ]
+[v Lcd_Set_Cursor@b b `uc  1 p 1 4 ]
+"47
+[v Lcd_Set_Cursor@a a `uc  1 a 1 7 ]
+"60
+} 0
+"62
+[v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
+{
+"78
+} 0
+"40
+[v _Lcd_Clear Lcd_Clear `(v  1 e 1 0 ]
 {
 "43
 } 0
-"74
+"32
+[v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
+{
+[v Lcd_Cmd@a a `uc  1 a 1 wreg ]
+[v Lcd_Cmd@a a `uc  1 a 1 wreg ]
+[v Lcd_Cmd@a a `uc  1 a 1 3 ]
+"38
+} 0
+"10
+[v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
+{
+[v Lcd_Port@a a `uc  1 a 1 wreg ]
+[v Lcd_Port@a a `uc  1 a 1 wreg ]
+[v Lcd_Port@a a `uc  1 a 1 0 ]
+"30
+} 0
+"66 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab04\Master\MasterLab04.X\I2C.c
+[v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
+{
+[v I2C_Master_Write@d d `ui  1 p 2 0 ]
+"70
+} 0
+"56
+[v _I2C_Master_Stop I2C_Master_Stop `(v  1 e 1 0 ]
+{
+"60
+} 0
+"40
+[v _I2C_Master_Start I2C_Master_Start `(v  1 e 1 0 ]
+{
+"44
+} 0
+"75
 [v _I2C_Master_Read I2C_Master_Read `(us  1 e 2 0 ]
 {
-"76
+"77
 [v I2C_Master_Read@temp temp `us  1 a 2 4 ]
-"74
+"75
 [v I2C_Master_Read@a a `us  1 p 2 0 ]
-"89
+"90
 } 0
-"32
+"33
 [v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
 {
-"35
+"36
 } 0

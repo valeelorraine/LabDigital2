@@ -118,10 +118,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1478
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1478: extern volatile unsigned char TRISB __attribute__((address(0x086)));
 [v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"1546
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1546:     struct {
+[s S57 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S57 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"1545
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1545: typedef union {
+[u S56 `S57 1 ]
+[n S56 . . ]
+"1557
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1557: extern volatile TRISCbits_t TRISCbits __attribute__((address(0x087)));
+[v _TRISCbits `VS56 ~T0 @X0 0 e@135 ]
 "166
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 166: extern volatile unsigned char PORTA __attribute__((address(0x005)));
 [v _PORTA `Vuc ~T0 @X0 0 e@5 ]
-"1868
+"290
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 290: extern volatile unsigned char PORTC __attribute__((address(0x007)));
+[v _PORTC `Vuc ~T0 @X0 0 e@7 ]
+"19 ./config_ADC.h
+[v _config_ADC `(v ~T0 @X0 0 ef1`uc ]
+"1868 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1868:     struct {
 [s S70 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 ]
 [n S70 . SCS LTS HTS OSTS IRCF ]
@@ -165,8 +181,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "64 ./I2C.h
 [; ;./I2C.h: 64: void I2C_Slave_Init(uint8_t address);
 [v _I2C_Slave_Init `(v ~T0 @X0 0 ef1`uc ]
-"19 ./config_ADC.h
-[v _config_ADC `(v ~T0 @X0 0 ef1`uc ]
 [p mainexit ]
 "54 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 54: __asm("INDF equ 00h");
@@ -587,81 +601,90 @@ Version 4.0 HI-TECH Software Intermediate Code
 "112
 [; ;Esclavo_04.c: 112:     TRISB = 0x00;
 [e = _TRISB -> -> 0 `i `uc ]
-"115
-[; ;Esclavo_04.c: 115:     PORTA = 0X00;
+"113
+[; ;Esclavo_04.c: 113:     TRISCbits.TRISC4 = 0;
+[e = . . _TRISCbits 0 4 -> -> 0 `i `uc ]
+"114
+[; ;Esclavo_04.c: 114:     TRISCbits.TRISC3 = 0;
+[e = . . _TRISCbits 0 3 -> -> 0 `i `uc ]
+"117
+[; ;Esclavo_04.c: 117:     PORTA = 0X00;
 [e = _PORTA -> -> 0 `i `uc ]
-"116
-[; ;Esclavo_04.c: 116:     PORTB = 0x00;
+"118
+[; ;Esclavo_04.c: 118:     PORTB = 0x00;
 [e = _PORTB -> -> 0 `i `uc ]
 "119
-[; ;Esclavo_04.c: 119:     OSCCONbits.SCS = 1;
-[e = . . _OSCCONbits 0 0 -> -> 1 `i `uc ]
-"120
-[; ;Esclavo_04.c: 120:     OSCCONbits.IRCF2 = 1;
-[e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
+[; ;Esclavo_04.c: 119:     PORTC = 0X00;
+[e = _PORTC -> -> 0 `i `uc ]
 "121
-[; ;Esclavo_04.c: 121:     OSCCONbits.IRCF1 = 1;
-[e = . . _OSCCONbits 1 2 -> -> 1 `i `uc ]
-"122
-[; ;Esclavo_04.c: 122:     OSCCONbits.IRCF0 = 0;
-[e = . . _OSCCONbits 1 1 -> -> 0 `i `uc ]
-"125
-[; ;Esclavo_04.c: 125:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"126
-[; ;Esclavo_04.c: 126:     INTCONbits.PEIE = 1;
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"127
-[; ;Esclavo_04.c: 127:     PIE1bits.ADIE = 1;
-[e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
-"128
-[; ;Esclavo_04.c: 128:     PIR1bits.ADIF = 0;
-[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
-"131
-[; ;Esclavo_04.c: 131:     I2C_Slave_Init(0x50);
-[e ( _I2C_Slave_Init (1 -> -> 80 `i `uc ]
-"133
-[; ;Esclavo_04.c: 133:     config_ADC(1);
+[; ;Esclavo_04.c: 121:     config_ADC(1);
 [e ( _config_ADC (1 -> -> 1 `i `uc ]
-"134
-[; ;Esclavo_04.c: 134: }
+"124
+[; ;Esclavo_04.c: 124:     OSCCONbits.SCS = 1;
+[e = . . _OSCCONbits 0 0 -> -> 1 `i `uc ]
+"125
+[; ;Esclavo_04.c: 125:     OSCCONbits.IRCF2 = 1;
+[e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
+"126
+[; ;Esclavo_04.c: 126:     OSCCONbits.IRCF1 = 1;
+[e = . . _OSCCONbits 1 2 -> -> 1 `i `uc ]
+"127
+[; ;Esclavo_04.c: 127:     OSCCONbits.IRCF0 = 0;
+[e = . . _OSCCONbits 1 1 -> -> 0 `i `uc ]
+"130
+[; ;Esclavo_04.c: 130:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"131
+[; ;Esclavo_04.c: 131:     INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+"132
+[; ;Esclavo_04.c: 132:     PIE1bits.ADIE = 1;
+[e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
+"133
+[; ;Esclavo_04.c: 133:     PIR1bits.ADIF = 0;
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+"136
+[; ;Esclavo_04.c: 136:     I2C_Slave_Init(0x50);
+[e ( _I2C_Slave_Init (1 -> -> 80 `i `uc ]
+"138
+[; ;Esclavo_04.c: 138: }
 [e :UE 153 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"139
-[; ;Esclavo_04.c: 139: void main(void){
+"143
+[; ;Esclavo_04.c: 143: void main(void){
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"140
-[; ;Esclavo_04.c: 140:     setup();
+"144
+[; ;Esclavo_04.c: 144:     setup();
 [e ( _setup ..  ]
-"142
-[; ;Esclavo_04.c: 142:     while(1){
+"145
+[; ;Esclavo_04.c: 145:     while(1){
 [e :U 156 ]
 {
-"144
-[; ;Esclavo_04.c: 144:         if(ADCON0bits.GO == 0){
+"146
+[; ;Esclavo_04.c: 146:         if(ADCON0bits.GO == 0){
 [e $ ! == -> . . _ADCON0bits 1 1 `i -> 0 `i 158  ]
 {
-"145
-[; ;Esclavo_04.c: 145:             _delay((unsigned long)((100)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"146
-[; ;Esclavo_04.c: 146:             ADCON0bits.GO = 1;
-[e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
 "147
-[; ;Esclavo_04.c: 147:         }
+[; ;Esclavo_04.c: 147:             _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"148
+[; ;Esclavo_04.c: 148:             ADCON0bits.GO = 1;
+[e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
+"149
+[; ;Esclavo_04.c: 149:         }
 }
 [e :U 158 ]
-"148
-[; ;Esclavo_04.c: 148:     }
+"150
+[; ;Esclavo_04.c: 150:     }
 }
 [e :U 155 ]
 [e $U 156  ]
 [e :U 157 ]
-"149
-[; ;Esclavo_04.c: 149: }
+"151
+[; ;Esclavo_04.c: 151: }
 [e :UE 154 ]
 }
