@@ -2724,6 +2724,124 @@ extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 # 18 "Lab05.c" 2
 
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\string.h" 1 3
+# 14 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\string.h" 3
+extern void * memcpy(void *, const void *, size_t);
+extern void * memmove(void *, const void *, size_t);
+extern void * memset(void *, int, size_t);
+# 36 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\string.h" 3
+extern char * strcat(char *, const char *);
+extern char * strcpy(char *, const char *);
+extern char * strncat(char *, const char *, size_t);
+extern char * strncpy(char *, const char *, size_t);
+extern char * strdup(const char *);
+extern char * strtok(char *, const char *);
+
+
+extern int memcmp(const void *, const void *, size_t);
+extern int strcmp(const char *, const char *);
+extern int stricmp(const char *, const char *);
+extern int strncmp(const char *, const char *, size_t);
+extern int strnicmp(const char *, const char *, size_t);
+extern void * memchr(const void *, int, size_t);
+extern size_t strcspn(const char *, const char *);
+extern char * strpbrk(const char *, const char *);
+extern size_t strspn(const char *, const char *);
+extern char * strstr(const char *, const char *);
+extern char * stristr(const char *, const char *);
+extern char * strerror(int);
+extern size_t strlen(const char *);
+extern char * strchr(const char *, int);
+extern char * strichr(const char *, int);
+extern char * strrchr(const char *, int);
+extern char * strrichr(const char *, int);
+# 19 "Lab05.c" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdlib.h" 1 3
+
+
+
+
+
+
+typedef unsigned short wchar_t;
+
+
+
+
+
+
+
+typedef struct {
+ int rem;
+ int quot;
+} div_t;
+typedef struct {
+ unsigned rem;
+ unsigned quot;
+} udiv_t;
+typedef struct {
+ long quot;
+ long rem;
+} ldiv_t;
+typedef struct {
+ unsigned long quot;
+ unsigned long rem;
+} uldiv_t;
+# 65 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdlib.h" 3
+extern double atof(const char *);
+extern double strtod(const char *, const char **);
+extern int atoi(const char *);
+extern unsigned xtoi(const char *);
+extern long atol(const char *);
+
+
+
+extern long strtol(const char *, char **, int);
+
+extern int rand(void);
+extern void srand(unsigned int);
+extern void * calloc(size_t, size_t);
+extern div_t div(int numer, int denom);
+extern udiv_t udiv(unsigned numer, unsigned denom);
+extern ldiv_t ldiv(long numer, long denom);
+extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
+
+
+
+extern unsigned long _lrotl(unsigned long value, unsigned int shift);
+extern unsigned long _lrotr(unsigned long value, unsigned int shift);
+extern unsigned int _rotl(unsigned int value, unsigned int shift);
+extern unsigned int _rotr(unsigned int value, unsigned int shift);
+
+
+
+
+extern void * malloc(size_t);
+extern void free(void *);
+extern void * realloc(void *, size_t);
+# 104 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdlib.h" 3
+extern int atexit(void (*)(void));
+extern char * getenv(const char *);
+extern char ** environ;
+extern int system(char *);
+extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
+extern int abs(int);
+extern long labs(long);
+
+extern char * itoa(char * buf, int val, int base);
+extern char * utoa(char * buf, unsigned val, int base);
+
+
+
+
+extern char * ltoa(char * buf, long val, int base);
+extern char * ultoa(char * buf, unsigned long val, int base);
+
+extern char * ftoa(float f, int * status);
+# 20 "Lab05.c" 2
+
 
 
 
@@ -2744,24 +2862,38 @@ extern int printf(const char *, ...);
 
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
-# 48 "Lab05.c"
+
+
+
+
+
+
+
+
 unsigned char FLAG = 0X00;
 unsigned char FLAG1 = 0X00;
+unsigned char un;
+unsigned char dec;
+unsigned char cen;
+int select;
+char centena;
+unsigned char decena;
+unsigned char unidad;
+char var, con;
+int full;
 
 
 
 
 void setup(void);
+void setup(void);
+void Text(void);
+void decimal(uint8_t var);
 
 
 
 
 void __attribute__((picinterrupt(("")))) isr(void){
-    if(T0IF == 1){
-        TMR0 = 100;
-        INTCONbits.T0IF = 0;
-    }
-
     if(INTCONbits.RBIF == 1){
         if(PORTBbits.RB0 == 0){
             FLAG = 1;}
@@ -2788,13 +2920,11 @@ void __attribute__((picinterrupt(("")))) isr(void){
 
 void setup(void){
 
-
     ANSEL = 0X00;
-    ANSELH = 0B00001000;
+    ANSELH = 0x00;
 
     TRISA = 0X00;
     TRISB = 0B00000011;
-    TRISC = 0X00;
     TRISE = 0X00;
 
     PORTA = 0X00;
@@ -2813,17 +2943,139 @@ void setup(void){
     WPUB = 0B00000011;
 
 
-    ADCON0bits.ADON = 1;
-    ADCON0bits.CHS = 8;
-
-
-
-    OPTION_REG = 0B00000101;
-    TMR0 = 100;
+    OPTION_REGbits.nRBPU = 0;
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
-    INTCONbits.T0IE = 1;
     INTCONbits.RBIE = 1;
-    INTCONbits.T0IF = 0;
     INTCONbits.RBIF = 0;
+
+
+
+    PIR1bits.RCIF = 0;
+    PIR1bits.TXIF = 0;
+    PIE1bits.RCIE = 0;
+    PIE1bits.TXIE = 0;
+    TXSTAbits.TX9 = 0;
+    TXSTAbits.TXEN = 1;
+    TXSTAbits.SYNC = 0;
+    TXSTAbits.BRGH = 1;
+    RCSTAbits.RX9 = 0;
+    RCSTAbits.CREN = 1;
+    RCSTAbits.SPEN = 1;
+
+
+
+    BAUDCTLbits.BRG16 = 0;
+    SPBRG = 25;
+    SPBRGH = 1;
+
+    }
+
+
+
+
+void main(void){
+    setup();
+    while (1){
+        PORTD = select;
+        Text();
+    }
+}
+
+
+
+
+void putch(char info){
+    while (TXIF == 0);
+    TXREG = info;
+
+}
+
+void Text(void){
+    _delay((unsigned long)((250)*(4000000/4000.0)));
+        decimal(PORTA);
+        printf("Valor del contador:\r");
+        _delay((unsigned long)((250)*(4000000/4000.0)));
+        TXREG = cen;
+        _delay((unsigned long)((250)*(4000000/4000.0)));
+        TXREG = dec;
+        _delay((unsigned long)((250)*(4000000/4000.0)));
+        TXREG = un;
+        _delay((unsigned long)((250)*(4000000/4000.0)));
+        printf("\r");
+
+
+         printf("Ingresar valor de la centena que sea menor o igual que 2: \r ");
+          defensa1:
+           while(RCIF == 0);
+            centena = RCREG -48;
+
+           while(RCREG > '2'){
+               goto defensa1;
+           }
+
+        printf("Ingresar decena: \r");
+          defensa2:
+            while(RCIF == 0);
+             decena = RCREG -48;
+
+            if(centena == 2){
+               while(RCREG > '5'){
+                   goto defensa2;
+               }
+           }
+
+        printf("Ingresar unidad: \r");
+          defensa3:
+           while(RCIF == 0);
+            unidad = RCREG - 48;
+
+           if(centena == 2 && decena == 5){
+               while(RCREG > '5'){
+                   goto defensa3;
+               }
+           }
+          con = concat(centena, decena);
+          full = concat(con, unidad);
+          _delay((unsigned long)((250)*(4000000/4000.0)));
+        printf("El numero elegido es: %d \r", full);
+        select = full;
+    }
+
+    void decimal(uint8_t var){
+        uint8_t VAL;
+        VAL = var;
+        cen = (VAL/100) ;
+        VAL = (VAL - (cen*100));
+        dec = (VAL/10);
+        VAL = (VAL - (dec*10));
+        un = (VAL);
+
+        cen = cen + 48;
+        dec = dec + 48;
+        un = un + 48;
+    }
+
+
+    int concat(int a, int b)
+    {
+
+        char s1[20];
+        char s2[20];
+
+
+
+        sprintf(s1, "%d", a);
+        sprintf(s2, "%d", b);
+
+
+
+        strcat(s1, s2);
+
+
+
+        int c = atoi(s1);
+
+
+        return c;
     }
