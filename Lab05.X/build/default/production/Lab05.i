@@ -2875,10 +2875,13 @@ unsigned char FLAG1 = 0X00;
 unsigned char un;
 unsigned char dec;
 unsigned char cen;
+unsigned char tempRX;
+unsigned char CONT;
 int select;
-char centena;
-unsigned char decena;
+unsigned char contint;
 unsigned char unidad;
+unsigned char decena;
+unsigned char centena;
 char var, con;
 int full;
 
@@ -2886,8 +2889,7 @@ int full;
 
 
 void setup(void);
-void setup(void);
-void Text(void);
+
 void decimal(uint8_t var);
 
 
@@ -2900,7 +2902,7 @@ void __attribute__((picinterrupt(("")))) isr(void){
         else{
             if(FLAG == 1){
                 FLAG = 0;
-                PORTA++;
+                contint++;
             }
         }
         if(PORTBbits.RB1 == 0){
@@ -2908,12 +2910,60 @@ void __attribute__((picinterrupt(("")))) isr(void){
         else{
             if(FLAG1 == 1){
                 FLAG1 = 0;
-                PORTA--;
+                contint--;
             }
         }
         INTCONbits.RBIF = 0;
     }
-}
+
+
+    if (PIR1bits.RCIF == 1){
+        tempRX = RCREG;
+        if(tempRX == 0x00){
+            if(PIR1bits.TXIF == 1){
+                TXREG = cen;
+                _delay((unsigned long)((1)*(4000000/4000.0)));
+                }
+
+            if(PIR1bits.TXIF == 1){
+                TXREG = dec;
+                _delay((unsigned long)((1)*(4000000/4000.0)));
+                }
+
+            if(PIR1bits.TXIF == 1){
+                TXREG = un;
+                _delay((unsigned long)((1)*(4000000/4000.0)));
+                }
+        }
+            PIR1bits.RCIF = 0;
+
+
+            if(tempRX == 0xff){
+
+                while(PIR1bits.RCIF == 0){
+                }
+                centena = RCREG;
+                PIR1bits.RCIF = 0;
+
+
+                while(PIR1bits.RCIF == 0){}
+                decena = RCREG;
+                PIR1bits.RCIF = 0;
+
+
+                while(PIR1bits.RCIF == 0){}
+                unidad = RCREG;
+                PIR1bits.RCIF = 0;
+
+                centena = centena - 48;
+                decena = decena - 48;
+                unidad = unidad - 48;
+
+                PORTD = ((centena*100)+(decena*10)+ unidad);
+            }
+            PIR1bits.RCIF =0;
+        }
+    }
 
 
 
@@ -2925,11 +2975,13 @@ void setup(void){
 
     TRISA = 0X00;
     TRISB = 0B00000011;
+    TRISD = 0X00;
     TRISE = 0X00;
 
     PORTA = 0X00;
     PORTB = 0X00;
     PORTC = 0X00;
+    PORTD = 0X00;
     PORTE = 0X00;
 
 
@@ -2953,7 +3005,7 @@ void setup(void){
 
     PIR1bits.RCIF = 0;
     PIR1bits.TXIF = 0;
-    PIE1bits.RCIE = 0;
+    PIE1bits.RCIE = 1;
     PIE1bits.TXIE = 0;
     TXSTAbits.TX9 = 0;
     TXSTAbits.TXEN = 1;
@@ -2977,11 +3029,10 @@ void setup(void){
 void main(void){
     setup();
     while (1){
-        PORTD = select;
-        Text();
+        decimal(contint);
+        _delay((unsigned long)((200)*(4000000/4000.0)));
     }
 }
-
 
 
 
@@ -2991,91 +3042,16 @@ void putch(char info){
 
 }
 
-void Text(void){
-    _delay((unsigned long)((250)*(4000000/4000.0)));
-        decimal(PORTA);
-        printf("Valor del contador:\r");
-        _delay((unsigned long)((250)*(4000000/4000.0)));
-        TXREG = cen;
-        _delay((unsigned long)((250)*(4000000/4000.0)));
-        TXREG = dec;
-        _delay((unsigned long)((250)*(4000000/4000.0)));
-        TXREG = un;
-        _delay((unsigned long)((250)*(4000000/4000.0)));
-        printf("\r");
+void decimal(uint8_t var){
+    uint8_t VAL;
+    VAL = var;
+    cen = (VAL/100) ;
+    VAL = (VAL - (cen*100));
+    dec = (VAL/10);
+    VAL = (VAL - (dec*10));
+    un = (VAL);
 
-
-         printf("Ingresar valor de la centena que sea menor o igual que 2: \r ");
-          defensa1:
-           while(RCIF == 0);
-            centena = RCREG -48;
-
-           while(RCREG > '2'){
-               goto defensa1;
-           }
-
-        printf("Ingresar decena: \r");
-          defensa2:
-            while(RCIF == 0);
-             decena = RCREG -48;
-
-            if(centena == 2){
-               while(RCREG > '5'){
-                   goto defensa2;
-               }
-           }
-
-        printf("Ingresar unidad: \r");
-          defensa3:
-           while(RCIF == 0);
-            unidad = RCREG - 48;
-
-           if(centena == 2 && decena == 5){
-               while(RCREG > '5'){
-                   goto defensa3;
-               }
-           }
-          con = concat(centena, decena);
-          full = concat(con, unidad);
-          _delay((unsigned long)((250)*(4000000/4000.0)));
-        printf("El numero elegido es: %d \r", full);
-        select = full;
-    }
-
-    void decimal(uint8_t var){
-        uint8_t VAL;
-        VAL = var;
-        cen = (VAL/100) ;
-        VAL = (VAL - (cen*100));
-        dec = (VAL/10);
-        VAL = (VAL - (dec*10));
-        un = (VAL);
-
-        cen = cen + 48;
-        dec = dec + 48;
-        un = un + 48;
-    }
-
-
-    int concat(int a, int b)
-    {
-
-        char s1[20];
-        char s2[20];
-
-
-
-        sprintf(s1, "%d", a);
-        sprintf(s2, "%d", b);
-
-
-
-        strcat(s1, s2);
-
-
-
-        int c = atoi(s1);
-
-
-        return c;
-    }
+    cen = cen + 48;
+    dec = dec + 48;
+    un = un + 48;
+}
