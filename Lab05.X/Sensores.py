@@ -18,13 +18,13 @@ time.sleep(1)                                # Delay
 
 # Sensor de Temperatura
 digital_feed = aio.feeds('temp')             # Temperatura
-aio.send_data(digital_feed.key, 50)          # Valor a enviar
+aio.send_data(digital_feed.key, 30)          # Valor a enviar
 digital_data1 = aio.receive(digital_feed.key)
 print(f'Magnitud de temperatura: {digital_data1.value}')
 
 # Sensor de Humedad
 digital_feed1 = aio.feeds('lab05')
-aio.send_data(digital_feed1.key, 100)
+aio.send_data(digital_feed1.key, 70)
 digital_data1 = aio.receive(digital_feed1.key)
 print(f'Porcentaje de humedad: {digital_data1.value}')
 
@@ -50,7 +50,6 @@ def obtvalor():
     CONTADOR = cen + dec + un                # Unir numeros y enviar a Adafruit
     return CONTADOR
 
-# Estoooo para que es
 digitalfeed2 = aio.feeds("interno")
 digitalfeed3 = aio.feeds("contador")
 
@@ -65,9 +64,6 @@ while(1):
     un1 = numcont[2:3].encode('ascii', 'ignore')
     send()                                   # Enviar valor del contador de Adafruit
     print(numcont)
-    print(cen1)
-    print(dec1)
-    print(un1)
     print(data)
     
     time.sleep(0.01)

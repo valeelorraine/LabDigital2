@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\PERSON~1\AppData\Local\Temp\s4oc.o
+$C:\Users\PERSON~1\AppData\Local\Temp\s880.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 4 2007 2007 2 2
@@ -76,27 +76,27 @@ STRING 230-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Lab05.X.production.o
-F cinit CODE >507:C:\Users\PERSON~1\AppData\Local\Temp\s4oc.s
-F cinit CODE >510:C:\Users\PERSON~1\AppData\Local\Temp\s4oc.s
-F cinit CODE >557:C:\Users\PERSON~1\AppData\Local\Temp\s4oc.s
-10 cinit CODE >558:C:\Users\PERSON~1\AppData\Local\Temp\s4oc.s
-11 cinit CODE >559:C:\Users\PERSON~1\AppData\Local\Temp\s4oc.s
-12 cinit CODE >560:C:\Users\PERSON~1\AppData\Local\Temp\s4oc.s
-13 cinit CODE >561:C:\Users\PERSON~1\AppData\Local\Temp\s4oc.s
-14 cinit CODE >564:C:\Users\PERSON~1\AppData\Local\Temp\s4oc.s
-15 cinit CODE >565:C:\Users\PERSON~1\AppData\Local\Temp\s4oc.s
-16 cinit CODE >566:C:\Users\PERSON~1\AppData\Local\Temp\s4oc.s
-17 cinit CODE >567:C:\Users\PERSON~1\AppData\Local\Temp\s4oc.s
-18 cinit CODE >568:C:\Users\PERSON~1\AppData\Local\Temp\s4oc.s
-19 cinit CODE >569:C:\Users\PERSON~1\AppData\Local\Temp\s4oc.s
-1A cinit CODE >570:C:\Users\PERSON~1\AppData\Local\Temp\s4oc.s
-1B cinit CODE >571:C:\Users\PERSON~1\AppData\Local\Temp\s4oc.s
-1C cinit CODE >572:C:\Users\PERSON~1\AppData\Local\Temp\s4oc.s
-1D cinit CODE >573:C:\Users\PERSON~1\AppData\Local\Temp\s4oc.s
-1E cinit CODE >574:C:\Users\PERSON~1\AppData\Local\Temp\s4oc.s
-1F cinit CODE >580:C:\Users\PERSON~1\AppData\Local\Temp\s4oc.s
-1F cinit CODE >582:C:\Users\PERSON~1\AppData\Local\Temp\s4oc.s
-20 cinit CODE >583:C:\Users\PERSON~1\AppData\Local\Temp\s4oc.s
+F cinit CODE >507:C:\Users\PERSON~1\AppData\Local\Temp\s880.s
+F cinit CODE >510:C:\Users\PERSON~1\AppData\Local\Temp\s880.s
+F cinit CODE >557:C:\Users\PERSON~1\AppData\Local\Temp\s880.s
+10 cinit CODE >558:C:\Users\PERSON~1\AppData\Local\Temp\s880.s
+11 cinit CODE >559:C:\Users\PERSON~1\AppData\Local\Temp\s880.s
+12 cinit CODE >560:C:\Users\PERSON~1\AppData\Local\Temp\s880.s
+13 cinit CODE >561:C:\Users\PERSON~1\AppData\Local\Temp\s880.s
+14 cinit CODE >564:C:\Users\PERSON~1\AppData\Local\Temp\s880.s
+15 cinit CODE >565:C:\Users\PERSON~1\AppData\Local\Temp\s880.s
+16 cinit CODE >566:C:\Users\PERSON~1\AppData\Local\Temp\s880.s
+17 cinit CODE >567:C:\Users\PERSON~1\AppData\Local\Temp\s880.s
+18 cinit CODE >568:C:\Users\PERSON~1\AppData\Local\Temp\s880.s
+19 cinit CODE >569:C:\Users\PERSON~1\AppData\Local\Temp\s880.s
+1A cinit CODE >570:C:\Users\PERSON~1\AppData\Local\Temp\s880.s
+1B cinit CODE >571:C:\Users\PERSON~1\AppData\Local\Temp\s880.s
+1C cinit CODE >572:C:\Users\PERSON~1\AppData\Local\Temp\s880.s
+1D cinit CODE >573:C:\Users\PERSON~1\AppData\Local\Temp\s880.s
+1E cinit CODE >574:C:\Users\PERSON~1\AppData\Local\Temp\s880.s
+1F cinit CODE >580:C:\Users\PERSON~1\AppData\Local\Temp\s880.s
+1F cinit CODE >582:C:\Users\PERSON~1\AppData\Local\Temp\s880.s
+20 cinit CODE >583:C:\Users\PERSON~1\AppData\Local\Temp\s880.s
 4 intentry CODE >74:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Lab05.X\Lab05.c
 21B text6 CODE >4:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
 21C text6 CODE >6:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
@@ -264,22 +264,22 @@ _FLAG 7D 0 COMMON 1 bssCOMMON dist/default/production\Lab05.X.production.o
 _IOCB 96 0 ABS 0 - dist/default/production\Lab05.X.production.o
 _TXIF 64 0 ABS 0 - dist/default/production\Lab05.X.production.o
 _WPUB 95 0 ABS 0 - dist/default/production\Lab05.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\PERSON~1\AppData\Local\Temp\s4oc.o
+___sp 0 0 STACK 2 stack C:\Users\PERSON~1\AppData\Local\Temp\s880.o
 _main 3C8 0 CODE 0 maintext dist/default/production\Lab05.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Lab05.X.production.o
-start 18 0 CODE 0 init C:\Users\PERSON~1\AppData\Local\Temp\s4oc.o
+start 18 0 CODE 0 init C:\Users\PERSON~1\AppData\Local\Temp\s880.o
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\Lab05.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Lab05.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OPTION_REGbits 81 0 ABS 0 - dist/default/production\Lab05.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 i1___bmul@multiplier 73 0 COMMON 1 cstackCOMMON dist/default/production\Lab05.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\s4oc.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\s4oc.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\s4oc.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\s4oc.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\s4oc.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\s4oc.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\s880.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\s880.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\s880.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\s880.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\s880.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\s880.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 ___bmul@multiplicand 20 0 BANK0 1 cstackBANK0 dist/default/production\Lab05.X.production.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Lab05.X.production.o
@@ -298,8 +298,8 @@ decimal@VAL 2D 0 BANK0 1 cstackBANK0 dist/default/production\Lab05.X.production.
 decimal@var 2C 0 BANK0 1 cstackBANK0 dist/default/production\Lab05.X.production.o
 ___awdiv@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\Lab05.X.production.o
 __end_of___awdiv 282 0 CODE 0 text4 dist/default/production\Lab05.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\PERSON~1\AppData\Local\Temp\s4oc.o
-___stacklo 0 0 ABS 0 - C:\Users\PERSON~1\AppData\Local\Temp\s4oc.o
+___stackhi 0 0 ABS 0 - C:\Users\PERSON~1\AppData\Local\Temp\s880.o
+___stacklo 0 0 ABS 0 - C:\Users\PERSON~1\AppData\Local\Temp\s880.o
 __size_ofi1___bmul 0 0 ABS 0 - dist/default/production\Lab05.X.production.o
 _BAUDCTLbits 187 0 ABS 0 - dist/default/production\Lab05.X.production.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\Lab05.X.production.o
@@ -308,7 +308,7 @@ i1___bmul@multiplicand 70 0 COMMON 1 cstackCOMMON dist/default/production\Lab05.
 _SPBRGH 9A 0 ABS 0 - dist/default/production\Lab05.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\Lab05.X.production.o
 i1___bmul@product 72 0 COMMON 1 cstackCOMMON dist/default/production\Lab05.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\PERSON~1\AppData\Local\Temp\s4oc.o
+___int_sp 0 0 STACK 2 stack C:\Users\PERSON~1\AppData\Local\Temp\s880.o
 i1___bmul 436 0 CODE 0 text6 dist/default/production\Lab05.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
@@ -360,7 +360,7 @@ _decena 7A 0 COMMON 1 bssCOMMON dist/default/production\Lab05.X.production.o
 __end_of_isr 1B0 0 CODE 0 text5 dist/default/production\Lab05.X.production.o
 __HnvBANK0 0 0 ABS 0 nvBANK0 -
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\PERSON~1\AppData\Local\Temp\s4oc.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\PERSON~1\AppData\Local\Temp\s880.o
 __size_of___bmul 0 0 ABS 0 - dist/default/production\Lab05.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 _RCSTAbits 18 0 ABS 0 - dist/default/production\Lab05.X.production.o

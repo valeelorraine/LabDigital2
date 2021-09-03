@@ -7,7 +7,7 @@
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "Master.c" 2
-# 16 "Master.c"
+# 267 "Master.c"
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2488,7 +2488,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 16 "Master.c" 2
+# 267 "Master.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 3
@@ -2623,7 +2623,7 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 17 "Master.c" 2
+# 268 "Master.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 1 3
 
@@ -2722,7 +2722,7 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 #pragma printf_check(sprintf) const
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
-# 18 "Master.c" 2
+# 269 "Master.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdlib.h" 1 3
 
@@ -2807,7 +2807,7 @@ extern char * ltoa(char * buf, long val, int base);
 extern char * ultoa(char * buf, unsigned long val, int base);
 
 extern char * ftoa(float f, int * status);
-# 19 "Master.c" 2
+# 270 "Master.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\string.h" 1 3
 # 14 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\string.h" 3
@@ -2840,50 +2840,8 @@ extern char * strchr(const char *, int);
 extern char * strichr(const char *, int);
 extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
-# 20 "Master.c" 2
+# 271 "Master.c" 2
 
-
-# 1 "./config_USART.h" 1
-# 17 "./config_USART.h"
-void config_USART(void);
-# 22 "Master.c" 2
-
-# 1 "./SPI.h" 1
-# 17 "./SPI.h"
-typedef enum
-{
-    SPI_MASTER_OSC_DIV4 = 0b00100000,
-    SPI_MASTER_OSC_DIV16 = 0b00100001,
-    SPI_MASTER_OSC_DIV64 = 0b00100010,
-    SPI_MASTER_TMR2 = 0b00100011,
-    SPI_SLAVE_SS_EN = 0b00100100,
-    SPI_SLAVE_SS_DIS = 0b00100101
-}Spi_Type;
-
-typedef enum
-{
-    SPI_DATA_SAMPLE_MIDDLE = 0b00000000,
-    SPI_DATA_SAMPLE_END = 0b10000000
-}Spi_Data_Sample;
-
-typedef enum
-{
-    SPI_CLOCK_IDLE_HIGH = 0b00010000,
-    SPI_CLOCK_IDLE_LOW = 0b00000000
-}Spi_Clock_Idle;
-
-typedef enum
-{
-    SPI_IDLE_2_ACTIVE = 0b00000000,
-    SPI_ACTIVE_2_IDLE = 0b01000000
-}Spi_Transmit_Edge;
-
-
-void spiInit(Spi_Type, Spi_Data_Sample, Spi_Clock_Idle, Spi_Transmit_Edge);
-void spiWrite(char);
-unsigned spiDataReady();
-char spiRead();
-# 23 "Master.c" 2
 
 
 
@@ -2906,39 +2864,29 @@ char spiRead();
 
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
-# 54 "Master.c"
-uint8_t vol_a, vol_b;
-uint8_t cen, dec, un, residuo;
-uint8_t c1, d1, u1;
-char s1[10];
-char s2[10];
-char s3[10];
+# 305 "Master.c"
+unsigned char FLAG = 0X00;
 
+unsigned char dist = 0x00;
 
 
 
 void setup(void);
-void putch(char dato);
-void mensaje1(void);
-void mensaje2(void);
-void division(char dividendo);
-void precaucion(void);
-void precaucion1(void);
-void precaucion2(void);
 
 
 
 
 void setup(void){
-    TRISB = 0X00;
 
-    TRISCbits.TRISC2 = 1;
+    ANSEL = 0X00;
+    ANSELH = 0x00;
+
+
+    TRISCbits.TRISC2 = 0;
     TRISCbits.TRISC3 = 1;
-    TRISCbits.TRISC5 = 1;
+    TRISBbits.TRISB1 = 0;
+    TRISBbits.TRISB2 = 0;
     TRISD = 0X00;
-    TRISCbits.TRISC6 = 0;
-    TRISCbits.TRISC7 = 1;
-
 
     PORTA = 0X00;
     PORTB = 0X00;
@@ -2950,156 +2898,56 @@ void setup(void){
     OSCCONbits.SCS = 1;
     OSCCONbits.IRCF2 = 1;
     OSCCONbits.IRCF1 = 1;
-    OSCCONbits.IRCF0 = 0;
+    OSCCONbits.IRCF0 = 1;
 
 
-    spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW,
-            SPI_IDLE_2_ACTIVE);
+    INTCONbits.GIE = 1;
+    INTCONbits.PEIE = 1;
 
-    config_USART();
-}
+
+    TMR1 = 0X00;
+    T1CONbits.T1CKPS = 0B01;
+    T1CONbits.TMR1GE = 0;
+    T1CONbits.TMR1CS = 0;
+    }
 
 
 
 
 void main(void){
     setup();
-    while(1){
-        PORTCbits.RC2 = 0;
-       _delay((unsigned long)((1)*(4000000/4000.0)));
+    while (1){
+        _delay((unsigned long)((200)*(8000000/4000.0)));
+        C_distancia(dist);
+        PORTD = dist;
 
-       spiWrite(0x0A);
-       vol_a = spiRead();
-       _delay((unsigned long)((1)*(4000000/4000.0)));
-
-       spiWrite(0x0A);
-       vol_b = spiRead();
-       _delay((unsigned long)((1)*(4000000/4000.0)));
-
-       PORTCbits.RC2 = 1;
-       _delay((unsigned long)((50)*(4000000/4000.0)));
-       printf(" Valor actual de los voltajes: ");
-       division(vol_a);
-       mensaje1();
-       _delay((unsigned long)((50)*(4000000/4000.0)));
-       division(vol_b);
-       mensaje2();
-       _delay((unsigned long)((50)*(4000000/4000.0)));
-
-       printf("Ingresar la centena deseada, si es <100 colocar 0.\r");
-       while(RCIF == 0);
-       c1 = RCREG -48;
-
-       while(RCREG > '2'){
-           precaucion();
-       }
-
-       printf("Ingresar la decena deseada.\r");
-       while(RCIF == 0);
-       d1 = RCREG -48;
-
-       if(c1 == 2){
-           while(RCREG > '5'){
-               precaucion1();
-           }
-       }
-
-       printf("Ingresar la unidad deseada.\r\r");
-       while(RCIF == 0);
-       u1 = RCREG -48;
-
-       if(c1 == 2 && d1 == 5){
-           while(RCREG > '5'){
-               precaucion2();
-           }
-       }
-
-       sprintf(s1, "%d", c1);
-       sprintf(s2, "%d", d1);
-       sprintf(s3, "%d", u1);
-       strcat(s1, s2);
-       strcat(s1, s3);
-       int completo = atoi(s1);
-       division(completo);
-       _delay((unsigned long)((100)*(4000000/4000.0)));
-       TXREG = cen;
-       _delay((unsigned long)((100)*(4000000/4000.0)));
-       TXREG = dec;
-       _delay((unsigned long)((100)*(4000000/4000.0)));
-       TXREG = un;
-       _delay((unsigned long)((100)*(4000000/4000.0)));
-       PORTD = completo;
+        if(dist <= 4){
+            PORTBbits.RB1 = 1;
+            PORTBbits.RB2 = 0;
+            _delay((unsigned long)((1)*(8000000/4000.0)));
+        }
+        if(dist >= 5){
+            PORTBbits.RB1 = 0;
+            PORTBbits.RB2 = 1;
+            _delay((unsigned long)((1)*(8000000/4000.0)));
+        }
     }
 }
 
 
 
 
-void putch(char info){
-    while (TXIF == 0);
-    TXREG = info;
 
-}
-
-void division(char dividendo){
-    cen = (dividendo)/100;
-    residuo = dividendo%100;
-    dec = residuo/10;
-    un = residuo%10;
-    cen += 48;
-    dec += 48;
-    un += 48;
-    return;
-}
-
-void mensaje1(void){
-    printf("\r* V1: ");
-    _delay((unsigned long)((50)*(4000000/4000.0)));
-    TXREG = cen;
-    _delay((unsigned long)((50)*(4000000/4000.0)));
-    printf(".");
-    _delay((unsigned long)((50)*(4000000/4000.0)));
-    TXREG = dec;
-    _delay((unsigned long)((50)*(4000000/4000.0)));
-    TXREG = un;
-    _delay((unsigned long)((50)*(4000000/4000.0)));
-    printf("\r");
-}
-
-void mensaje2(void){
-    printf("\r* V2: ");
-    _delay((unsigned long)((50)*(4000000/4000.0)));
-    TXREG = cen;
-    _delay((unsigned long)((50)*(4000000/4000.0)));
-    printf(".");
-    _delay((unsigned long)((50)*(4000000/4000.0)));
-    TXREG = dec;
-    _delay((unsigned long)((50)*(4000000/4000.0)));
-    TXREG = un;
-    _delay((unsigned long)((50)*(4000000/4000.0)));
-    printf("\r\r");
-}
-
-void precaucion(void){
-    if(RCREG > 2){
-           printf("Introduzca un valor de 0 a 2\r");
-       }
-       while(RCIF == 0);
-       c1 = RCREG -48;
-}
-
-void precaucion1(void){
-    if(RCREG > 5){
-           printf("Introduzca un valor menor o igual a 5\r");
-       }
-       while(RCIF == 0);
-       d1 = RCREG -48;
-}
-
-void precaucion2(void){
-    if(RCREG > 5){
-           printf("Introduzca un valor menor o igual a 5\r");
-       }
-       while(RCIF == 0);
-       u1 = RCREG -48;
+int C_distancia(void){
+    dist = 0x00;
+    TMR1 = 0X00;
+    PORTCbits.RC2 = 1;
+    _delay((unsigned long)((10)*(8000000/4000000.0)));
+    PORTCbits.RC2 = 0;
+    while(PORTCbits.RC3 == 0){};
+    T1CONbits.TMR1ON = 1;
+    while(PORTCbits.RC3 == 1){};
+    T1CONbits.TMR1ON = 0;
+    dist = TMR1/58.82;
+    return dist;
 }
